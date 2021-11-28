@@ -1,0 +1,138 @@
+@import "grid";
+@import "variables";
+@import "fonts";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-regular;
+  font-size: 14px;
+  color: #111111;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li {
+  margin: 0;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 1.2;
+  @media only screen and (min-width: $breakpoint-sm) {
+    font-size: 64px;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    font-size: 80px;
+  }
+  @media only screen and (min-width: $breakpoint-lg) {
+    font-size: 112px;
+  }
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 1.2;
+  @media only screen and (min-width: $breakpoint-sm) {
+    font-size: 64px;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    font-size: 80px;
+  }
+  @media only screen and (min-width: $breakpoint-lg) {
+    font-size: 112px;
+  }
+}
+
+h3 {
+  font-size: 24;
+  line-height: 1.2;
+  @media only screen and (min-width: $breakpoint-sm) {
+    font-size: 32;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    font-size: 40px;
+  }
+  @media only screen and (min-width: $breakpoint-lg) {
+    font-size: 64px;
+  }
+}
+h4 {
+  font-size: 36px;
+  line-height: 1;
+}
+
+p {
+  font-family: $font-light;
+  font-size: 20px;
+  line-height: 1.4;
+}
+p.small {
+  font-family: $font-light;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+a {
+  font-family: $font-medium;
+  text-decoration: underline;
+  font-size: 20px;
+  line-height: inherit;
+}
+a:hover,
+a:active {
+  color: $accent-color;
+}
+
+label,
+.label {
+  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 2px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.5;
+  font-family: monospace;
+
+  &:before {
+    content: "";
+    height: 5px;
+    width: 5px;
+    background-color: $accent-color;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 2px);
+  }
+}
+
+// ::selection {
+//   background: $blue; /* WebKit/Blink Browsers */
+// }
+// ::-moz-selection {
+//   background: $blue; /* Gecko Browsers */
+// }
+
+.hide {
+  visibility: none;
+}
