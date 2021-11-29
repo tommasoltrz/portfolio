@@ -30,6 +30,7 @@
     "gatsby-transformer-sharp": "^4.2.0",
     "glslify": "^7.1.1",
     "glslify-loader": "^2.0.0",
+    "gsap": "^3.8.0",
     "netlify-cms-app": "^2.15.59",
     "raw-loader": "^4.0.2",
     "react": "^17.0.1",

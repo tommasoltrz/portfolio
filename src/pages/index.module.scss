@@ -1,17 +1,71 @@
-.title {
-  margin-bottom: 32px;
-  text-align: center;
-}
+@import "../styles/variables.scss";
 
-.imgContainer {
+.heroContainer {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 70px 0 70px 0;
+  @media only screen and (min-width: $breakpoint-sm) {
+    padding: 120px 0 90px 0;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    padding: 120px 0;
+  }
+  @media only screen and (min-width: $breakpoint-lg) {
+    padding: 120px 0;
+  }
+  @media only screen and (min-width: $breakpoint-xl) {
+    padding: 180px 0;
+  }
 }
 
-.image {
-  max-width: 400px;
-  width: 100%;
-  display: inline-block;
-  margin-top: 100px;
-  cursor: pointer;
+.name {
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 20px;
+  position: relative;
+  @media only screen and (min-width: $breakpoint-sm) {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    margin-bottom: 32px;
+  }
+  span {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+.subTitle {
+  position: relative;
+  z-index: 1;
+  span {
+    display: block;
+    overflow: hidden;
+
+    &.offset {
+      margin-left: 61px;
+      margin-bottom: 32px;
+      @media only screen and (min-width: $breakpoint-sm) {
+        margin-left: 121px;
+        margin-bottom: 32px;
+      }
+      @media only screen and (min-width: $breakpoint-md) {
+        margin-left: 138px;
+        margin-bottom: 0;
+      }
+      @media only screen and (min-width: $breakpoint-lg) {
+        margin-left: 168px;
+      }
+    }
+  }
+}
+
+.heroLinkContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
 }

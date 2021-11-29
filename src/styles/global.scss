@@ -9,10 +9,11 @@
 body {
   margin: 0;
   font-family: $font-regular;
-  font-size: 14px;
-  color: #111111;
+  color: $black;
   overflow-x: hidden;
   overscroll-behavior-y: none;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 h1,
@@ -26,6 +27,7 @@ a,
 ul,
 li {
   margin: 0;
+  font-weight: normal;
 }
 
 h1 {
@@ -43,27 +45,30 @@ h1 {
 }
 
 h2 {
-  font-size: 34px;
+  font-size: 40px;
   line-height: 1.2;
+  font-family: $font-light;
   @media only screen and (min-width: $breakpoint-sm) {
-    font-size: 64px;
+    font-size: 80px;
   }
   @media only screen and (min-width: $breakpoint-md) {
-    font-size: 80px;
+    font-size: 92px;
   }
   @media only screen and (min-width: $breakpoint-lg) {
     font-size: 112px;
+    font-family: $font-regular;
   }
 }
 
 h3 {
-  font-size: 24;
+  font-size: 36px;
   line-height: 1.2;
+  font-family: $font-light;
   @media only screen and (min-width: $breakpoint-sm) {
-    font-size: 32;
+    font-size: 56px;
   }
   @media only screen and (min-width: $breakpoint-md) {
-    font-size: 40px;
+    font-size: 64px;
   }
   @media only screen and (min-width: $breakpoint-lg) {
     font-size: 64px;
@@ -81,7 +86,13 @@ p {
 }
 p.small {
   font-family: $font-light;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+p.xsmall {
+  font-family: $font-light;
+  font-size: 14px;
   line-height: 1.4;
 }
 
@@ -90,6 +101,7 @@ a {
   text-decoration: underline;
   font-size: 20px;
   line-height: inherit;
+  color: $black;
 }
 a:hover,
 a:active {

@@ -6,6 +6,7 @@
   grid-template-columns: repeat(var(--grid-cols), 1fr);
   max-width: $grid-max-width;
   margin: auto;
+  width: 100%;
 
   // Gutters
   column-gap: $gutters;
