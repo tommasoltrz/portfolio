@@ -56,7 +56,6 @@ h2 {
   }
   @media only screen and (min-width: $breakpoint-lg) {
     font-size: 112px;
-    font-family: $font-regular;
   }
 }
 
@@ -75,8 +74,9 @@ h3 {
   }
 }
 h4 {
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1;
+  font-family: $font-light;
 }
 
 p {
@@ -138,12 +138,12 @@ li {
   }
 }
 
-// ::selection {
-//   background: $blue; /* WebKit/Blink Browsers */
-// }
-// ::-moz-selection {
-//   background: $blue; /* Gecko Browsers */
-// }
+::selection {
+  background: $accent-color; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $accent-color; /* Gecko Browsers */
+}
 
 .hide {
   visibility: none;

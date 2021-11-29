@@ -7,7 +7,7 @@ $breakpoint-xl: 1400px;
 // Grid Gutters
 $gutters: 20px;
 $gutters-sm: 30px;
-$gutters-lg: 30px;
+$gutters-lg: 100px;
 
 // Grid Lateral margins
 $grid-margins: 20px;
@@ -23,6 +23,7 @@ $grid-max-width: 1520px;
 $black: #111111;
 $white: #ffffff;
 $dark-grey: #555;
+$light-grey: #e3e3e3;
 $off-white: #f7f8fb;
 $accent-color: #ffc736;
 $border: #ddd;
@@ -48,9 +49,9 @@ $font-bold: SofiaBold, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 
 @function transition(
   $property,
-  $duration: 200ms,
+  $duration: 150ms,
   $delay: 0s,
-  $timing-function: ease-in-out
+  $timing-function: ease-out
 ) {
   @return $property $duration $timing-function $delay;
 }

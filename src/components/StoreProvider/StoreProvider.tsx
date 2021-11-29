@@ -21,7 +21,7 @@ export const StoreProvider: FC<any> = ({ children }) => {
 
   let current = 0;
   let target = 0;
-  let ease = 0.075;
+  let ease = 0.1;
   const MathUtils = {
     // map number x from range [a, b] to [c, d]
     map: (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c,

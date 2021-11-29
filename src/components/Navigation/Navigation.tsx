@@ -9,6 +9,8 @@ import { useEffect } from "react";
 
 const Navigation = () => {
   useEffect(() => {
+    gsap.set(".nav-el", { opacity: 1 });
+
     gsap.from(".nav-el", {
       duration: 1.2,
       yPercent: -500,

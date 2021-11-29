@@ -95,10 +95,10 @@ function Effect({ mouse, wSize }) {
         }
         void main()  {
             vec2 newUV = vUv;
-            float c = circle(vUv, uMouse, 0.0, 0.15);
-            float r = texture2D(tDiffuse, newUV.xy += c * (0.1 * .55)).x;
-            float g = texture2D(tDiffuse, newUV.xy += c * (0.1 * .525)).y;
-            float b = texture2D(tDiffuse, newUV.xy += c * (0.1 * .55)).z;
+            float c = circle(vUv, uMouse, 0.0, 0.08);
+            float r = texture2D(tDiffuse, newUV.xy += c * (0.05 * .55)).x;
+            float g = texture2D(tDiffuse, newUV.xy += c * (0.05 * .525)).y;
+            float b = texture2D(tDiffuse, newUV.xy += c * (0.05 * .55)).z;
 
             // float ra = texture2D(tDiffuse, newUV.xy).a;
             // float ga = texture2D(tDiffuse, newUV.xy ).a;

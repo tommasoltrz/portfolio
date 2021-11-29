@@ -26,6 +26,7 @@
     line-height: 1;
     text-decoration: none;
     transition: transition(color);
+    opacity: 0;
   }
 }
 
@@ -35,7 +36,6 @@
 
 .navLink {
   padding-left: 20px;
-
   @media only screen and (min-width: $breakpoint-md) {
     padding-left: 40px;
   }
@@ -98,7 +98,6 @@ p.ddTitle {
   display: flex;
   flex-direction: column;
 
-  opacity: 0;
   padding: 0 30px 30px;
   position: absolute;
   top: calc(100% - 0.5rem);
@@ -149,16 +148,14 @@ p.ddTitle {
   display: block;
 }
 
-.dropdown li {
-  clear: both;
-  width: 100%;
-}
-
 .dropdown a {
   align-items: center;
   display: flex;
   margin-top: 30px;
   width: 100%;
+  clear: both;
+
+  opacity: 1;
   img {
     height: 24px;
     margin-right: 15px;

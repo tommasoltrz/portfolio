@@ -15,7 +15,6 @@ type Props = {
 const StaggeredTitle: React.FC<Props> = ({ label1, label2, classname }) => {
   const ref1 = React.createRef<HTMLSpanElement>();
   const ref2 = React.createRef<HTMLSpanElement>();
-
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -28,19 +27,16 @@ const StaggeredTitle: React.FC<Props> = ({ label1, label2, classname }) => {
       yPercent: 100,
       ease: "power4",
       stagger: 0.2,
-      markers: true,
     });
   }, []);
 
   return (
     <h3 className={cn(styles.title, classname)}>
       <span>
-        <span ref={ref1} className={styles.spn}>
-          {label1}
-        </span>
+        <span ref={ref1}>{label1}</span>
       </span>
       <span>
-        <span ref={ref2} className={cn(styles.offset, styles.spn)}>
+        <span ref={ref2} className={cn(styles.offset)}>
           {label2}
         </span>
       </span>

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as styles from "./Layout.module.scss";
 import { Context } from "../StoreProvider/StoreProvider";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import Navigation from "../Navigation/Navigation";
 import Footer from "../Footer/Footer";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,19 +20,19 @@ const Layout = ({ children }) => {
     }, 100);
     gsap.registerPlugin(ScrollTrigger);
 
-    const fadeInUpTween = document.querySelectorAll(".fade-in-up");
-    fadeInUpTween.forEach((item, idx) => {
-      gsap.from(item, {
-        scrollTrigger: {
-          trigger: item,
-          start: "top 90%",
-        },
-        y: 40,
-        opacity: 0,
-        duration: 1,
-        ease: "Power2.easeOut",
-      });
-    });
+    // const fadeInUpTween = document.querySelectorAll(".fade-in-up");
+    // fadeInUpTween.forEach((item, idx) => {
+    //   gsap.from(item, {
+    //     scrollTrigger: {
+    //       trigger: item,
+    //       start: "top 90%",
+    //     },
+    //     y: 40,
+    //     opacity: 0,
+    //     duration: 1,
+    //     ease: "Power2.easeOut",
+    //   });
+    // });
   }, []);
 
   useEffect(() => {
