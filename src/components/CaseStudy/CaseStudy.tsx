@@ -7,7 +7,6 @@ import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "gatsby";
 import arrow from "../../assets/icons/arrow.svg";
-
 type Props = {
   imgUrl: string;
   url: string;
@@ -17,6 +16,7 @@ type Props = {
 
 const CaseStudy: React.FC<Props> = ({ imgUrl, url, title, tags }) => {
   const ref = React.createRef<HTMLDivElement>();
+  const source = imgUrl;
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -26,15 +26,22 @@ const CaseStudy: React.FC<Props> = ({ imgUrl, url, title, tags }) => {
     // gsap.to(ref.current, {
     //   scrollTrigger: {
     //     trigger: ref.current,
-    //     start: "top 90%",
+    //     start: "top 50%",
     //     markers: true,
     //   },
-    //   duration: 1.2,
+    //   duration: 10.2,
     //   height: 0,
     //   ease: "power4",
-    //   stagger: 0.2,
     // });
   }, []);
+
+  // TODO move this to its own Image component
+  const onImgLoaded = () => {
+    const scrollMain = document.getElementById("scrollArea");
+    document.body.style.height = `${
+      scrollMain.getBoundingClientRect().height
+    }px`;
+  };
 
   return (
     <Link to={url} className={styles.projWrap}>
@@ -44,7 +51,13 @@ const CaseStudy: React.FC<Props> = ({ imgUrl, url, title, tags }) => {
             src={imgUrl}
             alt={title}
             className={cn(styles.pgImage, "js-img")}
+            onLoad={() => onImgLoaded()}
           />
+          {/* <StaticImage
+            src={source}
+            alt={title}
+            className={cn(styles.pgImage, "js-img")}
+          /> */}
           <div className={styles.imgForeground} ref={ref}></div>
         </div>
 

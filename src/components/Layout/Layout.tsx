@@ -12,13 +12,7 @@ const Layout = ({ children }) => {
   const { top, wSize } = useContext(Context);
 
   useEffect(() => {
-    // TODO find a way to remove timeout
-    setTimeout(() => {
-      document.body.style.height = `${
-        scrollArea?.current?.getBoundingClientRect().height
-      }px`;
-      initAnimations();
-    }, 100);
+    initAnimations();
   }, []);
 
   const initAnimations = () => {
@@ -68,7 +62,12 @@ const Layout = ({ children }) => {
   }, [wSize]);
 
   return (
-    <main ref={scrollArea} data-scroll className={styles.scrollArea}>
+    <main
+      ref={scrollArea}
+      data-scroll
+      className={styles.scrollArea}
+      id="scrollArea"
+    >
       <Navigation />
       {children}
       <Footer />

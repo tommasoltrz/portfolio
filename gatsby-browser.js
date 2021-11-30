@@ -1,9 +1,7 @@
 import "./src/styles/global.scss";
-
-export const shouldUpdateScroll = ({
-  routerProps: { location },
-  getSavedScrollPosition,
-}) => {
+import "./src/styles/preloader.scss";
+export const shouldUpdateScroll = () => {
+  console.log(window.scrollY);
   window.scrollTo(0, 0);
-  return false;
+  //   return false;
 };
