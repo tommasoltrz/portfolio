@@ -6,14 +6,19 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
   font-family: $font-light;
   color: $black;
-  overflow-x: hidden;
-  overscroll-behavior-y: none;
+  // overflow: hidden;
+  // overscroll-behavior-y: none;
   font-size: 20px;
   line-height: 1.4;
+  height: 10px;
+}
+html {
+  // overflow: auto;
 }
 
 h1,

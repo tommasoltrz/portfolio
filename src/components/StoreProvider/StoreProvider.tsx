@@ -17,6 +17,7 @@ export const StoreProvider: FC<any> = ({ children }) => {
   const [wSize, setWSize] = useState(initialState.wSize);
   const [top, setTop] = useState(initialState.top);
   const [topThree, setTopThree] = useState(0);
+  const [loaded, setLoaded] = useState(false);
   const requestRef = useRef<number>();
 
   let current = 0;

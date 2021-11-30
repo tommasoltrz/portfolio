@@ -181,7 +181,7 @@ const IndexPage = () => {
           </div>
         </section>
       </Layout>
-      <Three />
+      {/* <Three /> */}
     </StoreProvider>
   );
 };

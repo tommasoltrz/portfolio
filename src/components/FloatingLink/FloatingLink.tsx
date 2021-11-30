@@ -17,20 +17,20 @@ const FloatingLink: React.FC<Props> = ({ name, imgUrl, bgColor, url, idx }) => {
   const ref = React.createRef<HTMLSpanElement>();
 
   useEffect(() => {
-    gsap.to(ref.current, {
+    gsap.to(ref?.current, {
       duration: 0.1,
       height: 120,
       width: 120,
       ease: "bounce",
       delay: 1 + 0.3 * idx,
       onComplete: () => {
-        gsap.to(ref.current, {
+        gsap.to(ref?.current, {
           height: 80,
           width: 80,
           duration: 0.1,
           ease: "bounce",
         });
-        gsap.to(ref.current.children, {
+        gsap.to(ref?.current?.children, {
           opacity: 1,
           duration: 0.2,
           delay: 0.2,

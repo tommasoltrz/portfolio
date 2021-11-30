@@ -18,16 +18,16 @@ const StaggeredTitle: React.FC<Props> = ({ label1, label2, classname }) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from([ref1.current, ref2.current], {
-      scrollTrigger: {
-        trigger: ref1.current,
-        start: "top 80%",
-      },
-      duration: 1.2,
-      yPercent: 100,
-      ease: "power4",
-      stagger: 0.2,
-    });
+    // gsap.from([ref1.current, ref2.current], {
+    //   scrollTrigger: {
+    //     trigger: ref1.current,
+    //     start: "top 80%",
+    //   },
+    //   duration: 1.2,
+    //   yPercent: 100,
+    //   ease: "power4",
+    //   stagger: 0.2,
+    // });
   }, []);
 
   return (

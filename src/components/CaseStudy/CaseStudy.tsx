@@ -20,19 +20,19 @@ const CaseStudy: React.FC<Props> = ({ imgUrl, url, title, tags }) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // gsap.set(ref.current, {
-    //   height: "100%",
-    // });
-    // gsap.to(ref.current, {
-    //   scrollTrigger: {
-    //     trigger: ref.current,
-    //     start: "top 50%",
-    //     markers: true,
-    //   },
-    //   duration: 10.2,
-    //   height: 0,
-    //   ease: "power4",
-    // });
+    gsap.set(ref.current, {
+      height: "100%",
+    });
+    gsap.to(ref.current, {
+      scrollTrigger: {
+        trigger: ref.current,
+        start: "top 50%",
+        markers: true,
+      },
+      duration: 10.2,
+      height: 0,
+      ease: "power4",
+    });
   }, []);
 
   // TODO move this to its own Image component

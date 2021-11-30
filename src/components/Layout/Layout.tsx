@@ -12,17 +12,19 @@ const Layout = ({ children }) => {
   const { top, wSize } = useContext(Context);
 
   useEffect(() => {
-    initAnimations();
+    // initAnimations();
   }, []);
 
   const initAnimations = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
     ScrollTrigger.scrollerProxy(scrollArea.current, {
       fixedMarkers: true,
       scrollTop(value) {
         if (arguments.length) {
           scrollArea.current.scrollTop = value; // setter
         }
-        return scrollArea?.current.scrollTop; // getter
+        return top; // getter
       },
       getBoundingClientRect() {
         return {
@@ -41,7 +43,7 @@ const Layout = ({ children }) => {
           trigger: item,
           start: "top 90%",
           // scroller: scrollArea.current,
-          // markers: true,
+          markers: true,
         },
         y: 40,
         opacity: 0,
