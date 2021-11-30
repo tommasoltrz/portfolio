@@ -19,4 +19,9 @@
   &:hover {
     transform: rotate(-15deg);
   }
+  @media only screen and (min-width: $breakpoint-md) {
+    height: 150px;
+    width: 150px;
+    font-size: 16px;
+  }
 }

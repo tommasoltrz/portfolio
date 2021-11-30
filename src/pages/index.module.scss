@@ -15,7 +15,7 @@
     padding: 120px 0;
   }
   @media only screen and (min-width: $breakpoint-xl) {
-    padding: 180px 0;
+    padding: 220px 0;
   }
 }
 
@@ -98,90 +98,53 @@
       margin-bottom: 54px;
     }
   }
+}
 
-  .projWrap {
-    text-decoration: none;
-    &:hover {
-      color: inherit;
+.aboutCol {
+  padding: 70px 0;
+  border-bottom: 1px solid $light-grey;
+
+  @media only screen and (min-width: $breakpoint-sm) {
+    padding: 90px 0;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    padding: 120px 0;
+  }
+
+  p {
+    margin-bottom: 35px;
+    @media only screen and (min-width: $breakpoint-sm) {
+      margin-bottom: 45px;
     }
-    &:hover .arrowContainer {
-      transform: rotate(-30deg);
-      transition: transition(transform);
+    @media only screen and (min-width: $breakpoint-md) {
+      margin-bottom: 60px;
     }
-    &:hover .bottom .arrowContainer .arrowBg {
-      height: 60px;
-      width: 60px;
-      transition: height 150ms ease-out, width 150ms ease-out;
+  }
+}
+
+.moreWorksSection {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  position: relative;
+
+  @media only screen and (min-width: $breakpoint-sm) {
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  .description {
+    margin-bottom: 35px;
+    margin-top: 35px;
+    @media only screen and (min-width: $breakpoint-sm) {
+      margin-bottom: 45px;
+      margin-top: 45px;
     }
-
-    article {
-      margin-bottom: 40px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid $light-grey;
-      @media only screen and (min-width: $breakpoint-md) {
-        margin-bottom: 54px;
-      }
-
-      .pgImage {
-        max-width: 100%;
-        margin-bottom: 32px;
-        width: 100%;
-      }
-      .bottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        h4 {
-          margin-bottom: 8px;
-          text-decoration: none;
-        }
-        .arrowContainer {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          transition: transition(transform);
-
-          img {
-            z-index: 1;
-          }
-          .arrowBg {
-            background-color: $accent-color;
-            height: 0;
-            width: 0;
-            border-radius: 50%;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 0;
-            transition: height 150ms ease-out, width 150ms ease-out;
-          }
-        }
-      }
-
-      p {
-        display: inline;
-        position: relative;
-        margin-right: 18px;
-        color: $dark-grey;
-        text-decoration: none;
-
-        &::after {
-          content: "";
-          height: 5px;
-          width: 5px;
-          border-radius: 50px;
-          background-color: $black;
-          position: absolute;
-          right: -12px;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        &:last-child::after {
-          display: none;
-        }
-      }
+    @media only screen and (min-width: $breakpoint-md) {
+      margin-bottom: 60px;
+      margin-top: 60px;
     }
   }
 }

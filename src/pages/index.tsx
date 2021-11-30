@@ -1,14 +1,9 @@
 import * as React from "react";
 import * as styles from "./index.module.scss";
-import img1 from "../assets/images/test-1.jpeg";
-import img2 from "../assets/images/test-2.jpeg";
-import img3 from "../assets/images/test-3.jpeg";
-
 import Three from "../components/Three/Three";
 import cn from "classnames";
 import Layout from "../components/Layout/Layout";
 import { StoreProvider } from "../components/StoreProvider/StoreProvider";
-import { Link } from "gatsby";
 import linkedin from "../assets/icons/linkedin.svg";
 import gmail from "../assets/icons/gmail.svg";
 import github from "../assets/icons/github.svg";
@@ -16,12 +11,15 @@ import stc from "../assets/images/stc.png";
 import frog from "../assets/images/frogdesign.png";
 import allvest from "../assets/images/allvest.png";
 import referralId from "../assets/images/referralId.png";
-import arrow from "../assets/icons/arrow.svg";
 import { gsap } from "gsap";
 import { useEffect } from "react";
 import FloatingLink from "../components/FloatingLink/FloatingLink";
 import MasonryGrid from "../components/MasonryGrid/MasonryGrid";
 import StaggeredTitle from "../components/StaggeredTitle/StaggeredTitle";
+import CaseStudy from "../components/CaseStudy/CaseStudy";
+import { Link } from "gatsby";
+import arrow from "../assets/icons/arrow.svg";
+import Work from "../components/Work/Work";
 
 const floatingLinksData = [
   {
@@ -71,6 +69,39 @@ const spData = [
   },
 ];
 
+const aboutData =
+  "Hi 👋, I am an Italian web developer moving pixels in the www. I specialize in building, and sometime designing, digital experiences. Currently working at frog.";
+
+const moreWorksData = {
+  description:
+    "This is a collection of smaller or older project that I worked on. Some even unrelated to web dev.",
+  works: [
+    {
+      title: "Knots Analytics",
+      description: "Website",
+      img: stc,
+      url: "https://knotsanalytics.com/",
+    },
+    {
+      title: "Knots Analytics",
+      description: "Website",
+      img: stc,
+      url: "https://knotsanalytics.com/",
+    },
+    {
+      title: "Knots Analytics",
+      description: "Website",
+      img: stc,
+      url: "https://knotsanalytics.com/",
+    },
+    {
+      title: "Knots Analytics",
+      description: "Website",
+      img: stc,
+      url: "https://knotsanalytics.com/",
+    },
+  ],
+};
 const IndexPage = () => {
   useEffect(() => {
     gsap.set(".hero-text-line", { opacity: 1 });
@@ -122,33 +153,32 @@ const IndexPage = () => {
               classname={styles.projTitle}
             />
             {spData.map((proj, idx) => (
-              <Link
-                to={proj.url}
-                className={styles.projWrap}
-                key={"proj" + idx}
-              >
-                <article>
-                  <img
-                    src={proj.imgUrl}
-                    alt={proj.title}
-                    className={cn(styles.pgImage, "js-img")}
-                  />
-                  <div className={styles.bottom}>
-                    <h4>{proj.title}</h4>
-                    <div className={styles.arrowContainer}>
-                      <img src={arrow} alt="Arrow" />
-                      <div className={styles.arrowBg}></div>
-                    </div>
-                  </div>
-                  {proj.tags.map((tag, ix) => (
-                    <p className={"small fade-in-up"} key={"tag" + ix}>
-                      {tag}
-                    </p>
-                  ))}
-                </article>
-              </Link>
+              <CaseStudy {...proj} key={"proj" + idx} />
             ))}
           </MasonryGrid>
+        </section>
+        <section className={cn("grid", styles.aboutSection)}>
+          <div
+            className={cn("col-12 col-sm-7 col-md-6 col-lg-5", styles.aboutCol)}
+          >
+            <p>{aboutData}</p>
+            <Link to="/about">About me</Link>
+          </div>
+        </section>
+        <section className={cn("grid", styles.moreWorksSection)}>
+          <div className={"col-12 col-sm-6"}>
+            <StaggeredTitle
+              label1="More"
+              label2="Works"
+              classname={styles.projTitle}
+            />
+          </div>
+          <div className={"col-12 col-sm-6"}>
+            <p className={styles.description}>{moreWorksData.description}</p>
+            {moreWorksData.works.map((work, idx) => (
+              <Work {...work} key={"work" + idx} />
+            ))}
+          </div>
         </section>
       </Layout>
       {/* <Three /> */}

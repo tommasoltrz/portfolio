@@ -17,23 +17,45 @@ const Layout = ({ children }) => {
       document.body.style.height = `${
         scrollArea?.current?.getBoundingClientRect().height
       }px`;
+      initAnimations();
     }, 100);
-    gsap.registerPlugin(ScrollTrigger);
-
-    // const fadeInUpTween = document.querySelectorAll(".fade-in-up");
-    // fadeInUpTween.forEach((item, idx) => {
-    //   gsap.from(item, {
-    //     scrollTrigger: {
-    //       trigger: item,
-    //       start: "top 90%",
-    //     },
-    //     y: 40,
-    //     opacity: 0,
-    //     duration: 1,
-    //     ease: "Power2.easeOut",
-    //   });
-    // });
   }, []);
+
+  const initAnimations = () => {
+    ScrollTrigger.scrollerProxy(scrollArea.current, {
+      fixedMarkers: true,
+      scrollTop(value) {
+        if (arguments.length) {
+          scrollArea.current.scrollTop = value; // setter
+        }
+        return scrollArea?.current.scrollTop; // getter
+      },
+      getBoundingClientRect() {
+        return {
+          top: 0,
+          left: 0,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        };
+      },
+    });
+
+    const fadeInUpTween = document.querySelectorAll(".fade-in-up");
+    fadeInUpTween.forEach((item, idx) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 90%",
+          // scroller: scrollArea.current,
+          // markers: true,
+        },
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        ease: "Power2.easeOut",
+      });
+    });
+  };
 
   useEffect(() => {
     scrollArea.current.style.transform = `translate3d(0,${-top}px, 0)`;
