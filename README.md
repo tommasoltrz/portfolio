@@ -1,39 +1,34 @@
-## ⚡ RGB hover effect
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This is a starter project for implementing React Three Fiber in Gatsby and applying custom shaders on images.
+## Getting Started
 
-RGB color displacement is applied on mouse hover.
+First, run the development server:
 
-![Hover Effect](./src/images/hover-effect.png)
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## ✨ Features
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- [Gatsby](https://www.gatsbyjs.com/)
-- [React Three Fiber](https://github.com/pmndrs/react-three-fiber/)
-- Typescript
-- Smooth, lerp based page scrolling
-- Scss
-- Sync between canvas and HTML
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-## 🚀 Quick start
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-1.  **Clone the repo**
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-    ```sh
-    git clone https://github.com/tommasoltrz/R3F-RGB-Hover.git
-    ```
+## Learn More
 
-2.  **Start the local server**
+To learn more about Next.js, take a look at the following resources:
 
-    Navigate into your new site’s directory and install the local dependencies first, then run the dev command.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-    ```sh
-    cd R3F-RGB-Hover/
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-    npm i
-    npm start
-    ```
+## Deploy on Vercel
 
-3.  **Open the source code and start editing!**
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-    Your site is will be running at `http://localhost:8000`
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

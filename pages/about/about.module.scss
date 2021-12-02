@@ -1,0 +1,32 @@
+@import "../../styles/variables.scss";
+
+.heroContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 70px 0 70px 0;
+  @media only screen and (min-width: $breakpoint-sm) {
+    padding: 120px 0 90px 0;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    padding: 180px 0;
+  }
+  @media only screen and (min-width: $breakpoint-lg) {
+    padding: 180px 0;
+  }
+  @media only screen and (min-width: $breakpoint-xl) {
+    padding: 220px 0;
+  }
+
+  h1 {
+    margin-bottom: 80px;
+    font-family: $font-medium;
+  }
+  h4 {
+    line-height: 1.4;
+    margin-bottom: 32px;
+  }
+  p {
+    margin-bottom: 32px;
+  }
+}
