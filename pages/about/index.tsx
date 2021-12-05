@@ -108,7 +108,7 @@ const About = () => {
             </div>
           </section>
 
-          <section className={cn("grid", styles.moreWorksSection)}>
+          {/* <section className={cn("grid", styles.moreWorksSection)}>
             <div className={"col-12 col-sm-6 col-md-5"}>
               <StaggeredTitle
                 label1="Selected"
@@ -121,7 +121,7 @@ const About = () => {
                 <Work {...work} key={"work" + idx} />
               ))}
             </div>
-          </section>
+          </section> */}
         </div>
       </Layout>
     </StoreProvider>
