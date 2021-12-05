@@ -36,7 +36,7 @@ const floatingLinksData = [
   },
 ];
 
-const spData = [
+export const spData = [
   {
     imgUrl: "assets/images/stc.png",
     url: "/about",
@@ -73,25 +73,25 @@ const moreWorksData = {
     {
       title: "Knots Analytics",
       description: "Website",
-      img: "../assets/images/allvest.png",
+      imgUrl: "../assets/images/allvest.png",
       url: "https://knotsanalytics.com/",
     },
     {
       title: "Knots Analytics",
       description: "Website",
-      img: "../assets/images/allvest.png",
+      imgUrl: "../assets/images/allvest.png",
       url: "https://knotsanalytics.com/",
     },
     {
       title: "Knots Analytics",
       description: "Website",
-      img: "../assets/images/allvest.png",
+      imgUrl: "../assets/images/allvest.png",
       url: "https://knotsanalytics.com/",
     },
     {
       title: "Knots Analytics",
       description: "Website",
-      img: "../assets/images/allvest.png",
+      imgUrl: "../assets/images/allvest.png",
       url: "https://knotsanalytics.com/",
     },
   ],
@@ -164,14 +164,14 @@ const IndexPage = () => {
         </section>
 
         <section className={cn("grid", styles.moreWorksSection)}>
-          <div className={"col-12 col-sm-6"}>
+          <div className={"col-12 col-sm-6 col-md-5"}>
             <StaggeredTitle
               label1="More"
               label2="Works"
               classname={styles.projTitle}
             />
           </div>
-          <div className={"col-12 col-sm-6"}>
+          <div className={"col-12 col-sm-6 col-md-7"}>
             <p className={styles.description}>{moreWorksData.description}</p>
             {moreWorksData.works.map((work, idx) => (
               <Work {...work} key={"work" + idx} />

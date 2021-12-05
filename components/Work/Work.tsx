@@ -7,30 +7,14 @@ import { useEffect, useRef } from "react";
 
 type Props = {
   title: string;
-  description: string;
-  img: string;
+  imgUrl: string;
   url: string;
+  description?: string;
+  tags?: string[];
 };
 
-const Work: React.FC<Props> = ({ description, title, img, url }) => {
+const Work: React.FC<Props> = ({ description, title, imgUrl, url, tags }) => {
   const ref = React.createRef<HTMLDivElement>();
-  useEffect(() => {
-    // gsap.registerPlugin(ScrollTrigger);
-    // gsap.set(ref.current, {
-    //   height: "100%",
-    // });
-    // gsap.to(ref.current, {
-    //   scrollTrigger: {
-    //     trigger: ref.current,
-    //     start: "top 90%",
-    //     markers: true,
-    //   },
-    //   duration: 1.2,
-    //   height: 0,
-    //   ease: "power4",
-    //   stagger: 0.2,
-    // });
-  }, []);
 
   return (
     <a
@@ -47,7 +31,16 @@ const Work: React.FC<Props> = ({ description, title, img, url }) => {
             <div className={styles.arrowBg}></div>
           </div>
         </div>
-        <p className={"small "}>{description}</p>
+        {description && <p className={"small "}>{description}</p>}
+        {tags && (
+          <div className={styles.tagContainer}>
+            {tags.map((tag, ix) => (
+              <p className={"small "} key={"tag" + ix}>
+                {tag}
+              </p>
+            ))}
+          </div>
+        )}
       </article>
     </a>
   );

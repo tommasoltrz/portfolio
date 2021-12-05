@@ -56,4 +56,30 @@
       }
     }
   }
+  .tagContainer {
+    display: flex;
+    p {
+      display: inline;
+      position: relative;
+      margin-right: 24px;
+      color: $dark-grey;
+      text-decoration: none;
+      margin-bottom: 0;
+
+      &::after {
+        content: "";
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: $dark-grey;
+        position: absolute;
+        right: -15px;
+        top: 49%;
+        transform: translateY(-50%);
+      }
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
 }

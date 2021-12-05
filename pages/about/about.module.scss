@@ -1,8 +1,6 @@
 @import "../../styles/variables.scss";
 
 .heroContainer {
-  display: flex;
-  align-items: center;
   width: 100%;
   padding: 70px 0 70px 0;
   @media only screen and (min-width: $breakpoint-sm) {
@@ -21,6 +19,10 @@
   h1 {
     margin-bottom: 80px;
     font-family: $font-medium;
+    span {
+      display: block;
+      overflow: hidden;
+    }
   }
   h4 {
     line-height: 1.4;
@@ -28,5 +30,61 @@
   }
   p {
     margin-bottom: 32px;
+  }
+}
+
+.moreWorksSection {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  position: relative;
+
+  @media only screen and (min-width: $breakpoint-sm) {
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+  .description {
+    margin-bottom: 35px;
+    margin-top: 35px;
+    @media only screen and (min-width: $breakpoint-sm) {
+      margin-bottom: 45px;
+      margin-top: 45px;
+    }
+    @media only screen and (min-width: $breakpoint-md) {
+      margin-bottom: 60px;
+      margin-top: 60px;
+    }
+  }
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  @media only screen and (min-width: $breakpoint-sm) {
+    margin-top: 45px;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    margin-top: 60px;
+  }
+
+  .skillsCell {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    @media only screen and (min-width: $breakpoint-sm) {
+      width: 50%;
+    }
+    @media only screen and (min-width: $breakpoint-md) {
+      width: 33%;
+      height: 70px;
+    }
+    p {
+      font-family: $font-extra-light;
+    }
   }
 }
