@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: test-repo
+  # git-gateway
 media_folder: public/assets/images
 public_folder: assets/images
 collections:
@@ -31,6 +32,11 @@ collections:
                     collapsed: true,
                   },
                 ],
+            }
+          - {
+              label: "More works description",
+              name: "moreWorksDesc",
+              widget: "text",
             }
           - {
               label: More Works,
@@ -65,7 +71,7 @@ collections:
               name: "selectedPj",
               widget: "relation",
               collection: "home",
-              search_fields: ["selectedProjects"],
+              search_fields: ["title"],
               value_field: "title",
             }
       - label: "Projects"

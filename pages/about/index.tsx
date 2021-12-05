@@ -4,7 +4,6 @@ import cn from "classnames";
 import Layout from "../../components/Layout/Layout";
 import { StoreProvider } from "../../components/StoreProvider/StoreProvider";
 import StaggeredTitle from "../../components/StaggeredTitle/StaggeredTitle";
-import { spData } from "..";
 import Work from "../../components/Work/Work";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";

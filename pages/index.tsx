@@ -38,65 +38,9 @@ const floatingLinksData = [
   },
 ];
 
-export const spData = [
-  {
-    imgUrl: "assets/images/stc.png",
-    url: "/about",
-    title: "STC - Telcom",
-    tags: ["Website", "Design Language System"],
-  },
-  {
-    imgUrl: "../assets/images/frogdesign.png",
-    url: "/about",
-    title: "Frogdesign",
-    tags: ["Website"],
-  },
-  {
-    imgUrl: "../assets/images/referralId.png",
-    url: "/about",
-    title: "Referral ID - Astrazeneca",
-    tags: ["Website", "Medical Tool"],
-  },
-  {
-    imgUrl: "../assets/images/allvest.png",
-    url: "/about",
-    title: "Allvest",
-    tags: ["Website", "Fintech"],
-  },
-];
-
-const aboutData =
-  "Hi 👋, I am an Italian web developer moving pixels in the www. I specialize in building, and sometime designing, digital experiences. Currently working at frog.";
-
 const moreWorksData = {
   description:
     "This is a collection of smaller or older project that I worked on. Some even unrelated to web dev.",
-  works: [
-    {
-      title: "Knots Analytics",
-      description: "Website",
-      imgUrl: "../assets/images/allvest.png",
-      url: "https://knotsanalytics.com/",
-    },
-    {
-      title: "Knots Analytics",
-      description: "Website",
-      imgUrl: "../assets/images/allvest.png",
-      url: "https://knotsanalytics.com/",
-    },
-    {
-      title: "Knots Analytics",
-      description: "Website",
-      imgUrl: "../assets/images/allvest.png",
-      url: "https://knotsanalytics.com/",
-    },
-    {
-      title: "Knots Analytics",
-      description: "Website",
-      imgUrl: "../assets/images/allvest.png",
-      url: "https://knotsanalytics.com/",
-    },
-  ],
 };
 type Props = {
   data: any;

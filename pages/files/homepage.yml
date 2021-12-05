@@ -3,18 +3,18 @@ aboutShort: Hi 👋, I am an Italian web developer moving pixels in the www. I
   working at frog.
 selectedProjects:
   - title: STC - Telcom
-    image: assets/stc.png
+    image: assets/images/stc.png
     url: projects/stc
     tags:
       - Website
       - Design-Language-System
   - title: Frogdesign
-    image: assets/frogdesign.png
+    image: assets/images/frogdesign.png
     url: projects/frogdesign
     tags:
       - Website
   - title: Referral ID - Astrazeneca
-    image: assets/referralId.png
+    image: assets/images/referralId.png
     url: projects/referralId
     tags:
       - Website
@@ -24,7 +24,7 @@ selectedProjects:
     tags:
       - Website
       - Fintech
-    image: assets/allvest.png
+    image: assets/images/allvest.png
 moreWorks:
   - title: Knots Analytics
     image: assets/allvest.png
@@ -33,4 +33,4 @@ moreWorks:
   - title: Knots Analytics
     description: Website
     url: https://knotsanalytics.com/
-    image: assets/allvest.png
+    image: assets/images/allvest.png
