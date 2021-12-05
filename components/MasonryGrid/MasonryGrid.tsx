@@ -36,5 +36,5 @@ const MasonryGrid: React.FC<Props> = React.memo(({ children }) => {
     </div>
   );
 });
-
+MasonryGrid.displayName = "MasonryGrid";
 export default MasonryGrid;

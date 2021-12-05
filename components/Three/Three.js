@@ -19,7 +19,6 @@ import { Context } from "../StoreProvider/StoreProvider";
 const Imager = React.memo(({ img, wSize }) => {
   const ref = useRef();
   const [rec, setRec] = useState(img.getBoundingClientRect());
-  const [hidden, set] = useState();
 
   const texture = useLoader(THREE.TextureLoader, img.src);
   const elHeight = rec.height;
@@ -197,5 +196,5 @@ const Three = () => {
     </>
   );
 };
-
+Imager.displayName = "Imager";
 export default Three;
