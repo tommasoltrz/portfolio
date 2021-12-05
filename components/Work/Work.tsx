@@ -8,19 +8,27 @@ import { useEffect, useRef } from "react";
 type Props = {
   title: string;
   image: string;
-  url: string;
+  url?: string;
+  slug?: string;
   description?: string;
   tags?: string[];
 };
 
-const Work: React.FC<Props> = ({ description, title, image, url, tags }) => {
+const Work: React.FC<Props> = ({
+  description,
+  title,
+  image,
+  url,
+  slug,
+  tags,
+}) => {
   const ref = React.createRef<HTMLDivElement>();
 
   return (
     <a
-      href={url}
+      href={url || slug}
       className={cn(styles.work, "fade-in-up")}
-      target="_blank"
+      target={url ? "_blank" : "_self"}
       rel="noreferrer"
     >
       <article>
