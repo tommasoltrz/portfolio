@@ -99,9 +99,11 @@ const moreWorksData = {
   ],
 };
 type Props = {
-  hero: any;
+  data: any;
 };
-const IndexPage: React.FC<Props> = ({ hero }) => {
+const IndexPage: React.FC<Props> = ({ data }) => {
+  console.log(data);
+  const { aboutShort, selectedProjects, moreWorks } = data;
   useEffect(() => {
     gsap.set(".hero-text-line", { opacity: 1 });
     gsap.from(".hero-text-line", {
@@ -149,7 +151,7 @@ const IndexPage: React.FC<Props> = ({ hero }) => {
           <div
             className={cn("col-12 col-sm-7 col-md-6 col-lg-5", styles.aboutCol)}
           >
-            <p className={"fade-in-up"}>{aboutData}</p>
+            <p className={"fade-in-up"}>{aboutShort}</p>
             <Link href="/about">
               <a className={"fade-in-up"}>About me</a>
             </Link>
@@ -162,7 +164,7 @@ const IndexPage: React.FC<Props> = ({ hero }) => {
               label2="Projects"
               classname={styles.projTitle}
             />
-            {spData.map((proj, idx) => (
+            {selectedProjects.map((proj: any, idx: number) => (
               <CaseStudy {...proj} key={"proj" + idx} />
             ))}
           </MasonryGrid>
@@ -178,7 +180,7 @@ const IndexPage: React.FC<Props> = ({ hero }) => {
           </div>
           <div className={"col-12 col-sm-6 col-md-7"}>
             <p className={styles.description}>{moreWorksData.description}</p>
-            {moreWorksData.works.map((work, idx) => (
+            {moreWorks.map((work: any, idx: number) => (
               <Work {...work} key={"work" + idx} />
             ))}
           </div>
@@ -192,11 +194,11 @@ const IndexPage: React.FC<Props> = ({ hero }) => {
 export default IndexPage;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const hero = gePageData("hero")["en"];
+  const data = gePageData("homepage");
 
   return {
     props: {
-      hero,
+      data,
     },
   };
 };

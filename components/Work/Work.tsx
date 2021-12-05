@@ -7,13 +7,13 @@ import { useEffect, useRef } from "react";
 
 type Props = {
   title: string;
-  imgUrl: string;
+  image: string;
   url: string;
   description?: string;
   tags?: string[];
 };
 
-const Work: React.FC<Props> = ({ description, title, imgUrl, url, tags }) => {
+const Work: React.FC<Props> = ({ description, title, image, url, tags }) => {
   const ref = React.createRef<HTMLDivElement>();
 
   return (

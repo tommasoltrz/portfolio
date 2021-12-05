@@ -41,6 +41,6 @@ export const getStaticProps: GetStaticProps = async () => {
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [{ params: { pageSlug: "we" } }],
-    fallback: false,
+    fallback: true,
   };
 };

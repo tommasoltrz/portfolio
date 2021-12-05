@@ -4,23 +4,23 @@ aboutShort: Hi 👋, I am an Italian web developer moving pixels in the www. I
 selectedProjects:
   - title: STC - Telcom
     image: assets/stc.png
-    url: stc
+    url: projects/stc
     tags:
       - Website
       - Design-Language-System
   - title: Frogdesign
     image: assets/frogdesign.png
-    url: frogdesign
+    url: projects/frogdesign
     tags:
       - Website
   - title: Referral ID - Astrazeneca
     image: assets/referralId.png
-    url: referralId
+    url: projects/referralId
     tags:
       - Website
       - Medicl-Tool
   - title: Allvest
-    url: allvest
+    url: projects/allvest
     tags:
       - Website
       - Fintech

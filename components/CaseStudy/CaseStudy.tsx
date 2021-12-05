@@ -8,13 +8,13 @@ import { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 type Props = {
-  imgUrl: string;
+  image: string;
   url: string;
   title: string;
   tags: string[];
 };
 
-const CaseStudy: React.FC<Props> = ({ imgUrl, url, title, tags }) => {
+const CaseStudy: React.FC<Props> = ({ image, url, title, tags }) => {
   const ref = React.createRef<HTMLDivElement>();
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -47,7 +47,7 @@ const CaseStudy: React.FC<Props> = ({ imgUrl, url, title, tags }) => {
         <article>
           <div className={styles.imgContainer}>
             <img
-              src={imgUrl}
+              src={image}
               alt={title}
               className={cn(styles.pgImage, "js-img")}
               onLoad={() => onImgLoaded()}
