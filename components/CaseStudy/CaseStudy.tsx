@@ -7,8 +7,6 @@ import { gsap } from "gsap";
 import { useEffect, useRef } from "react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-
 type Props = {
   imgUrl: string;
   url: string;
@@ -19,6 +17,8 @@ type Props = {
 const CaseStudy: React.FC<Props> = ({ imgUrl, url, title, tags }) => {
   const ref = React.createRef<HTMLDivElement>();
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     gsap.set(ref.current, {
       height: "100%",
     });
@@ -52,11 +52,7 @@ const CaseStudy: React.FC<Props> = ({ imgUrl, url, title, tags }) => {
               className={cn(styles.pgImage, "js-img")}
               onLoad={() => onImgLoaded()}
             />
-            {/* <StaticImage
-            src={source}
-            alt={title}
-            className={cn(styles.pgImage, "js-img")}
-          /> */}
+
             <div className={styles.imgForeground} ref={ref}></div>
           </div>
 

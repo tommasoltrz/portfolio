@@ -9,6 +9,7 @@ import Work from "../../components/Work/Work";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
+import RoundLink from "../../components/RoundLink/RoundLink";
 
 const skillsData = [
   "JS, ES6",
@@ -99,6 +100,11 @@ const About = () => {
                   <p>{tool}</p>
                 </div>
               ))}
+              <RoundLink
+                label={"Download CV"}
+                url={"mailto:tommasoltrz@gmail.com"}
+                classname={styles.cvLink}
+              />
             </div>
           </section>
 
