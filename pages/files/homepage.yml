@@ -1,0 +1,36 @@
+aboutShort: Hi 👋, I am an Italian web developer moving pixels in the www. I
+  specialise in building, and sometime designing, digital experiences. Currently
+  working at frog.
+selectedProjects:
+  - title: STC - Telcom
+    image: assets/stc.png
+    url: stc
+    tags:
+      - Website
+      - Design-Language-System
+  - title: Frogdesign
+    image: assets/frogdesign.png
+    url: frogdesign
+    tags:
+      - Website
+  - title: Referral ID - Astrazeneca
+    image: assets/referralId.png
+    url: referralId
+    tags:
+      - Website
+      - Medicl-Tool
+  - title: Allvest
+    url: allvest
+    tags:
+      - Website
+      - Fintech
+    image: assets/allvest.png
+moreWorks:
+  - title: Knots Analytics
+    image: assets/allvest.png
+    url: https://knotsanalytics.com/
+    description: Website
+  - title: Knots Analytics
+    description: Website
+    url: https://knotsanalytics.com/
+    image: assets/allvest.png
