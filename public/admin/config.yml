@@ -1,5 +1,5 @@
 backend:
-  name: test-repo
+  name: git-gateway
   # git-gateway
 media_folder: public/assets/images
 public_folder: assets/images
@@ -65,14 +65,6 @@ collections:
               hint: "Use comma to separate strings",
               allow_add: true,
               collapsed: true,
-            }
-          - {
-              label: "Selected Projects",
-              name: "selectedPj",
-              widget: "relation",
-              collection: "home",
-              search_fields: ["title"],
-              value_field: "title",
             }
       - label: "Projects"
         name: "projects"
