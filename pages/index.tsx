@@ -14,6 +14,8 @@ import CaseStudy from "../components/CaseStudy/CaseStudy";
 import Work from "../components/Work/Work";
 import Link from "next/link";
 import { ScrollTriggerProxy } from "../components/ScrollTriggerProxy/ScrollTriggerProxy";
+import { GetStaticProps } from "next";
+import { gePageData } from "../components/pages";
 
 const floatingLinksData = [
   {
@@ -96,7 +98,10 @@ const moreWorksData = {
     },
   ],
 };
-const IndexPage = () => {
+type Props = {
+  hero: any;
+};
+const IndexPage: React.FC<Props> = ({ hero }) => {
   useEffect(() => {
     gsap.set(".hero-text-line", { opacity: 1 });
     gsap.from(".hero-text-line", {
@@ -185,3 +190,13 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const hero = gePageData("hero")["en"];
+
+  return {
+    props: {
+      hero,
+    },
+  };
+};

@@ -8,14 +8,99 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "content/home.md"
+        file: "pages/files/homepage.yml"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Publish Date", name: "date", widget: "datetime" }
-          - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Cats"
-            name: "cats"
-            widget: list
-            fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+          - { label: "About short", name: "aboutShort", widget: "markdown" }
+          - {
+              label: Selected Projects,
+              name: selectedProjects,
+              widget: "list",
+              allow_add: true,
+              collapsed: true,
+              fields:
+                [
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Image", name: "image", widget: "image" },
+                  { label: "Page Slug", name: "url", widget: "string" },
+                  {
+                    label: "Tags",
+                    name: "tags",
+                    widget: "list",
+                    hint: "Use comma to separate strings",
+                    allow_add: true,
+                    collapsed: true,
+                  },
+                ],
+            }
+          - {
+              label: More Works,
+              name: moreWorks,
+              widget: "list",
+              allow_add: true,
+              collapsed: true,
+              fields:
+                [
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Image", name: "image", widget: "image" },
+                  { label: "Url", name: "url", widget: "string" },
+                  { label: "Description", name: "description", widget: "text" },
+                ],
+            }
+      - label: "About"
+        name: "about"
+        file: "pages/files/about.yml"
+        fields:
+          - { label: "Intro", name: "intro", widget: "markdown" }
+          - { label: "Description", name: "description", widget: "markdown" }
+          - {
+              label: "Skills",
+              name: "skill",
+              widget: "list",
+              hint: "Use comma to separate strings",
+              allow_add: true,
+              collapsed: true,
+            }
+          - {
+              label: "Selected Projects",
+              name: "selectedPj",
+              widget: "relation",
+              collection: "home",
+              search_fields: ["selectedProjects"],
+              value_field: "title",
+            }
+      - label: "Projects"
+        name: "projects"
+        file: "pages/files/projects.yml"
+        fields:
+          - {
+              label: Projects,
+              name: projects,
+              widget: "list",
+              allow_add: true,
+              collapsed: true,
+              fields:
+                [
+                  { label: "Title", name: "title", widget: "string" },
+                  { label: "Image", name: "image", widget: "image" },
+                  { label: "Description", name: "description", widget: "text" },
+                  { label: "Company", name: "company", widget: "string" },
+                  { label: "Date", name: "date", widget: "string" },
+                  { label: "Link", name: "link", widget: "string" },
+                  {
+                    label: "Text Block",
+                    name: "textBlock",
+                    widget: "list",
+                    allow_add: true,
+                    collapsed: true,
+                    fields:
+                      [
+                        {
+                          label: "Category",
+                          name: "category",
+                          widget: "string",
+                        },
+                        { label: "Body", name: "body", widget: "markdown" },
+                      ],
+                  },
+                ],
+            }
