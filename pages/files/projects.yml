@@ -1,0 +1,18 @@
+projects:
+  - title: STC
+    image: assets/images/stc.png
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+      accumsan neque. Orci varius natoque penatibus et magnis dis parturient
+      montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
+    company: STC
+    link: https://www.stc.com.kw/ar/
+    date: "2021"
+    textBlock:
+      - category: My Role
+        body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+          accumsan neque. Orci varius natoque penatibus et magnis dis parturient
+          montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
+      - category: The challenge
+        body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+          accumsan neque. Orci varius natoque penatibus et magnis dis parturient
+          montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
