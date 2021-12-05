@@ -9,12 +9,12 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 type Props = {
   image: string;
-  url: string;
+  slug: string;
   title: string;
   tags: string[];
 };
 
-const CaseStudy: React.FC<Props> = ({ image, url, title, tags }) => {
+const CaseStudy: React.FC<Props> = ({ image, slug, title, tags }) => {
   const ref = React.createRef<HTMLDivElement>();
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -42,7 +42,7 @@ const CaseStudy: React.FC<Props> = ({ image, url, title, tags }) => {
   };
 
   return (
-    <Link href={url}>
+    <Link href={slug}>
       <a className={styles.projWrap}>
         <article>
           <div className={styles.imgContainer}>

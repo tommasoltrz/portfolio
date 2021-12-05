@@ -46,8 +46,7 @@ type Props = {
   data: any;
 };
 const IndexPage: React.FC<Props> = ({ data }) => {
-  console.log(data);
-  const { aboutShort, selectedProjects, moreWorks } = data;
+  const { aboutShort, selectedProjects, moreWorksDesc, moreWorks } = data;
   useEffect(() => {
     gsap.set(".hero-text-line", { opacity: 1 });
     gsap.from(".hero-text-line", {
@@ -123,7 +122,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
             />
           </div>
           <div className={"col-12 col-sm-6 col-md-7"}>
-            <p className={styles.description}>{moreWorksData.description}</p>
+            <p className={styles.description}>{moreWorksDesc}</p>
             {moreWorks.map((work: any, idx: number) => (
               <Work {...work} key={"work" + idx} />
             ))}
