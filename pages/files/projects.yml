@@ -8,7 +8,7 @@ projects:
     link: https://www.stc.com.kw/ar/
     date: "2021"
     textBlock:
-      - category: My Role
+      - category: My role
         body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
@@ -16,3 +16,21 @@ projects:
         body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
+  - title: frogdesign
+    image: assets/images/frogdesign.png
+    description: >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+      accumsan neque. Orci varius natoque penatibus et magnis dis parturient
+      montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
+    company: Frog Design
+    date: "2021"
+    link: https://www.frogdesign.com/
+    textBlock:
+      - category: Te objective
+        body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+          accumsan neque. Orci varius natoque penatibus et magnis dis parturient
+          montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
+      - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+          accumsan neque. Orci varius natoque penatibus et magnis dis parturient
+          montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
+        category: My role
