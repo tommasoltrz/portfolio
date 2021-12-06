@@ -28,38 +28,54 @@ export type project = {
   }>;
 };
 
+export type selectedProject = {
+  title: string;
+  image: string;
+  slug: string;
+  tags: string[];
+};
+
 type Props = {
   data: project;
-  selectedPjs: any;
+  selectedPjs: selectedProject[];
   slug: string;
 };
 const ProjectPage: React.FC<Props> = ({ data, selectedPjs, slug }) => {
   const title = React.createRef<HTMLDivElement>();
   const imgForeground = React.createRef<HTMLDivElement>();
-  const [sProjects, setSProjects] = useState([]);
+  const [sProjects, setSProjects] = useState<Array<selectedProject>>();
 
   useEffect(() => {
-    const sPj = selectedPjs.filter(
-      (el: any) => el.slug !== `/projects/${slug}`
-    );
-    setSProjects(sPj);
+    if (selectedPjs) {
+      const sPj = selectedPjs.filter(
+        (el: any) => el.slug !== `/projects/${slug}`
+      );
+      setSProjects(sPj);
+      gsap.set(title.current, { opacity: 1 });
+      gsap.from(title.current, {
+        duration: 1,
+        yPercent: 100,
+        ease: "power4",
+        stagger: 0.1,
+        delay: 0.2,
+      });
+      gsap.to(imgForeground.current, {
+        duration: 1,
+        width: 0,
+        ease: "power4",
+        stagger: 0.1,
+        delay: 0.2,
+      });
+      const scrollMain = document.getElementById("scrollArea");
+      setTimeout(() => {
+        document.body.style.height = `${
+          scrollMain?.getBoundingClientRect().height
+        }px`;
+      }, 10);
+    }
+  }, [selectedPjs]);
 
-    gsap.set(title.current, { opacity: 1 });
-    gsap.from(title.current, {
-      duration: 1,
-      yPercent: 100,
-      ease: "power4",
-      stagger: 0.1,
-      delay: 0.2,
-    });
-    gsap.to(imgForeground.current, {
-      duration: 1,
-      width: 0,
-      ease: "power4",
-      stagger: 0.1,
-      delay: 0.2,
-    });
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <StoreProvider>
@@ -147,8 +163,9 @@ const ProjectPage: React.FC<Props> = ({ data, selectedPjs, slug }) => {
                 />
               </div>
               <div className={"col-12 col-sm-6 col-md-7"}>
-                {sProjects.length &&
-                  sProjects.map((work: any, idx: number) => (
+                {sProjects &&
+                  sProjects.length &&
+                  sProjects.map((work, idx: number) => (
                     <Work {...work} key={"work" + idx} />
                   ))}
               </div>
@@ -156,7 +173,7 @@ const ProjectPage: React.FC<Props> = ({ data, selectedPjs, slug }) => {
           </>
         )}
       </Layout>
-      {sProjects.length && (
+      {sProjects && sProjects.length && (
         <Cursor imgArray={sProjects.map((work: any) => work.image)} />
       )}
     </StoreProvider>
@@ -173,6 +190,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // const data = gePageData("projects");
 
   const selectedPjs = gePageData("homepage").selectedProjects;
+  // console.log(gePageData("homepage"));
+  // console.log("hey");
   return {
     props: {
       data,
