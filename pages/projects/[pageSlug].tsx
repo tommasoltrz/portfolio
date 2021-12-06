@@ -38,44 +38,28 @@ export type selectedProject = {
 type Props = {
   data: project;
   selectedPjs: selectedProject[];
-  slug: string;
 };
-const ProjectPage: React.FC<Props> = ({ data, selectedPjs, slug }) => {
+const ProjectPage: React.FC<Props> = ({ data, selectedPjs }) => {
   const title = React.createRef<HTMLDivElement>();
   const imgForeground = React.createRef<HTMLDivElement>();
-  const [sProjects, setSProjects] = useState<Array<selectedProject>>();
 
   useEffect(() => {
-    if (selectedPjs) {
-      const sPj = selectedPjs.filter(
-        (el: any) => el.slug !== `/projects/${slug}`
-      );
-      setSProjects(sPj);
-      gsap.set(title.current, { opacity: 1 });
-      gsap.from(title.current, {
-        duration: 1,
-        yPercent: 100,
-        ease: "power4",
-        stagger: 0.1,
-        delay: 0.2,
-      });
-      gsap.to(imgForeground.current, {
-        duration: 1,
-        width: 0,
-        ease: "power4",
-        stagger: 0.1,
-        delay: 0.2,
-      });
-      const scrollMain = document.getElementById("scrollArea");
-      setTimeout(() => {
-        document.body.style.height = `${
-          scrollMain?.getBoundingClientRect().height
-        }px`;
-      }, 10);
-    }
-  }, [selectedPjs]);
-
-  useEffect(() => {}, []);
+    gsap.set(title.current, { opacity: 1 });
+    gsap.from(title.current, {
+      duration: 1,
+      yPercent: 100,
+      ease: "power4",
+      stagger: 0.1,
+      delay: 0.2,
+    });
+    gsap.to(imgForeground.current, {
+      duration: 1,
+      width: 0,
+      ease: "power4",
+      stagger: 0.1,
+      delay: 0.2,
+    });
+  }, []);
 
   return (
     <StoreProvider>
@@ -163,19 +147,15 @@ const ProjectPage: React.FC<Props> = ({ data, selectedPjs, slug }) => {
                 />
               </div>
               <div className={"col-12 col-sm-6 col-md-7"}>
-                {sProjects &&
-                  sProjects.length &&
-                  sProjects.map((work, idx: number) => (
-                    <Work {...work} key={"work" + idx} />
-                  ))}
+                {selectedPjs.map((work, idx: number) => (
+                  <Work {...work} key={"work" + idx} />
+                ))}
               </div>
             </section>
           </>
         )}
       </Layout>
-      {sProjects && sProjects.length && (
-        <Cursor imgArray={sProjects.map((work: any) => work.image)} />
-      )}
+      <Cursor imgArray={selectedPjs.map((work: any) => work.image)} />
     </StoreProvider>
   );
 };
@@ -183,28 +163,30 @@ const ProjectPage: React.FC<Props> = ({ data, selectedPjs, slug }) => {
 export default ProjectPage;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const data = gePageData("projects").projects.filter(
+  const data = await gePageData("projects").projects.filter(
     (el: project) => el.title.toLowerCase() == params?.pageSlug
   )[0];
 
-  // const data = gePageData("projects");
+  const selectedPjs = await gePageData("homepage").selectedProjects.filter(
+    (el: any) => el.slug !== `/projects/${params?.pageSlug}`
+  );
 
-  const selectedPjs = gePageData("homepage").selectedProjects;
-  // console.log(gePageData("homepage"));
-  // console.log("hey");
   return {
     props: {
       data,
       selectedPjs,
-      slug: params?.pageSlug,
     },
-    notFound: !data,
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const slugs = await gePageData("homepage")
+    .selectedProjects.map((pj: selectedProject) => pj.slug)
+    .map((el: string) => el.split("/")[2]);
   return {
-    paths: [{ params: { pageSlug: "stc" } }],
-    fallback: true,
+    paths: slugs.map((el: string) => {
+      return { params: { pageSlug: el } };
+    }),
+    fallback: false,
   };
 };
