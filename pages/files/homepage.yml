@@ -28,10 +28,10 @@ selectedProjects:
 moreWorksDesc: This is a collection of smaller or older project that I worked on. Some even unrelated to web dev.
 moreWorks:
   - title: Knots Analytics
-    image: assets/allvest.png
+    image: assets/images/allvest.png
     url: https://knotsanalytics.com/
     description: Website
   - title: Knots Analytics
     description: Website
     url: https://knotsanalytics.com/
-    image: assets/images/allvest.png
+    image: assets/images/stc.png

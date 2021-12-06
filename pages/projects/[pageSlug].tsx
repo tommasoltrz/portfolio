@@ -13,6 +13,7 @@ import { gePageData } from "../../components/pages";
 import StaggeredTitle from "../../components/StaggeredTitle/StaggeredTitle";
 import Work from "../../components/Work/Work";
 import ReactMarkdown from "react-markdown";
+import Cursor from "../../components/Cursor/Cursor";
 
 export type project = {
   title: string;
@@ -131,6 +132,7 @@ const projectPage: React.FC<Props> = ({ data, selectedPjs }) => {
           </div>
         </section>
       </Layout>
+      <Cursor imgArray={selectedPjs.map((work: any) => work.image)} />
     </StoreProvider>
   );
 };
@@ -139,8 +141,7 @@ export default projectPage;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const data = gePageData("projects").projects.filter(
-    // @ts-ignore
-    (el: project) => el.title.toUpperCase() == params?.pageSlug?.toUpperCase()
+    (el: project) => el.title.toLowerCase() == params?.pageSlug
   )[0];
   const selectedPjs = gePageData("homepage").selectedProjects.filter(
     (el: any) => el.slug !== `/projects/${params?.pageSlug}`

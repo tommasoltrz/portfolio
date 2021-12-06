@@ -12,28 +12,8 @@ import RoundLink from "../../components/RoundLink/RoundLink";
 import { GetStaticProps } from "next";
 import { gePageData } from "../../components/pages";
 import ReactMarkdown from "react-markdown";
+import Cursor from "../../components/Cursor/Cursor";
 
-const skillsData = [
-  "JS, ES6",
-  "React",
-  "Angular 2+",
-
-  "Next.js",
-  "Gatsby",
-  "GIT",
-
-  "Three.js",
-  "Gsap",
-  "D3",
-
-  "Contentful",
-  "Netlify",
-  "AWS",
-
-  "Figma",
-  "Sketch",
-  "Adobe Suite",
-];
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
@@ -68,7 +48,7 @@ const About: React.FC<Props> = ({ data, projData }) => {
             </div>
             <div
               className={
-                "col-12 col-start-sm-3 col-end-sm-12 col-start-md-3 col-end-md-12 col-start-lg-6 col-end-lg-12"
+                "col-12 col-start-sm-3 col-end-sm-12 col-start-md-3 col-end-md-12 col-start-lg-5 col-end-lg-12"
               }
             >
               <ReactMarkdown className="fade-in-up">{intro}</ReactMarkdown>
@@ -126,6 +106,7 @@ const About: React.FC<Props> = ({ data, projData }) => {
           </div>
         </section>
       </Layout>
+      <Cursor imgArray={projData.map((work: any) => work.image)} />
     </StoreProvider>
   );
 };

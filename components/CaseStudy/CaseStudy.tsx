@@ -49,7 +49,7 @@ const CaseStudy: React.FC<Props> = ({ image, slug, title, tags }) => {
             <img
               src={image}
               alt={title}
-              className={cn(styles.pgImage, "js-img")}
+              className={cn(styles.pgImage, "js-img selected-pj-img")}
               onLoad={() => onImgLoaded()}
             />
 

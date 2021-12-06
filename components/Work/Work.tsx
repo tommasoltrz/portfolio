@@ -27,7 +27,7 @@ const Work: React.FC<Props> = ({
   return (
     <a
       href={url || slug}
-      className={cn(styles.work, "fade-in-up")}
+      className={cn(styles.work, "fade-in-up", "work-proj")}
       target={url ? "_blank" : "_self"}
       rel="noreferrer"
     >

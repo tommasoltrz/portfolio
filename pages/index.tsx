@@ -16,6 +16,7 @@ import Link from "next/link";
 import { ScrollTriggerProxy } from "../components/ScrollTriggerProxy/ScrollTriggerProxy";
 import { GetStaticProps } from "next";
 import { gePageData } from "../components/pages";
+import Cursor from "../components/Cursor/Cursor";
 
 const floatingLinksData = [
   {
@@ -125,7 +126,8 @@ const IndexPage: React.FC<Props> = ({ data }) => {
           </div>
         </section>
       </Layout>
-      {/* <Three /> */}
+      <Three />
+      <Cursor imgArray={moreWorks.map((work: any) => work.image)} />
     </StoreProvider>
   );
 };

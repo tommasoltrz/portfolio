@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import Navigation from "../Navigation/Navigation";
 import Footer from "../Footer/Footer";
 import { gsap } from "gsap/dist/gsap";
+import Cursor from "../Cursor/Cursor";
 type Props = {};
 
 const Layout: React.FC<Props> = ({ children }) => {
@@ -52,6 +53,7 @@ const Layout: React.FC<Props> = ({ children }) => {
         id="scrollArea"
       >
         <Navigation />
+
         {children}
         <Footer />
       </main>
