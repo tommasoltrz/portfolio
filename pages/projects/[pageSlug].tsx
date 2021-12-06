@@ -32,6 +32,27 @@ type Props = {
   selectedPjs: any;
 };
 const projectPage: React.FC<Props> = ({ data, selectedPjs }) => {
+  const title = React.createRef<HTMLDivElement>();
+  const imgForeground = React.createRef<HTMLDivElement>();
+
+  useEffect(() => {
+    gsap.set(title.current, { opacity: 1 });
+    gsap.from(title.current, {
+      duration: 1,
+      yPercent: 100,
+      ease: "power4",
+      stagger: 0.1,
+      delay: 0.2,
+    });
+    gsap.to(imgForeground.current, {
+      duration: 1,
+      width: 0,
+      ease: "power4",
+      stagger: 0.1,
+      delay: 0.2,
+    });
+  }, []);
+
   return (
     <StoreProvider>
       <ScrollTriggerProxy />
@@ -40,20 +61,26 @@ const projectPage: React.FC<Props> = ({ data, selectedPjs }) => {
           <div className={styles.prjTitleContainer}>
             <h1 className={styles.title}>
               <span>
-                <span className={"hero-text-line"}>{data.title}</span>
+                <span ref={title} className={styles.titleSpan}>
+                  {data.title}
+                </span>
               </span>
             </h1>
             <div
               className={styles.imageContainer}
               style={{ backgroundImage: `url(../../${data.image})` }}
-            ></div>
+            >
+              <div ref={imgForeground} className={styles.imgForeground}></div>
+            </div>
           </div>
           <div className={cn("col-12", styles.description)}>
-            <h4>{data.description}</h4>
+            <h4 className="fade-in-up">{data.description}</h4>
           </div>
-          <div className={cn("grid no-pad", styles.bottomTitleSection)}>
+          <div
+            className={cn("grid no-pad fade-in-up", styles.bottomTitleSection)}
+          >
             <div className={"col-12 col-sm-4 col-lg-3"}>
-              <p className={cn("small", styles.label)}>Client</p>
+              <p className={cn("small ", styles.label)}>Client</p>
               <p className={styles.keyFact}>{data.company}</p>
             </div>
             <div className={"col-12 col-sm-4 col-lg-3"}>

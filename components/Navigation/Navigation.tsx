@@ -6,18 +6,20 @@ import { gsap } from "gsap";
 import { useEffect } from "react";
 
 const Navigation = () => {
-  useEffect(() => {
-    gsap.set(".nav-el", { opacity: 1 });
+  const navigation = React.createRef<HTMLDivElement>();
 
-    gsap.from(".nav-el", {
-      duration: 1.2,
-      yPercent: -500,
+  useEffect(() => {
+    gsap.to(".nav-el", {
+      duration: 1,
+      opacity: 1,
+      yPercent: 100,
       ease: "power4",
-      stagger: -0.03,
+      delay: 0.5,
+      stagger: 0.1,
     });
   }, []);
   return (
-    <nav className={styles.nav}>
+    <nav className={styles.nav} ref={navigation}>
       <Link href="/">
         <a className={cn("nav-el")}>Home</a>
       </Link>

@@ -21,8 +21,16 @@
   }
   .title {
     margin-bottom: 32px;
+
     @media only screen and (min-width: $breakpoint-md) {
       margin-bottom: 0;
+    }
+    span {
+      overflow: hidden;
+      display: block;
+      .titleSpan {
+        opacity: 0;
+      }
     }
   }
 
@@ -47,6 +55,12 @@
     @media only screen and (min-width: $breakpoint-lg) {
     }
     @media only screen and (min-width: $breakpoint-xl) {
+    }
+
+    .imgForeground {
+      background-color: $white;
+      height: 100%;
+      width: 100%;
     }
   }
 }
