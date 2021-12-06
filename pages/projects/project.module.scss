@@ -1,0 +1,137 @@
+@import "../../styles/variables.scss";
+
+.prjTitleContainer {
+  display: flex;
+
+  width: 100%;
+  padding: 70px 0 70px 0;
+  position: relative;
+  flex-direction: column;
+  @media only screen and (min-width: $breakpoint-sm) {
+    padding: 120px 0 90px 0;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    padding: 180px 0;
+  }
+  @media only screen and (min-width: $breakpoint-lg) {
+    padding: 180px 0;
+  }
+  @media only screen and (min-width: $breakpoint-xl) {
+    padding: 220px 0;
+  }
+  .title {
+    margin-bottom: 32px;
+    @media only screen and (min-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+  }
+
+  .imageContainer {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    @media only screen and (min-width: $breakpoint-sm) {
+      height: 450px;
+    }
+    @media only screen and (min-width: $breakpoint-md) {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      height: 80%;
+      width: 600px;
+      transform: translateY(-50%);
+    }
+    @media only screen and (min-width: $breakpoint-lg) {
+    }
+    @media only screen and (min-width: $breakpoint-xl) {
+    }
+  }
+}
+.description {
+  margin-top: 0;
+  margin-bottom: 32px;
+  @media only screen and (min-width: $breakpoint-sm) {
+    margin-top: 0;
+    margin-bottom: 64px;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+}
+.bottomTitleSection {
+  border-bottom: 1px solid $light-grey;
+  padding-bottom: 0;
+  @media only screen and (min-width: $breakpoint-sm) {
+    padding-bottom: 64px;
+  }
+  p.label {
+    margin-bottom: 8px;
+    font-family: $font-extra-light;
+  }
+  p.keyFact {
+    margin-bottom: 16px;
+    font-family: $font-regular;
+    margin-bottom: 32px;
+    @media only screen and (min-width: $breakpoint-sm) {
+      margin-bottom: 0;
+    }
+  }
+}
+.projDetailsSection {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  position: relative;
+
+  @media only screen and (min-width: $breakpoint-sm) {
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    margin-top: 90px;
+    margin-bottom: 120px;
+  }
+
+  .detailLabel {
+    margin-bottom: 16px;
+  }
+  .detailBody {
+    margin-bottom: 64px;
+    @media only screen and (min-width: $breakpoint-md) {
+      margin-bottom: 96px;
+    }
+  }
+  .divider {
+    border-bottom: 1px solid $light-grey;
+  }
+}
+
+.moreWorksSection {
+  margin-top: 90px;
+  margin-bottom: 70px;
+  position: relative;
+
+  @media only screen and (min-width: $breakpoint-sm) {
+    margin-top: 120px;
+    margin-bottom: 90px;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    margin-top: 160px;
+    margin-bottom: 120px;
+  }
+  .description {
+    margin-bottom: 35px;
+    margin-top: 35px;
+    @media only screen and (min-width: $breakpoint-sm) {
+      margin-bottom: 45px;
+      margin-top: 45px;
+    }
+    @media only screen and (min-width: $breakpoint-md) {
+      margin-bottom: 60px;
+      margin-top: 60px;
+    }
+  }
+}

@@ -86,6 +86,14 @@ h4 {
     font-size: 32px;
   }
 }
+h5 {
+  font-size: 20px;
+  line-height: 1;
+  font-family: $font-regular;
+  @media only screen and (min-width: $breakpoint-md) {
+    font-size: 24px;
+  }
+}
 
 p {
   font-family: $font-light;

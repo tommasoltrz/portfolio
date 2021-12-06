@@ -41,16 +41,17 @@ type Props = {
   projData: any;
 };
 const About: React.FC<Props> = ({ data, projData }) => {
-  console.log(data);
   const { intro, description, skill } = data;
   const refTitle = React.createRef<HTMLSpanElement>();
   useEffect(() => {
-    gsap.from(refTitle.current, {
-      duration: 1,
-      yPercent: 100,
-      ease: "power4",
-      delay: 0.2,
-    });
+    if (refTitle.current) {
+      gsap.from(refTitle.current, {
+        duration: 1,
+        yPercent: 100,
+        ease: "power4",
+        delay: 0.2,
+      });
+    }
   }, []);
 
   return (

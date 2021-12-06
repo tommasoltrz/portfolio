@@ -38,10 +38,6 @@ const floatingLinksData = [
   },
 ];
 
-const moreWorksData = {
-  description:
-    "This is a collection of smaller or older project that I worked on. Some even unrelated to web dev.",
-};
 type Props = {
   data: any;
 };
