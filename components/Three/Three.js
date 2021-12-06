@@ -155,6 +155,7 @@ const Three = () => {
   useEffect(() => {
     setTouchDevice("ontouchstart" in window);
     setCollection(Array.from(document.getElementsByClassName("js-img")));
+    // TODO replace this and run it when scroll stops
     setTimeout(() => {
       setLoaded(true);
     }, 1000);

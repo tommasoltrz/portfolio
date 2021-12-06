@@ -164,7 +164,8 @@ export default ProjectPage;
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const data = await gePageData("projects").projects.filter(
-    (el: project) => el.title.toLowerCase() == params?.pageSlug
+    // @ts-ignore
+    (el: project) => el.title.toLowerCase() == params?.pageSlug?.toLowerCase()
   )[0];
 
   const selectedPjs = await gePageData("homepage").selectedProjects.filter(

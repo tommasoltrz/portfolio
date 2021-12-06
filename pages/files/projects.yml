@@ -1,7 +1,8 @@
 projects:
   - title: STC
     image: assets/images/stc.png
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+    description:
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
       accumsan neque. Orci varius natoque penatibus et magnis dis parturient
       montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
     company: STC
@@ -9,11 +10,13 @@ projects:
     date: "2021"
     textBlock:
       - category: My role
-        body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+        body:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
       - category: The challenge
-        body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+        body:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
   - title: frogdesign
@@ -27,10 +30,12 @@ projects:
     link: https://www.frogdesign.com/
     textBlock:
       - category: Te objective
-        body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+        body:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
-      - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+      - body:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
         category: My role
@@ -44,20 +49,23 @@ projects:
     date: "2020"
     link: https://asthmareferid.com
     textBlock:
-      - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+      - body:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
         category: My role
   - title: Allvest
     image: assets/images/allvest.png
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+    description:
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
       accumsan neque. Orci varius natoque penatibus et magnis dis parturient
       montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
     company: Allianz
     date: "2019"
-    link: https://www.allvest.de/de/av/home
+    link: https://www.allvest.de
     textBlock:
-      - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+      - body:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
         category: My role
