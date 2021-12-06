@@ -8,24 +8,23 @@ type Props = {
 };
 
 const Cursor: React.FC<Props> = ({ imgArray }) => {
+  const { mouse } = useContext(Context);
   const isMobile = () => {
     const ua = navigator.userAgent;
     return /Android|Mobi/i.test(ua);
   };
-  if (typeof navigator !== "undefined" && isMobile()) return null;
-  const { mouse } = useContext(Context);
+  useEffect(() => {
+    addEventListeners();
+    handleLinkHoverEvents();
+    return () => removeEventListeners();
+  }, []);
+
   const [clicked, setClicked] = useState(false);
   const [linkHovered, setLinkHovered] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [projLinkHovered, setProjLinkHovered] = useState(false);
   const [workLinkHovered, setWorkLinkHovered] = useState(false);
   const [activeIdx, setActiveIdx] = useState(-1);
-
-  useEffect(() => {
-    addEventListeners();
-    handleLinkHoverEvents();
-    return () => removeEventListeners();
-  }, []);
 
   const addEventListeners = () => {
     document.addEventListener("mouseenter", onMouseEnter);
@@ -98,6 +97,7 @@ const Cursor: React.FC<Props> = ({ imgArray }) => {
     [styles.cursor_proj_link_hovered]: projLinkHovered,
     [styles.cursor_work_link_hovered]: workLinkHovered,
   });
+  if (typeof navigator !== "undefined" && isMobile()) return null;
 
   return (
     <>
