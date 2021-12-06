@@ -28,9 +28,9 @@ const Navigation = () => {
         <a className={cn(styles.aboutLink, styles.navLink, "nav-el")}>About</a>
       </Link>
 
-      <Link href="/about">
+      {/* <Link href="/about">
         <a className={cn(styles.navLink, "nav-el")}>Works</a>
-      </Link>
+      </Link> */}
 
       <div className={styles.ddContainer}>
         <p className={cn(styles.ddTitle, "small", "nav-el")}>Connect</p>

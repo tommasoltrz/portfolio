@@ -17,7 +17,7 @@ const Footer: React.FC<Props> = ({}) => {
             classname={styles.footerTitle}
           />
           <RoundLink
-            label={"Write an Email"}
+            label={"Fire me an Email"}
             url={"mailto:tommasoltrz@gmail.com"}
           />
         </div>

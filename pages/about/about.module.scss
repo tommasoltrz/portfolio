@@ -16,9 +16,12 @@
     padding: 220px 0 100px 0;
   }
 
-  h1 {
+  .title {
     margin-bottom: 80px;
     font-family: $font-medium;
+    @media only screen and (min-width: $breakpoint-md) {
+      margin-bottom: 120px;
+    }
     span {
       display: block;
       overflow: hidden;
