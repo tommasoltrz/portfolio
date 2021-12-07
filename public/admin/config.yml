@@ -34,6 +34,11 @@ collections:
                 ],
             }
           - {
+              label: "NDA disclaimer",
+              name: "ndaDisclaimer",
+              widget: "markdown",
+            }
+          - {
               label: "More works description",
               name: "moreWorksDesc",
               widget: "text",

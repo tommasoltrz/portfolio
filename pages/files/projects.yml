@@ -6,17 +6,19 @@ projects:
       and implement the entire ecosystem of web and mobile apps. Which was done
       by creating a whole new Design Language System (DLS)."
     company: STC
-    link: https://www.stc.com.kw/en/
+    link: https://www.stc.com.kw/en
     date: "2021"
     textBlock:
       - category: Objectives
-        body: The newly desigend DLS needed to be translated into code and implemented
+        body:
+          The newly desigend DLS needed to be translated into code and implemented
           across three different touchpoints. A mobile app and two websites (one
           for businesses and one for customers). To do so we created a react
           component based library and used it to create the three backend driven
           touchpoints.
       - category: My role
-        body: In a team made mostly of contractors, I was the only in house front-end
+        body:
+          In a team made mostly of contractors, I was the only in house front-end
           developer working on the websites. As such I was in charge of
           enforcing best practices, writing code reviews, and working with the
           designers to avoid inconsistencies and make the life of my team
@@ -41,9 +43,11 @@ projects:
       - SCSS
       - Storybook
       - Typescript
+      - i18n
   - title: frogdesign
     image: assets/images/frogdesign.png
-    description: "#### Frog Design went through a big rebranding, and put a lot of
+    description:
+      "#### Frog Design went through a big rebranding, and put a lot of
       emphasis on its taglines: ***Make Your Mark*** and ***Make Bolder
       Choices***. The new design reflect these concepts by using bright colors
       and strong animations."
@@ -61,7 +65,8 @@ projects:
 
 
           The project led up to the big launch of the key pages of the website, including the home one.
-      - body: As the only developer on this project, I worked closely with the designers
+      - body:
+          As the only developer on this project, I worked closely with the designers
           informing them of opportunities and limitations of the stack, and
           prototyping animations and interactions. I then took care of the
           implementation on both the front-end and the back-end.
@@ -82,20 +87,23 @@ projects:
     date: "2020"
     link: https://asthmareferid.com
     textBlock:
-      - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+      - body:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
         category: My role
   - title: Allvest
     image: assets/images/allvest.png
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+    description:
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
       accumsan neque. Orci varius natoque penatibus et magnis dis parturient
       montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
     company: Allianz
     date: "2019"
     link: https://www.allvest.de
     textBlock:
-      - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+      - body:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
         category: My role

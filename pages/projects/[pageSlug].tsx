@@ -38,9 +38,9 @@ export type selectedProject = {
 
 type Props = {
   data: project;
-  selectedPjs: selectedProject[];
+  moreProjs: selectedProject[];
 };
-const ProjectPage: React.FC<Props> = ({ data, selectedPjs }) => {
+const ProjectPage: React.FC<Props> = ({ data, moreProjs }) => {
   const title = React.createRef<HTMLDivElement>();
   const imgForeground = React.createRef<HTMLDivElement>();
 
@@ -84,7 +84,9 @@ const ProjectPage: React.FC<Props> = ({ data, selectedPjs }) => {
               </div>
             </div>
             <div className={cn("col-12", styles.description)}>
-              <h4 className="fade-in-up">{data.description}</h4>
+              <ReactMarkdown className="fade-in-up">
+                {data.description}
+              </ReactMarkdown>
             </div>
             <div
               className={cn(
@@ -153,20 +155,20 @@ const ProjectPage: React.FC<Props> = ({ data, selectedPjs }) => {
           <section className={cn("grid", styles.moreWorksSection)}>
             <div className={"col-12 col-sm-6 col-md-5"}>
               <StaggeredTitle
-                label1="Selected"
+                label1="More"
                 label2="Projects"
                 classname={styles.projTitle}
               />
             </div>
             <div className={"col-12 col-sm-6 col-md-7"}>
-              {selectedPjs.map((work, idx: number) => (
+              {moreProjs.map((work, idx: number) => (
                 <Work {...work} key={"work" + idx} />
               ))}
             </div>
           </section>
         </>
       </Layout>
-      <Cursor imgArray={selectedPjs.map((work: any) => work.image)} />
+      <Cursor imgArray={moreProjs.map((work: any) => work.image)} />
     </StoreProvider>
   );
 };
@@ -179,14 +181,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     (el: project) => el.title.toLowerCase() == params?.pageSlug?.toLowerCase()
   )[0];
 
-  const selectedPjs = await gePageData("homepage").selectedProjects.filter(
+  const homeData = await gePageData("homepage");
+  const selectedPjs = homeData.selectedProjects.filter(
     (el: any) => el.slug !== `/projects/${params?.pageSlug}`
   );
+  const works = homeData.moreWorks;
+  const moreProjs = [...selectedPjs, ...works];
 
   return {
     props: {
       data,
-      selectedPjs,
+      moreProjs,
     },
   };
 };

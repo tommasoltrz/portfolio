@@ -39,7 +39,9 @@ const Work: React.FC<Props> = ({
             <div className={styles.arrowBg}></div>
           </div>
         </div>
-        {description && <p className={"small "}>{description}</p>}
+        {description && (
+          <p className={cn("small", styles.desc)}>{description}</p>
+        )}
         {tags && (
           <div className={styles.tagContainer}>
             {tags.map((tag, ix) => (

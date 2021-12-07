@@ -17,6 +17,7 @@ import { ScrollTriggerProxy } from "../components/ScrollTriggerProxy/ScrollTrigg
 import { GetStaticProps } from "next";
 import { gePageData } from "../components/pages";
 import Cursor from "../components/Cursor/Cursor";
+import ReactMarkdown from "react-markdown";
 
 const floatingLinksData = [
   {
@@ -43,7 +44,13 @@ type Props = {
   data: any;
 };
 const IndexPage: React.FC<Props> = ({ data }) => {
-  const { aboutShort, selectedProjects, moreWorksDesc, moreWorks } = data;
+  const {
+    aboutShort,
+    selectedProjects,
+    moreWorksDesc,
+    moreWorks,
+    ndaDisclaimer,
+  } = data;
   useEffect(() => {
     gsap.set(".hero-text-line", { opacity: 1 });
     gsap.from(".hero-text-line", {
@@ -97,17 +104,32 @@ const IndexPage: React.FC<Props> = ({ data }) => {
             </Link>
           </div>
         </section>
-        <section className={styles.selectedWorkContainer}>
-          <MasonryGrid>
-            <StaggeredTitle
-              label1="Selected"
-              label2="Projects"
-              classname={styles.projTitle}
-            />
+        <section className={cn("", styles.selectedWorkContainer)}>
+          <div className="grid">
+            <div className={"col-12 "}>
+              <StaggeredTitle
+                label1="Selected"
+                label2="Projects"
+                classname={styles.projTitle}
+              />
+            </div>
+
             {selectedProjects.map((proj: any, idx: number) => (
-              <CaseStudy {...proj} key={"proj" + idx} />
+              <div
+                key={"proj" + idx}
+                className={cn("col-12 col-sm-6", {
+                  [styles.offsetCol]: idx === 1,
+                })}
+              >
+                <CaseStudy {...proj} />
+              </div>
             ))}
-          </MasonryGrid>
+            <div className={"col-12 col-sm-6 "}>
+              <ReactMarkdown className={cn("fade-in-up", styles.nda)}>
+                {ndaDisclaimer}
+              </ReactMarkdown>
+            </div>
+          </div>
         </section>
 
         <section className={cn("grid", styles.moreWorksSection)}>

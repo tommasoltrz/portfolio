@@ -84,18 +84,32 @@
 
 .selectedWorkContainer {
   background-color: $off-white;
-  padding: 70px 0;
+  padding-top: 70px;
+  padding-bottom: 70px;
   @media only screen and (min-width: $breakpoint-sm) {
-    padding: 90px 0;
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
   @media only screen and (min-width: $breakpoint-md) {
-    padding: 120px 0;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
   .projTitle {
     margin-bottom: 40px;
     @media only screen and (min-width: $breakpoint-md) {
       margin-bottom: 54px;
+    }
+  }
+  .offsetCol {
+    @media only screen and (min-width: $breakpoint-sm) {
+      margin-top: -60px;
+    }
+  }
+  .nda {
+    margin-top: 32px;
+    @media only screen and (min-width: $breakpoint-sm) {
+      margin-top: 60px;
     }
   }
 }
