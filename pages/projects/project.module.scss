@@ -118,6 +118,14 @@
       margin-bottom: 96px;
     }
   }
+
+  p {
+    margin-bottom: 24px;
+    @media only screen and (min-width: $breakpoint-md) {
+      margin-bottom: 32px;
+    }
+  }
+
   .divider {
     border-bottom: 1px solid $light-grey;
   }

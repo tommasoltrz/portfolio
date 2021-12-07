@@ -23,6 +23,7 @@ const Imager = React.memo(({ img, wSize }) => {
   const texture = useLoader(THREE.TextureLoader, img.src);
   const elHeight = rec.height;
   const elWidth = rec.width;
+
   useEffect(() => {
     setRec(img.getBoundingClientRect());
     img.style.opacity = 0;
@@ -37,7 +38,7 @@ const Imager = React.memo(({ img, wSize }) => {
       a2 = elHeight / elWidth / imageAspect;
     }
 
-    texture.needsUpdate = true;
+    texture.needsUpdate = false;
     ref.current.resolution.x = wSize.w;
     ref.current.resolution.y = wSize.h;
     ref.current.resolution.z = a1;

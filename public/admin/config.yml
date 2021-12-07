@@ -85,6 +85,14 @@ collections:
                   { label: "Date", name: "date", widget: "string" },
                   { label: "Link", name: "link", widget: "string" },
                   {
+                    label: "Skills",
+                    name: "skill",
+                    widget: "list",
+                    hint: "Use comma to separate strings",
+                    allow_add: true,
+                    collapsed: true,
+                  },
+                  {
                     label: "Text Block",
                     name: "textBlock",
                     widget: "list",

@@ -126,7 +126,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
           </div>
         </section>
       </Layout>
-      <Three />
+      {/* <Three /> */}
       <Cursor imgArray={moreWorks.map((work: any) => work.image)} />
     </StoreProvider>
   );
