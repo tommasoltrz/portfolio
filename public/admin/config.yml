@@ -80,13 +80,17 @@ collections:
                 [
                   { label: "Title", name: "title", widget: "string" },
                   { label: "Image", name: "image", widget: "image" },
-                  { label: "Description", name: "description", widget: "text" },
+                  {
+                    label: "Description",
+                    name: "description",
+                    widget: "markdown",
+                  },
                   { label: "Company", name: "company", widget: "string" },
                   { label: "Date", name: "date", widget: "string" },
                   { label: "Link", name: "link", widget: "string" },
                   {
-                    label: "Skills",
-                    name: "skill",
+                    label: "Stack",
+                    name: "stack",
                     widget: "list",
                     hint: "Use comma to separate strings",
                     allow_add: true,

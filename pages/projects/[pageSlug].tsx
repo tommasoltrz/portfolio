@@ -22,6 +22,7 @@ export type project = {
   company: string;
   link: string;
   date: string;
+  stack: string[];
   textBlock: Array<{
     category: string;
     body: string;
@@ -65,95 +66,105 @@ const ProjectPage: React.FC<Props> = ({ data, selectedPjs }) => {
     <StoreProvider>
       <ScrollTriggerProxy />
       <Layout>
-        {data && (
-          <>
-            <section className={cn("grid", styles.prjTitleSection)}>
-              <div className={styles.prjTitleContainer}>
-                <h1 className={styles.title}>
-                  <span>
-                    <span ref={title} className={styles.titleSpan}>
-                      {data.title}
-                    </span>
+        <>
+          <section className={cn("grid", styles.prjTitleSection)}>
+            <div className={styles.prjTitleContainer}>
+              <h1 className={styles.title}>
+                <span>
+                  <span ref={title} className={styles.titleSpan}>
+                    {data.title}
                   </span>
-                </h1>
-                <div
-                  className={styles.imageContainer}
-                  style={{ backgroundImage: `url(../../${data.image})` }}
-                >
-                  <div
-                    ref={imgForeground}
-                    className={styles.imgForeground}
-                  ></div>
-                </div>
-              </div>
-              <div className={cn("col-12", styles.description)}>
-                <h4 className="fade-in-up">{data.description}</h4>
-              </div>
+                </span>
+              </h1>
               <div
-                className={cn(
-                  "grid no-pad fade-in-up",
-                  styles.bottomTitleSection
-                )}
+                className={styles.imageContainer}
+                style={{ backgroundImage: `url(../../${data.image})` }}
               >
-                <div className={"col-12 col-sm-4 col-lg-3"}>
-                  <p className={cn("small ", styles.label)}>Client</p>
-                  <p className={styles.keyFact}>{data.company}</p>
-                </div>
-                <div className={"col-12 col-sm-4 col-lg-3"}>
-                  <p className={cn("small", styles.label)}>Project date</p>
-                  <p className={styles.keyFact}>{data.date}</p>
-                </div>
-                <div className={"col-12 col-sm-4 col-lg-3"}>
-                  <p className={cn("small", styles.label)}>Project Link</p>
-                  <p className={styles.keyFact}>
-                    <a href={data.link} rel="noreferrer" target="_blank">
-                      {data.link}
-                    </a>
-                  </p>
-                </div>
+                <div ref={imgForeground} className={styles.imgForeground}></div>
               </div>
-            </section>
-            <section className={cn("grid", styles.projDetailsSection)}>
-              {data.textBlock.map((block, idx) => (
-                <React.Fragment key={idx}>
-                  <div
-                    className={cn(
-                      "col-12 col-md-3 col-lg-4",
-                      styles.detailLabel
-                    )}
-                  >
-                    <h5 className="fade-in-up">{block.category}</h5>
-                  </div>
-                  <div
-                    className={cn(
-                      "col-12 col-md-9 col-lg-8",
-                      styles.detailBody
-                    )}
-                  >
-                    <ReactMarkdown className="fade-in-up">
-                      {block.body}
-                    </ReactMarkdown>
-                  </div>
-                </React.Fragment>
+            </div>
+            <div className={cn("col-12", styles.description)}>
+              <h4 className="fade-in-up">{data.description}</h4>
+            </div>
+            <div
+              className={cn(
+                "grid no-pad fade-in-up",
+                styles.bottomTitleSection
+              )}
+            >
+              <div className={"col-12 col-sm-4 col-lg-3"}>
+                <p className={cn("small ", styles.label)}>Client</p>
+                <p className={styles.keyFact}>{data.company}</p>
+              </div>
+              <div className={"col-12 col-sm-4 col-lg-3"}>
+                <p className={cn("small", styles.label)}>Project date</p>
+                <p className={styles.keyFact}>{data.date}</p>
+              </div>
+              <div className={"col-12 col-sm-4 col-lg-3"}>
+                <p className={cn("small", styles.label)}>Project Link</p>
+                <p className={styles.keyFact}>
+                  <a href={data.link} rel="noreferrer" target="_blank">
+                    {data.link}
+                  </a>
+                </p>
+              </div>
+            </div>
+          </section>
+          <section className={cn("grid", styles.projDetailsSection)}>
+            {data.textBlock.map((block, idx) => (
+              <React.Fragment key={idx}>
+                <div
+                  className={cn("col-12 col-md-3 col-lg-4", styles.detailLabel)}
+                >
+                  <h5 className="fade-in-up">{block.category}</h5>
+                </div>
+                <div
+                  className={cn("col-12 col-md-9 col-lg-8", styles.detailBody)}
+                >
+                  <ReactMarkdown className="fade-in-up">
+                    {block.body}
+                  </ReactMarkdown>
+                </div>
+              </React.Fragment>
+            ))}
+            {data.stack && (
+              <>
+                <div
+                  className={cn("col-12 col-md-3 col-lg-4", styles.detailLabel)}
+                >
+                  <h5 className="fade-in-up">Stack</h5>
+                </div>
+                <div
+                  className={cn("col-12 col-md-9 col-lg-8", styles.skillsGrid)}
+                >
+                  {data.stack.map((tool: any, idx: number) => (
+                    <div
+                      className={cn(styles.skillsCell, "fade-in-up")}
+                      key={"stack" + idx}
+                    >
+                      <p>{tool}</p>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+            <div className={cn("col-12", styles.divider)}></div>
+          </section>
+          <section className={cn("grid", styles.moreWorksSection)}>
+            <div className={"col-12 col-sm-6 col-md-5"}>
+              <StaggeredTitle
+                label1="Selected"
+                label2="Projects"
+                classname={styles.projTitle}
+              />
+            </div>
+            <div className={"col-12 col-sm-6 col-md-7"}>
+              {selectedPjs.map((work, idx: number) => (
+                <Work {...work} key={"work" + idx} />
               ))}
-              <div className={cn("col-12", styles.divider)}></div>
-            </section>
-            <section className={cn("grid", styles.moreWorksSection)}>
-              <div className={"col-12 col-sm-6 col-md-5"}>
-                <StaggeredTitle
-                  label1="Selected"
-                  label2="Projects"
-                  classname={styles.projTitle}
-                />
-              </div>
-              <div className={"col-12 col-sm-6 col-md-7"}>
-                {selectedPjs.map((work, idx: number) => (
-                  <Work {...work} key={"work" + idx} />
-                ))}
-              </div>
-            </section>
-          </>
-        )}
+            </div>
+          </section>
+        </>
       </Layout>
       <Cursor imgArray={selectedPjs.map((work: any) => work.image)} />
     </StoreProvider>

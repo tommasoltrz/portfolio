@@ -1,14 +1,15 @@
-aboutShort: Hi 👋, I am an Italian web developer moving pixels in the www. I
-  specialise in building, and sometime designing, digital experiences. Currently
-  working at frog.
+aboutShort:
+  Hi 👋, I am an Italian web developer moving pixels in the www. I have
+  5 years of experience in building, and sometime designing, digital experiences.
+  Currently working at frog.
 selectedProjects:
   - title: STC - Telcom
     image: assets/images/stc.png
     slug: /projects/stc
     tags:
-      - Website
+      - Webapp
       - Design-Language-System
-  - title: Frogdesign
+  - title: Frog Rebranding
     image: assets/images/frogdesign6.jpg
     slug: /projects/frogdesign
     tags:

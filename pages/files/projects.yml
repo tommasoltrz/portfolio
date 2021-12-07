@@ -10,13 +10,15 @@ projects:
     date: "2021"
     textBlock:
       - category: Objectives
-        body: The newly desigend DLS needed to be translated into code and implemented
+        body:
+          The newly desigend DLS needed to be translated into code and implemented
           across three different touchpoints. A mobile app and two websites (one
           for businesses and one for customers). To do so we created a react
           component based library and used it to create the three backend driven
           touchpoints.
       - category: My role
-        body: In a team made mostly of contractors, I was the only in house front-end
+        body:
+          In a team made mostly of contractors, I was the only in house front-end
           developer working on the websites. As such I was in charge of
           enforcing best practices, writing code reviews, and working with the
           designers to avoid inconsistencies and make the life of my team
@@ -35,7 +37,7 @@ projects:
 
 
           The first one is almost entirely stateless, backend driven, and server side rendered. The dashboard is the section of the website where the user can interact with STC services.
-    skill:
+    stack:
       - React
       - Redux
       - SCSS
@@ -44,21 +46,30 @@ projects:
   - title: frogdesign
     image: assets/images/frogdesign.png
     description: >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-      accumsan neque. Orci varius natoque penatibus et magnis dis parturient
-      montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
+      Frog Design went through a big rebranding, and put a lot of emphasis on its taglines: Make Your Mark and Make Bolder Choices.
+      The new design reflect these concepts by using bright colors and strong animations.
     company: Frog Design
-    date: "2021"
+    date: "July - Aug, 2021"
     link: https://www.frogdesign.com/
     textBlock:
-      - category: Te objective
-        body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-          accumsan neque. Orci varius natoque penatibus et magnis dis parturient
-          montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
-      - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-          accumsan neque. Orci varius natoque penatibus et magnis dis parturient
-          montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
+      - category: In a nutshell
+        body:
+          The existing website was too vast to be updated all at once. So the new design was
+          created in modules that could slowly replace the existing sections.
+          Moreover it also allow new pages to be created almost entirely from the backend (wordpress)
+          without having to touch the code base.
+          The project led up to the big launch of the key pages of the website, including the home one.
+      - body:
+          As the only developer on this project, I worked closely with the designers informing
+          them of opportunities and limitations of the stack, and prototyping animations and interactions.
+          I then took care of the implementation on both the front-end and the back-end.
         category: My role
+    stack:
+      - Next.js
+      - Typescript
+      - Wordpress
+      - SCSS
+      - GSAP
   - title: referralId
     image: assets/images/test-1.jpeg
     description: >
@@ -69,20 +80,23 @@ projects:
     date: "2020"
     link: https://asthmareferid.com
     textBlock:
-      - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+      - body:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
         category: My role
   - title: Allvest
     image: assets/images/allvest.png
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+    description:
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
       accumsan neque. Orci varius natoque penatibus et magnis dis parturient
       montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
     company: Allianz
     date: "2019"
     link: https://www.allvest.de
     textBlock:
-      - body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
+      - body:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
           accumsan neque. Orci varius natoque penatibus et magnis dis parturient
           montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
         category: My role

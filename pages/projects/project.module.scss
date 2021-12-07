@@ -157,3 +157,26 @@
     }
   }
 }
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+  @media only screen and (min-width: $breakpoint-md) {
+    margin-bottom: 96px;
+  }
+
+  .skillsCell {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 33%;
+
+    @media only screen and (min-width: $breakpoint-md) {
+      height: 70px;
+    }
+    p {
+      font-family: $font-extra-light;
+    }
+  }
+}
