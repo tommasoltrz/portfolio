@@ -101,10 +101,21 @@
       margin-bottom: 54px;
     }
   }
-  .offsetCol {
+  .caseStudyCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     @media only screen and (min-width: $breakpoint-sm) {
-      margin-top: -60px;
+      margin-top: -30px;
     }
+    @media only screen and (min-width: $breakpoint-md) {
+      margin-top: -50px;
+    }
+  }
+  .offsetCol {
+    // @media only screen and (min-width: $breakpoint-sm) {
+    //   margin-top: -60px;
+    // }
   }
   .nda {
     margin-top: 32px;

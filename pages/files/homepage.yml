@@ -10,7 +10,7 @@ selectedProjects:
       - Webapp
       - Design-Language-System
   - title: Frog Rebranding
-    image: assets/images/frogdesign6.jpg
+    image: assets/images/frog.jpg
     slug: /projects/frogdesign
     tags:
       - Website
@@ -29,10 +29,10 @@ selectedProjects:
 ndaDisclaimer: Unfortunately most of the projects that I am most proud of are
   under NDA. Some of them are about to be published, so hopefeully I
   will be able to grow this list.
-moreWorksDesc: This is a collection of smaller or older project that I worked on. Some even unrelated to web dev.
+moreWorksDesc: This is a collection of smaller or older projects and code snippets I worked on.
 moreWorks:
   - title: Knots Analytics
-    image: assets/images/allvest.png
+    image: assets/images/knots.png
     url: https://knotsanalytics.com/
     description: Website & Design - using Next.js and Figma
   - title: Face Blurring Tool
@@ -42,8 +42,12 @@ moreWorks:
   - title: Old Portfolio Iteration
     description: Built with Gatsby
     url: https://blur.frogdesign.com/
-    image: assets/images/stc.png
-  - title: Telegram Bot Library
-    description: An Arduino library to interact with Telegram APIs
-    url: https://github.com/CasaJasmina/TelegramBot-Library
-    image: assets/images/stc.png
+    image: assets/images/oldPortfolio.png
+  - title: RGB Color Displacement
+    description: A starter project for React Three Fiber and Gatsby
+    url: https://rgb-hover-displacement.netlify.app/
+    image: assets/images/rgb.png
+  # - title: Telegram Bot Library
+  #   description: An Arduino library to interact with Telegram APIs
+  #   url: https://github.com/CasaJasmina/TelegramBot-Library
+  #   image: assets/images/stc.png
