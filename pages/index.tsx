@@ -3,12 +3,10 @@ import styles from "./index.module.scss";
 import cn from "classnames";
 import Layout from "../components/Layout/Layout";
 import { StoreProvider } from "../components/StoreProvider/StoreProvider";
-import Three from "../components/Three/Three";
 
 import { gsap } from "gsap";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import FloatingLink from "../components/FloatingLink/FloatingLink";
-import MasonryGrid from "../components/MasonryGrid/MasonryGrid";
 import StaggeredTitle from "../components/StaggeredTitle/StaggeredTitle";
 import CaseStudy from "../components/CaseStudy/CaseStudy";
 import Work from "../components/Work/Work";
@@ -152,7 +150,6 @@ const IndexPage: React.FC<Props> = ({ data }) => {
           </div>
         </section>
       </Layout>
-      {/* <Three /> */}
       <Cursor imgArray={moreWorks.map((work: any) => work.image)} />
     </StoreProvider>
   );
