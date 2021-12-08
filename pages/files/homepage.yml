@@ -1,7 +1,6 @@
-aboutShort:
-  Hi 👋, I am an Italian web developer moving pixels in the www. I have
-  5 years of experience in building, and sometime designing, digital experiences.
-  Currently working at frog.
+aboutShort: Hi 👋, I am an Italian web developer moving pixels in the www. I
+  have 5 years of experience in building, and sometime designing, digital
+  experiences. Currently working at frog.
 selectedProjects:
   - title: STC - Telcom
     image: assets/images/stc.png
@@ -14,34 +13,24 @@ selectedProjects:
     slug: /projects/frogdesign
     tags:
       - Website
-  # - title: Referral ID - Astrazeneca
-  #   image: assets/images/referralId.png
-  #   slug: /projects/referralId
-  #   tags:
-  #     - Website
-  #     - Medicl-Tool
-  # - title: Allvest
-  #   slug: /projects/allvest
-  #   tags:
-  #     - Website
-  #     - Fintech
-  #   image: assets/images/allvest.png
-ndaDisclaimer: Unfortunately the projects that I am most proud of are
-  under NDA. Some of them are about to be published, so hopefeully I
-  will be able to make this list grow.
-moreWorksDesc: This is a collection of smaller or older projects and code snippets I worked on.
+ndaDisclaimer: Unfortunately the projects that I am most proud of are under NDA.
+  Some of them are about to be published, so hopefeully I will be able to make
+  this list grow.
+moreWorksDesc: This is a collection of smaller or older projects and code
+  snippets I worked on.
 moreWorks:
   - title: Knots Analytics
     image: assets/images/knots.png
     url: https://knotsanalytics.com/
     description: Design & development - using Next.js and Figma
   - title: Face Blurring Tool
-    description: Uses face recognition to detect faces in pictures and blurs them. Built as a tool for design research.
+    description: Uses face recognition to detect faces in pictures and blurs them.
+      Built as a tool for design research.
     url: https://blur.frogdesign.com/
     image: assets/images/blur.png
   - title: Old Portfolio Iteration
     description: Built with Gatsby
-    url: https://blur.frogdesign.com/
+    url: https://tommasolaterza-old-portfolio.netlify.app/
     image: assets/images/oldPortfolio.png
   - title: RGB Color Displacement
     description: A starter project for React Three Fiber and Gatsby
