@@ -78,10 +78,12 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
                 </span>
               </span>
             </h1>
-            <div
-              className={styles.imageContainer}
-              style={{ backgroundImage: `url(../../${data.image})` }}
-            >
+            <div className={styles.imageContainer}>
+              <img
+                src={`../../${data.image}`}
+                alt={data.title}
+                className={styles.projImage}
+              />
               <div ref={imgForeground} className={styles.imgForeground}></div>
             </div>
           </div>

@@ -41,33 +41,38 @@
 
   .imageContainer {
     position: relative;
-    height: 300px;
+    height: 100%;
     width: 100%;
     background-position: center;
     background-size: cover;
     z-index: -1;
-    @media only screen and (min-width: $breakpoint-sm) {
-      height: 420px;
-    }
     @media only screen and (min-width: $breakpoint-md) {
       position: absolute;
       right: 0;
       top: 50%;
-      height: 473px;
       width: 600px;
       transform: translateY(-50%);
     }
     @media only screen and (min-width: $breakpoint-lg) {
-      height: 473px;
       width: 800px;
     }
     @media only screen and (min-width: $breakpoint-xl) {
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      float: right;
     }
 
     .imgForeground {
       background-color: $white;
       height: 100%;
       width: 100%;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 }

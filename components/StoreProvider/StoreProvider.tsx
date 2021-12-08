@@ -8,11 +8,6 @@ const initialState = {
     h: 0,
   },
   top: 0,
-  velo: 0,
-  fMouse: {
-    x: 0,
-    y: 0,
-  },
 };
 
 export const Context = createContext(initialState);
@@ -22,19 +17,11 @@ export const StoreProvider: FC<any> = ({ children }) => {
   const [wSize, setWSize] = useState(initialState.wSize);
   const [top, setTop] = useState(initialState.top);
   const [topThree, setTopThree] = useState(0);
-  const [velo, setVelo] = useState(0);
-  const [fMouse, setFMouse] = useState(initialState.fMouse);
   const requestRef = useRef<number | null>(null);
 
   let current = 0;
   let target = 0;
   let ease = 0.1;
-
-  let speed = 0;
-  let targetSpeed = 0;
-  let testMouse = { x: 0, y: 0 };
-  let followMouse = { x: 0.1, y: 0.1 };
-  let prevMouse = { x: 0.1, y: 0.1 };
 
   const MathUtils = {
     lerp: (a: number, b: number, n: number) => (1 - n) * a + n * b,
@@ -56,34 +43,12 @@ export const StoreProvider: FC<any> = ({ children }) => {
     return () => cancelAnimationFrame(requestRef.current || 0);
   }, []);
 
-  const updateScroll = (mouse: any) => {
+  const updateScroll = () => {
     target = window.scrollY;
     current = MathUtils.lerp(current, target, ease);
     setTop(current);
     setTopThree(0);
     requestRef.current = requestAnimationFrame(updateScroll);
-
-    const mouseY = 1 - testMouse.y / window.innerHeight;
-    const mouseX = testMouse.x / window.innerWidth;
-    speed = Math.sqrt(
-      (prevMouse.x - mouseX) ** 2 + (prevMouse.y - mouseY) ** 2
-    );
-    targetSpeed -= 0.1 * (targetSpeed - speed);
-    followMouse.x -= 0.1 * (followMouse.x - mouseX);
-    followMouse.y -= 0.1 * (followMouse.y - mouseY);
-
-    prevMouse.x = mouseX;
-    prevMouse.y = mouseY;
-    setFMouse(followMouse);
-    if (targetSpeed <= 0.002) {
-      setVelo(0);
-    } else {
-      setVelo(Math.min(targetSpeed, 0.09));
-    }
-
-    // save targetSpeed
-    // update this
-    targetSpeed *= 0.999;
   };
 
   const addEventListeners = () => {
@@ -102,10 +67,6 @@ export const StoreProvider: FC<any> = ({ children }) => {
         x: e.clientX,
         y: e.clientY,
       });
-      testMouse = {
-        x: e.clientX,
-        y: e.clientY,
-      };
     });
   };
 
@@ -125,10 +86,8 @@ export const StoreProvider: FC<any> = ({ children }) => {
       mouse,
       wSize,
       top,
-      velo,
-      fMouse,
     }),
-    [mouse, wSize, top, velo, fMouse]
+    [mouse, wSize, top]
   );
 
   return <Context.Provider value={providerValue}>{children}</Context.Provider>;
