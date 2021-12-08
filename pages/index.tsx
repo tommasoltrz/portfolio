@@ -18,6 +18,7 @@ import { GetStaticProps } from "next";
 import { gePageData } from "../components/pages";
 import Cursor from "../components/Cursor/Cursor";
 import ReactMarkdown from "react-markdown";
+import BasicMeta from "../components/Meta/BasicMeta";
 
 const floatingLinksData = [
   {
@@ -66,6 +67,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
     <StoreProvider>
       <ScrollTriggerProxy />
       <Layout>
+        <BasicMeta url={"/"} />
         <div className={cn(styles.heroContainer)}>
           <section className={cn("grid")}>
             <div
@@ -141,7 +143,9 @@ const IndexPage: React.FC<Props> = ({ data }) => {
             />
           </div>
           <div className={"col-12 col-sm-6 col-md-7"}>
-            <p className={styles.description}>{moreWorksDesc}</p>
+            <p className={cn(styles.description, "fade-in-up")}>
+              {moreWorksDesc}
+            </p>
             {moreWorks.map((work: any, idx: number) => (
               <Work {...work} key={"work" + idx} />
             ))}

@@ -20,11 +20,13 @@ const RoundLink: React.FC<Props> = ({
     <>
       {internal ? (
         <Link href={url}>
-          <a className={cn(styles.roundLink, classname)}>{label}</a>
+          <a className={cn(styles.roundLink, classname, "round-link")}>
+            {label}
+          </a>
         </Link>
       ) : (
         <a
-          className={cn(styles.roundLink, classname)}
+          className={cn(styles.roundLink, classname, "round-link")}
           target="_blank"
           rel="noreferrer"
           href={url}

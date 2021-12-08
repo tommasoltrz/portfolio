@@ -26,15 +26,15 @@ selectedProjects:
   #     - Website
   #     - Fintech
   #   image: assets/images/allvest.png
-ndaDisclaimer: Unfortunately most of the projects that I am most proud of are
+ndaDisclaimer: Unfortunately the projects that I am most proud of are
   under NDA. Some of them are about to be published, so hopefeully I
-  will be able to grow this list.
+  will be able to make this list grow.
 moreWorksDesc: This is a collection of smaller or older projects and code snippets I worked on.
 moreWorks:
   - title: Knots Analytics
     image: assets/images/knots.png
     url: https://knotsanalytics.com/
-    description: Website & Design - using Next.js and Figma
+    description: Design & development - using Next.js and Figma
   - title: Face Blurring Tool
     description: Uses face recognition to detect faces in pictures and blurs them. Built as a tool for design research.
     url: https://blur.frogdesign.com/

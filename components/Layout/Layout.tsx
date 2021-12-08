@@ -46,14 +46,13 @@ const Layout: React.FC<Props> = ({ children }) => {
 
   return (
     <>
+      <Navigation />
       <main
         ref={scrollArea}
         data-scroll
         className={styles.scrollArea}
         id="scrollArea"
       >
-        <Navigation />
-
         {children}
         <Footer />
       </main>

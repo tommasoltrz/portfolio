@@ -9,8 +9,13 @@
   }
   @media only screen and (min-width: $breakpoint-md) {
     align-items: center;
+    display: -webkit-flex;
     display: flex;
+
     justify-content: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
     left: 40px;
     top: 100%;
     transform: translateX(-50%) translateY(-50%);

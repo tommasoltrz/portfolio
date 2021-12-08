@@ -13,6 +13,7 @@ import { GetStaticProps } from "next";
 import { gePageData } from "../../components/pages";
 import ReactMarkdown from "react-markdown";
 import Cursor from "../../components/Cursor/Cursor";
+import BasicMeta from "../../components/Meta/BasicMeta";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,6 +38,7 @@ const About: React.FC<Props> = ({ data, projData }) => {
   return (
     <StoreProvider>
       <Layout>
+        <BasicMeta url={"/about"} />
         <div className={cn(styles.heroContainer)}>
           <div className="grid">
             <div className={"col-12"}>

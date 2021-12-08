@@ -24,6 +24,7 @@ const Cursor: React.FC<Props> = ({ imgArray }) => {
   const [hidden, setHidden] = useState(false);
   const [projLinkHovered, setProjLinkHovered] = useState(false);
   const [workLinkHovered, setWorkLinkHovered] = useState(false);
+  const [roundLinkHovered, setRoundLinkHovered] = useState(false);
   const [activeIdx, setActiveIdx] = useState(-1);
 
   const addEventListeners = () => {
@@ -81,6 +82,18 @@ const Cursor: React.FC<Props> = ({ imgArray }) => {
       });
     });
 
+    // Round Links
+    const roundLinks = document.getElementsByClassName("round-link");
+    Array.from(roundLinks).forEach((link) => {
+      link.addEventListener("mouseover", () => {
+        setRoundLinkHovered(true);
+        console.log(true);
+      });
+      link.addEventListener("mouseout", () => {
+        setRoundLinkHovered(false);
+      });
+    });
+
     // Links
     document.querySelectorAll("a").forEach((el, idx) => {
       el.addEventListener("mouseover", () => {
@@ -96,6 +109,7 @@ const Cursor: React.FC<Props> = ({ imgArray }) => {
     [styles.cursor_link_hovered]: linkHovered,
     [styles.cursor_proj_link_hovered]: projLinkHovered,
     [styles.cursor_work_link_hovered]: workLinkHovered,
+    [styles.cursor_round_link_hovered]: roundLinkHovered,
   });
   if (typeof navigator !== "undefined" && isMobile()) return null;
 

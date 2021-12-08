@@ -22,16 +22,15 @@
 }
 
 .cursor_link_hovered {
-  // background-color: transparent !important;
-  // border: 1px solid $accent-color;
-  // width: 100px;
-  // height: 100px;
-  opacity: 0;
+  border: 2px solid $accent-color;
+  width: 70px;
+  height: 70px;
   transition: transform 0.8s ease, all 0.15s, opacity 0.4s;
 }
 
 .cursor_clicked {
-  transform: translate(-50%, -50%) scale(0.6);
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform 0.2s ease, all 0.15s, opacity 0.4s;
 }
 
 .cursor_proj_link_hovered {
@@ -52,6 +51,10 @@
     font-size: 14px;
     font-family: $font-extra-light;
   }
+}
+.cursor_round_link_hovered {
+  opacity: 0;
+  transition: transform 0.8s ease, all 0.15s, opacity 0.1s;
 }
 
 .cursor_work_link_hovered {

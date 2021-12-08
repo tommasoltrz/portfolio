@@ -52,7 +52,11 @@ const FloatingLink: React.FC<Props> = ({ name, imgUrl, bgColor, url, idx }) => {
       href={url}
       target="_blank"
       rel="noreferrer"
-      className={cn(styles.heroLink, styles[`heroLink${idx + 1}`])}
+      className={cn(
+        styles.heroLink,
+        "round-link",
+        styles[`heroLink${idx + 1}`]
+      )}
       onMouseEnter={() => hovering(true)}
       onMouseLeave={() => hovering(false)}
     >
