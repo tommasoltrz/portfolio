@@ -38,7 +38,7 @@ moreWorks:
   - title: Face Blurring Tool
     description: Uses face recognition to detect faces in pictures and blurs them. Built as a tool for design research.
     url: https://blur.frogdesign.com/
-    image: assets/images/stc.png
+    image: assets/images/blur.png
   - title: Old Portfolio Iteration
     description: Built with Gatsby
     url: https://blur.frogdesign.com/
