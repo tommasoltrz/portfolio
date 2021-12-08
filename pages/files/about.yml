@@ -1,13 +1,17 @@
-intro: "#### Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-  accumsan neque. Orci varius natoque penatibus et magnis dis parturient montes,
-  nascetur ridiculus mus. Morbi sed erat in est fermentum."
+intro: "#### I am a front-end developer based in Turin, Italy. I am a computer science engineer later graduated as interaction designer.
+Currently working at [frog](https://www.frogdesign.com/)."
 description: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget accumsan
-  neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-  ridiculus mus. Morbi sed erat in est fermentum.
+  I have 5+ years of experience developing digital products with a big focus on
+  design systems and end-to-end product experience. I enjoy implementing complex UI while keeping an eye on usability and accessibility.
+
+  Over the past few years I developed several web applications for some of the world’s largest Telcom, Fintech and Healtcare companies.
 
 
-  Lorem ipsum dolor sit [amet](www.google.com), consectetur adipiscing elit. Nulla eget accumsan neque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
+  I started my career as a graphic designer to then realise I was much better at writing code than I was at choosing fonts. I later worked for [Arduino](https://www.arduino.cc/),
+  where beside doing web dev I would also write [libraries](https://github.com/CasaJasmina/TelegramBot-Library) and tutorials of [questionable taste](https://create.arduino.cc/projecthub/arduino/pavlov-s-cat-7e6577?ref=user&ref_id=65561&offset=3) for thousands of users. The eperience left me
+  with a soft spot for open source projects and well written documentation.
+
+
 skill:
   - JS-ES6
   - React

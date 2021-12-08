@@ -47,7 +47,3 @@ moreWorks:
     description: A starter project for React Three Fiber and Gatsby
     url: https://rgb-hover-displacement.netlify.app/
     image: assets/images/rgb.png
-  # - title: Telegram Bot Library
-  #   description: An Arduino library to interact with Telegram APIs
-  #   url: https://github.com/CasaJasmina/TelegramBot-Library
-  #   image: assets/images/stc.png

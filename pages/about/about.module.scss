@@ -63,7 +63,10 @@
   }
 }
 .cvLink {
-  margin: 80px 0 100px 0;
+  margin: 80px auto 100px auto;
+  @media only screen and (min-width: $breakpoint-sm) {
+    margin: 80px 0 100px 0;
+  }
 }
 
 .skillsGrid {

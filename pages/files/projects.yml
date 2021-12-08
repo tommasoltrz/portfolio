@@ -49,7 +49,7 @@ projects:
     description:
       "#### Frog Design went through a big rebranding, and put a lot of
       emphasis on its taglines: ***Make Your Mark*** and ***Make Bolder
-      Choices***. The new design reflect these concepts by using bright colors
+      Choices***. The new design reflects these concepts by using bright colors
       and strong animations."
     company: Frog Design
     date: July - Aug, 2021
@@ -57,9 +57,9 @@ projects:
     textBlock:
       - category: In a nutshell
         body: >-
-          The existing website was too vast to be updated all at once. So the
+          The
           new design was created in modules that could slowly replace the
-          existing sections. Moreover it also allow new pages to be created
+          existing sections. This approach also allows new pages to be created
           almost entirely from the backend (wordpress) without having to touch
           the code base.
 
