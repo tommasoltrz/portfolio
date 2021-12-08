@@ -47,6 +47,14 @@ const Navigation = () => {
             <img src={"/assets/icons/linkedin.svg"} alt="Linkedin" />
             <span>Linkedin</span>
           </a>
+          <a
+            href="https://github.com/tommasoltrz"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={"/assets/icons/github.svg"} alt="Github" />
+            <span>Github</span>
+          </a>
         </ul>
       </div>
     </nav>
