@@ -87,7 +87,6 @@ const Cursor: React.FC<Props> = ({ imgArray }) => {
     Array.from(roundLinks).forEach((link) => {
       link.addEventListener("mouseover", () => {
         setRoundLinkHovered(true);
-        console.log(true);
       });
       link.addEventListener("mouseout", () => {
         setRoundLinkHovered(false);

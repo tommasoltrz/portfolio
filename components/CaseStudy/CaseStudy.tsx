@@ -3,8 +3,8 @@ import styles from "./CaseStudy.module.scss";
 import cn from "classnames";
 import Link from "next/link";
 
-import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
+import { gsap } from "gsap/dist/gsap";
+import { useEffect } from "react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 type Props = {
@@ -13,12 +13,11 @@ type Props = {
   title: string;
   tags: string[];
 };
+gsap.registerPlugin(ScrollTrigger);
 
 const CaseStudy: React.FC<Props> = ({ image, slug, title, tags }) => {
   const ref = React.createRef<HTMLDivElement>();
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
     gsap.set(ref.current, {
       height: "100%",
     });
