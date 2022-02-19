@@ -1,5 +1,5 @@
 aboutShort: Hi 👋, I am an Italian web developer moving pixels in the www. I
-  have 5 years of experience in building, and sometime designing, digital
+  have 5 years of experience in building, and sometimes designing, digital
   experiences. Currently working at frog.
 selectedProjects:
   - title: STC - Telcom
@@ -13,10 +13,9 @@ selectedProjects:
     slug: /projects/frogdesign
     tags:
       - Website
-ndaDisclaimer:
-  Unfortunately most of the projects that I am most proud of are under NDA.
-  Some of them are about to be published, so hopefeully I will be able to make
-  this list grow.
+ndaDisclaimer: Unfortunately a lot of the projects that I am most proud of are
+  under NDA. Some of them are about to be published, so hopefully I will be able
+  to make this list grow.
 moreWorksDesc: This is a collection of smaller or older projects and code
   snippets I worked on.
 moreWorks:
@@ -25,8 +24,7 @@ moreWorks:
     url: https://knotsanalytics.com/
     description: Design & development - using Next.js and Figma
   - title: Face Blurring Tool
-    description:
-      Uses face recognition to detect faces in pictures and blurs them.
+    description: Uses face recognition to detect faces in pictures and blurs them.
       Built as a tool for design research.
     url: https://blur.frogdesign.com/
     image: assets/images/blur.png
