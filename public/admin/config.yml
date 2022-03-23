@@ -84,6 +84,7 @@ collections:
               fields:
                 [
                   { label: "Title", name: "title", widget: "string" },
+                  { label: "Slug", name: "slug", widget: "string" },
                   { label: "Image", name: "image", widget: "image" },
                   {
                     label: "Description",

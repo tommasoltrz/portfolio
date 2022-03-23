@@ -29,6 +29,7 @@ export type aboutPageData = {
 export type project = {
   title: string;
   image: string;
+  slug: string;
   description: string;
   company: string;
   link: string;

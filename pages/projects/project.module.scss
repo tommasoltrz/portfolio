@@ -7,28 +7,28 @@
   margin-top: 100px;
   position: relative;
   flex-direction: column;
+  justify-content: center;
   @media only screen and (min-width: $breakpoint-sm) {
     padding: 120px 0 90px 0;
-    margin-top: 100px;
   }
   @media only screen and (min-width: $breakpoint-md) {
-    padding: 180px 0 180px 0;
-    margin-top: 100px;
+    // padding: 180px 0 180px 0;
+    min-height: 500px;
   }
   @media only screen and (min-width: $breakpoint-lg) {
-    padding: 180px 0 180px 0;
-    margin-top: 100px;
+    min-height: 650px;
   }
   @media only screen and (min-width: $breakpoint-xl) {
-    padding: 220px 0 220px 0;
-    margin-top: 100px;
+    // padding: 220px 0 220px 0;
   }
   .title {
     margin-bottom: 32px;
 
     @media only screen and (min-width: $breakpoint-md) {
       margin-bottom: 0;
+      max-width: 70%;
     }
+
     span {
       overflow: hidden;
       display: block;
@@ -51,20 +51,20 @@
       transform: translateY(-50%);
     }
     @media only screen and (min-width: $breakpoint-lg) {
-      width: 700px;
+      width: 900px;
     }
 
     > span {
-      position: unset !important;
+      // position: unset !important;
     }
 
     .projImage {
-      object-fit: contain;
-      width: 100% !important;
-      position: relative !important;
-      height: unset !important;
-      max-height: 100%;
-      max-width: 100%;
+      // object-fit: contain;
+      // width: 100% !important;
+      // position: relative !important;
+      // height: unset !important;
+      // max-height: 100%;
+      // max-width: 100%;
     }
 
     .imgForeground {

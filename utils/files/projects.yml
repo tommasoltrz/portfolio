@@ -1,6 +1,7 @@
 projects:
-  - title: STC
-    image: assets/images/stc.png
+  - title: STC - Telcom
+    slug: stc
+    image: assets/images/stc.webp
     description: "#### Stc is a leading telecom and technology service provider.
       They partnered with frog (the company I currently work for) to redesign
       and implement the entire ecosystem of web and mobile apps. Which was done
@@ -44,66 +45,24 @@ projects:
       - Storybook
       - Typescript
       - i18n
-  - title: frogdesign
-    image: assets/images/frog.png
-    description:
-      "#### Frog Design went through a big rebranding, and put a lot of
-      emphasis on its taglines: ***Make Your Mark*** and ***Make Bolder
-      Choices***. The new design reflects these concepts by using bright colors
-      and strong animations."
-    company: Frog Design
-    date: July - Aug, 2021
-    link: https://www.frogdesign.com
+  - title: Fishing Prediction Maps
+    slug: fishingpredictionmaps
+    image: assets/images/fishing-prediction-map.webp
+    description: "#### Fishing Prediction Maps is a unique service in the Mediterranean Sea: a reliable fishing forecast powered by artificial intelligence and predictive models."
+    company: Knots
+    date: Feb, 2022
+    link: https://fishingpredictionmaps.com
     textBlock:
       - category: In a nutshell
         body: >-
-          The
-          new design was created in modules that could slowly replace the
-          existing sections. This approach also allows new pages to be created
-          almost entirely from the backend (wordpress) without having to touch
-          the code base.
-
-
-          The project led up to the big launch of the key pages of the website, including the home one.
-      - body:
-          As the only developer on this project, I worked closely with the designers
-          informing them of opportunities and limitations of the stack, and
-          prototyping animations and interactions. I then took care of the
-          implementation on both the front-end and the back-end.
+          The interactive map displays the predicted fishing probability (FP) by zone and species for the next week, on a scale from zero to one. This variable represents how easy it will be to fish a species in a precise spot. Zero is assigned to areas where it will be more difficult to find and fish a species, while one to an area where it will be easier on a given day.
+      - body: I worked closely with the data scientists to design and develop the interface of the webapp and its architecture. The goal was to deliver a simple and intuitive way to display their data without crowding the interface with too much information but still being useful to the end user.
         category: My role
+      - body: The data produced by the model (running on the company server) get pushed every week on a AWS S3 bucket in the form of .pbf files. These files are then exposed at three different domains to improve performance. The front-end then uses mapbox-gl-js to consume and render the .pbf files.
+        category: Architecture
     stack:
-      - Next.js
       - Typescript
-      - Wordpress
-      - SCSS
-      - GSAP
-  # - title: referralId
-  #   image: assets/images/test-1.jpeg
-  #   description: >
-  #     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-  #     accumsan neque. Orci varius natoque penatibus et magnis dis parturient
-  #     montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
-  #   company: Astrazeneca
-  #   date: "2020"
-  #   link: https://asthmareferid.com
-  #   textBlock:
-  #     - body:
-  #         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-  #         accumsan neque. Orci varius natoque penatibus et magnis dis parturient
-  #         montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
-  #       category: My role
-  # - title: Allvest
-  #   image: assets/images/allvest.png
-  #   description:
-  #     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-  #     accumsan neque. Orci varius natoque penatibus et magnis dis parturient
-  #     montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
-  #   company: Allianz
-  #   date: "2019"
-  #   link: https://www.allvest.de
-  #   textBlock:
-  #     - body:
-  #         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget
-  #         accumsan neque. Orci varius natoque penatibus et magnis dis parturient
-  #         montes, nascetur ridiculus mus. Morbi sed erat in est fermentum.
-  #       category: My role
+      - React
+      - Chakra UI
+      - Mapbox
+      - S3

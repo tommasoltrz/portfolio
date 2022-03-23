@@ -62,7 +62,10 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
               <Image
                 src={`/${data.image}`}
                 alt={data.title}
-                layout="fill"
+                layout="responsive"
+                height={9}
+                width={16}
+                objectFit="cover"
                 className={styles.projImage}
               />
               <div ref={imgForeground} className={styles.imgForeground}></div>
@@ -161,7 +164,7 @@ export default ProjectPage;
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const data = await gePageData("projects").projects.filter(
     // @ts-ignore
-    (el: project) => el.title.toLowerCase() == params?.pageSlug?.toLowerCase()
+    (el: project) => el.slug.toLowerCase() == params?.pageSlug?.toLowerCase()
   )[0];
 
   const homeData = await gePageData("homepage");
