@@ -27,12 +27,24 @@ const About: React.FC<Props> = ({ data, projData }) => {
 
   useEffect(() => {
     if (refTitle.current) {
+      gsap.set(refTitle.current, { opacity: 1 });
       gsap.from(refTitle.current, {
         duration: 1,
         yPercent: 100,
         ease: "power4",
         delay: 0.2,
       });
+      gsap.set(".fade-in-up-bio", { opacity: 1 });
+      gsap.fromTo(
+        ".fade-in-up-bio",
+        { opacity: 0, y: 40 },
+        {
+          delay: 0.5,
+          opacity: 1,
+          duration: 0.6,
+          y: 0,
+        }
+      );
     }
   }, []);
 
@@ -54,8 +66,10 @@ const About: React.FC<Props> = ({ data, projData }) => {
                 "col-12 col-start-sm-3 col-end-sm-12 col-start-md-3 col-end-md-12 col-start-lg-5 col-end-lg-12"
               }
             >
-              <ReactMarkdown className="fade-in-up">{intro}</ReactMarkdown>
-              <ReactMarkdown className="fade-in-up">
+              <ReactMarkdown className={cn("fade-in-up-bio", styles.introBio)}>
+                {intro}
+              </ReactMarkdown>
+              <ReactMarkdown className={cn("fade-in-up-bio", styles.descBio)}>
                 {description}
               </ReactMarkdown>
             </div>
