@@ -40,10 +40,8 @@
 
   .imageContainer {
     position: relative;
-    height: 100%;
+    display: block;
     width: 100%;
-    background-position: center;
-    background-size: cover;
     z-index: -1;
     @media only screen and (min-width: $breakpoint-md) {
       position: absolute;
@@ -53,15 +51,20 @@
       transform: translateY(-50%);
     }
     @media only screen and (min-width: $breakpoint-lg) {
-      width: 800px;
-    }
-    @media only screen and (min-width: $breakpoint-xl) {
+      width: 700px;
     }
 
-    img {
-      max-width: 100%;
+    > span {
+      position: unset !important;
+    }
+
+    .projImage {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
       max-height: 100%;
-      float: right;
+      max-width: 100%;
     }
 
     .imgForeground {

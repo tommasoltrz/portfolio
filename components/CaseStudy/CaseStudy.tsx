@@ -6,16 +6,12 @@ import Link from "next/link";
 import { gsap } from "gsap/dist/gsap";
 import { useEffect } from "react";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
+import { selectedProject } from "../../utils/customTypes";
 
-type Props = {
-  image: string;
-  slug: string;
-  title: string;
-  tags: string[];
-};
 gsap.registerPlugin(ScrollTrigger);
 
-const CaseStudy: React.FC<Props> = ({ image, slug, title, tags }) => {
+const CaseStudy: React.FC<selectedProject> = ({ image, slug, title, tags }) => {
   const ref = React.createRef<HTMLDivElement>();
   useEffect(() => {
     gsap.set(ref.current, {
@@ -32,24 +28,16 @@ const CaseStudy: React.FC<Props> = ({ image, slug, title, tags }) => {
     });
   }, []);
 
-  // TODO move this to its own Image component
-  const onImgLoaded = () => {
-    const scrollMain = document.getElementById("scrollArea");
-    document.body.style.height = `${
-      scrollMain?.getBoundingClientRect().height
-    }px`;
-  };
-
   return (
     <Link href={slug}>
       <a className={styles.projWrap}>
         <article>
           <div className={styles.imgContainer}>
-            <img
-              src={image}
+            <Image
+              src={"/" + image}
+              layout="fill"
               alt={title}
               className={cn(styles.pgImage, "js-img selected-pj-img")}
-              onLoad={() => onImgLoaded()}
             />
 
             <div className={styles.imgForeground} ref={ref}></div>

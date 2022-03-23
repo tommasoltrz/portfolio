@@ -25,14 +25,24 @@
     }
     .imgContainer {
       position: relative;
+      display: block;
       margin-bottom: 24px;
+      width: 100%;
       @media only screen and (min-width: $breakpoint-md) {
         margin-bottom: 32px;
       }
-      .pgImage {
-        max-width: 100%;
-        width: 100%;
+
+      > span {
+        position: unset !important;
       }
+
+      .pgImage {
+        object-fit: contain;
+        width: 100% !important;
+        position: relative !important;
+        height: unset !important;
+      }
+
       .imgForeground {
         position: absolute;
         left: 0;

@@ -15,7 +15,6 @@ import { StoreProvider } from "../../utils/StoreProvider";
 import { gePageData } from "../../utils/pages";
 import BasicMeta from "../../utils/BasicMeta";
 import { aboutPageData, selectedProject } from "../../utils/customTypes";
-
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {

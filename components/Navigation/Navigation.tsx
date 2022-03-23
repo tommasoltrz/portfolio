@@ -28,10 +28,6 @@ const Navigation = () => {
         <a className={cn(styles.aboutLink, styles.navLink, "nav-el")}>About</a>
       </Link>
 
-      {/* <Link href="/about">
-        <a className={cn(styles.navLink, "nav-el")}>Works</a>
-      </Link> */}
-
       <div className={styles.ddContainer}>
         <p className={cn(styles.ddTitle, "small", "nav-el")}>Connect</p>
         <ul className={styles.dropdown}>

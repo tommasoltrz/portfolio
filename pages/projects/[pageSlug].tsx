@@ -16,6 +16,7 @@ import { StoreProvider } from "../../utils/StoreProvider";
 import { gePageData } from "../../utils/pages";
 import BasicMeta from "../../utils/BasicMeta";
 import { project, selectedProject } from "../../utils/customTypes";
+import Image from "next/image";
 
 type Props = {
   data: project;
@@ -58,9 +59,10 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
               </span>
             </h1>
             <div className={styles.imageContainer}>
-              <img
-                src={`../../${data.image}`}
+              <Image
+                src={`/${data.image}`}
                 alt={data.title}
+                layout="fill"
                 className={styles.projImage}
               />
               <div ref={imgForeground} className={styles.imgForeground}></div>

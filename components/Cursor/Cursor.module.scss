@@ -11,8 +11,6 @@
   pointer-events: none;
   z-index: 9999;
   transition: transform 0.8s ease, all 0.15s, opacity 0.4s;
-  // transition: transform 0.8s ease, left 0s, top 0s, width 0.15s, opacity 0.3s;
-
   transform: translate(-50%, -50%) scale(1);
   border: 1px solid $accent-color;
 }
@@ -29,7 +27,7 @@
 }
 
 .cursor_clicked {
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(0.96);
   transition: transform 0.2s ease, all 0.15s, opacity 0.4s;
 }
 
