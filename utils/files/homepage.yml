@@ -13,8 +13,18 @@ selectedProjects:
     slug: /projects/frogdesign
     tags:
       - Website
+      - Animations
+      - NextJs
+      - Wordpress
+  - title: Fishing Prediction Maps
+    slug: /projects/fishingpredictionmaps
+    tags:
+      - React
+      - Mapbox
+      - DataViz
+    image: assets/images/fishing-prediction-map.webp
 ndaDisclaimer: Unfortunately a lot of the projects that I am most proud of are
-  under NDA. Some of them are about to be published, so hopefully I will be able
+  under NDA. Some of them are about to be published and hopefully I will be able
   to make this list grow.
 moreWorksDesc: This is a collection of smaller or older projects and code
   snippets I worked on.
