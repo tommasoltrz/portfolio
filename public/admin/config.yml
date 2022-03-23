@@ -9,7 +9,7 @@ collections:
     files:
       - label: "Home"
         name: "home"
-        file: "pages/files/homepage.yml"
+        file: "utils/files/homepage.yml"
         fields:
           - { label: "About short", name: "aboutShort", widget: "markdown" }
           - {
@@ -59,7 +59,7 @@ collections:
             }
       - label: "About"
         name: "about"
-        file: "pages/files/about.yml"
+        file: "utils/files/about.yml"
         fields:
           - { label: "Intro", name: "intro", widget: "markdown" }
           - { label: "Description", name: "description", widget: "markdown" }
@@ -73,7 +73,7 @@ collections:
             }
       - label: "Projects"
         name: "projects"
-        file: "pages/files/projects.yml"
+        file: "utils/files/projects.yml"
         fields:
           - {
               label: Projects,

@@ -1,17 +1,10 @@
 import * as React from "react";
-import styles from "./Layout.module.scss";
-import { Context } from "../StoreProvider/StoreProvider";
-import { useContext, useEffect, useState } from "react";
 import Navigation from "../Navigation/Navigation";
 import Footer from "../Footer/Footer";
 import { gsap } from "gsap/dist/gsap";
-import Cursor from "../Cursor/Cursor";
-type Props = {};
+import { useEffect } from "react";
 
-const Layout: React.FC<Props> = ({ children }) => {
-  const scrollArea = React.createRef<HTMLDivElement>();
-  const { top, wSize } = useContext(Context);
-
+const Layout: React.FC = ({ children }) => {
   useEffect(() => {
     initAnimations();
   }, []);
@@ -32,30 +25,11 @@ const Layout: React.FC<Props> = ({ children }) => {
     });
   };
 
-  useEffect(() => {
-    if (scrollArea && scrollArea.current) {
-      scrollArea.current.style.transform = `translate3d(0,${-top}px, 0)`;
-    }
-  }, [top]);
-
-  useEffect(() => {
-    document.body.style.height = `${
-      scrollArea?.current?.getBoundingClientRect().height
-    }px`;
-  }, [wSize]);
-
   return (
     <>
       <Navigation />
-      <main
-        ref={scrollArea}
-        data-scroll
-        className={styles.scrollArea}
-        id="scrollArea"
-      >
-        {children}
-        <Footer />
-      </main>
+      <main>{children}</main>
+      <Footer />
     </>
   );
 };

@@ -2,9 +2,6 @@ import * as React from "react";
 import styles from "./Work.module.scss";
 import cn from "classnames";
 
-import { gsap } from "gsap";
-import { useEffect, useRef } from "react";
-
 type Props = {
   title: string;
   image: string;
@@ -14,16 +11,7 @@ type Props = {
   tags?: string[];
 };
 
-const Work: React.FC<Props> = ({
-  description,
-  title,
-  image,
-  url,
-  slug,
-  tags,
-}) => {
-  const ref = React.createRef<HTMLDivElement>();
-
+const Work: React.FC<Props> = ({ description, title, url, slug, tags }) => {
   return (
     <a
       href={url || slug}

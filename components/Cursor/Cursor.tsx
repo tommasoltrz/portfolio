@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Cursor.module.scss";
 import cn from "classnames";
 import React, { useContext } from "react";
-import { Context } from "../StoreProvider/StoreProvider";
+import { Context } from "../../utils/StoreProvider";
 type Props = {
   imgArray?: string[];
 };
