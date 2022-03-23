@@ -3,39 +3,19 @@ import styles from "./project.module.scss";
 import cn from "classnames";
 
 import { gsap } from "gsap";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import { GetStaticPaths, GetStaticProps } from "next";
-import { StoreProvider } from "../../components/StoreProvider/StoreProvider";
-import { ScrollTriggerProxy } from "../../components/ScrollTriggerProxy/ScrollTriggerProxy";
 import Layout from "../../components/Layout/Layout";
-import { gePageData } from "../../components/pages";
+
 import StaggeredTitle from "../../components/StaggeredTitle/StaggeredTitle";
 import Work from "../../components/Work/Work";
 import ReactMarkdown from "react-markdown";
 import Cursor from "../../components/Cursor/Cursor";
-import BasicMeta from "../../components/Meta/BasicMeta";
-
-export type project = {
-  title: string;
-  image: string;
-  description: string;
-  company: string;
-  link: string;
-  date: string;
-  stack: string[];
-  textBlock: Array<{
-    category: string;
-    body: string;
-  }>;
-};
-
-export type selectedProject = {
-  title: string;
-  image: string;
-  slug: string;
-  tags: string[];
-};
+import { StoreProvider } from "../../utils/StoreProvider";
+import { gePageData } from "../../utils/pages";
+import BasicMeta from "../../utils/BasicMeta";
+import { project, selectedProject } from "../../utils/customTypes";
 
 type Props = {
   data: project;
@@ -66,7 +46,6 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
 
   return (
     <StoreProvider>
-      <ScrollTriggerProxy />
       <Layout>
         <BasicMeta url={slug} />
         <section className={cn("grid", styles.prjTitleSection)}>
@@ -87,7 +66,7 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
               <div ref={imgForeground} className={styles.imgForeground}></div>
             </div>
           </div>
-          <div className={cn("col-12", styles.description)}>
+          <div className={cn("col-12", "description")}>
             <ReactMarkdown className="fade-in-up">
               {data.description}
             </ReactMarkdown>
@@ -113,7 +92,9 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
             </div>
           </div>
         </section>
-        <section className={cn("grid", styles.projDetailsSection)}>
+        <section
+          className={cn("grid sectionSpacing", styles.projDetailsSection)}
+        >
           {data.textBlock.map((block, idx) => (
             <React.Fragment key={idx}>
               <div
@@ -140,7 +121,7 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
               <div
                 className={cn("col-12 col-md-9 col-lg-8", styles.skillsGrid)}
               >
-                {data.stack.map((tool: any, idx: number) => (
+                {data.stack.map((tool, idx: number) => (
                   <div
                     className={cn(styles.skillsCell, "fade-in-up")}
                     key={"stack" + idx}
@@ -153,7 +134,7 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
           )}
           <div className={cn("col-12", styles.divider)}></div>
         </section>
-        <section className={cn("grid", styles.moreWorksSection)}>
+        <section className={cn("grid sectionSpacing", styles.moreWorksSection)}>
           <div className={"col-12 col-sm-6 col-md-5"}>
             <StaggeredTitle
               label1="More"
@@ -168,7 +149,7 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
           </div>
         </section>
       </Layout>
-      <Cursor imgArray={moreProjs.map((work: any) => work.image)} />
+      <Cursor imgArray={moreProjs.map((work) => work.image)} />
     </StoreProvider>
   );
 };
@@ -183,7 +164,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const homeData = await gePageData("homepage");
   const selectedPjs = homeData.selectedProjects.filter(
-    (el: any) => el.slug !== `/projects/${params?.pageSlug}`
+    (el: selectedProject) => el.slug !== `/projects/${params?.pageSlug}`
   );
   const works = homeData.moreWorks;
   const moreProjs = [...selectedPjs, ...works];

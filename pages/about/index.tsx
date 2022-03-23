@@ -2,7 +2,6 @@ import * as React from "react";
 import styles from "./about.module.scss";
 import cn from "classnames";
 import Layout from "../../components/Layout/Layout";
-import { StoreProvider } from "../../components/StoreProvider/StoreProvider";
 import StaggeredTitle from "../../components/StaggeredTitle/StaggeredTitle";
 import Work from "../../components/Work/Work";
 import { gsap } from "gsap/dist/gsap";
@@ -10,20 +9,23 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from "react";
 import RoundLink from "../../components/RoundLink/RoundLink";
 import { GetStaticProps } from "next";
-import { gePageData } from "../../components/pages";
 import ReactMarkdown from "react-markdown";
 import Cursor from "../../components/Cursor/Cursor";
-import BasicMeta from "../../components/Meta/BasicMeta";
+import { StoreProvider } from "../../utils/StoreProvider";
+import { gePageData } from "../../utils/pages";
+import BasicMeta from "../../utils/BasicMeta";
+import { aboutPageData, selectedProject } from "../../utils/customTypes";
 
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
-  data: any;
-  projData: any;
+  data: aboutPageData;
+  projData: selectedProject[];
 };
 const About: React.FC<Props> = ({ data, projData }) => {
   const { intro, description, skill } = data;
   const refTitle = React.createRef<HTMLSpanElement>();
+
   useEffect(() => {
     if (refTitle.current) {
       gsap.from(refTitle.current, {
@@ -60,7 +62,7 @@ const About: React.FC<Props> = ({ data, projData }) => {
             </div>
           </div>
         </div>
-        <section className={cn("grid", styles.moreWorksSection)}>
+        <section className={cn("grid sectionSpacing", styles.moreWorksSection)}>
           <div className={"col-12 col-sm-6 col-md-5"}>
             <StaggeredTitle
               label1="Tools"
@@ -69,7 +71,7 @@ const About: React.FC<Props> = ({ data, projData }) => {
             />
           </div>
           <div className={cn("col-12 col-sm-6 col-md-7", styles.skillsGrid)}>
-            {skill.map((tool: any, idx: number) => (
+            {skill.map((tool, idx: number) => (
               <div
                 className={cn(styles.skillsCell, "fade-in-up")}
                 key={"tool" + idx}
@@ -79,7 +81,7 @@ const About: React.FC<Props> = ({ data, projData }) => {
             ))}
           </div>
         </section>
-        <section className={cn("grid", styles.cvSection)}>
+        <section className={cn("grid sectionSpacing", styles.cvSection)}>
           <div
             className="col-12 col-start-sm-7 col-end-sm-12 col-start-md-6 col-end-md-12
               col-start-lg-6
@@ -93,7 +95,7 @@ const About: React.FC<Props> = ({ data, projData }) => {
           </div>
         </section>
 
-        <section className={cn("grid", styles.moreWorksSection)}>
+        <section className={cn("grid sectionSpacing", styles.moreWorksSection)}>
           <div className={"col-12 col-sm-6 col-md-5"}>
             <StaggeredTitle
               label1="Selected"
@@ -102,13 +104,13 @@ const About: React.FC<Props> = ({ data, projData }) => {
             />
           </div>
           <div className={"col-12 col-sm-6 col-md-7"}>
-            {projData.map((work: any, idx: number) => (
+            {projData.map((work, idx: number) => (
               <Work {...work} key={"work" + idx} />
             ))}
           </div>
         </section>
       </Layout>
-      <Cursor imgArray={projData.map((work: any) => work.image)} />
+      <Cursor imgArray={projData.map((work) => work.image)} />
     </StoreProvider>
   );
 };

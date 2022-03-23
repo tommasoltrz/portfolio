@@ -1,5 +1,5 @@
 import Head from "next/head";
-import config from "../config";
+import config from "./config";
 
 type Props = {
   title?: string;

@@ -84,16 +84,6 @@
 
 .selectedWorkContainer {
   background-color: $off-white;
-  padding-top: 70px;
-  padding-bottom: 70px;
-  @media only screen and (min-width: $breakpoint-sm) {
-    padding-top: 90px;
-    padding-bottom: 90px;
-  }
-  @media only screen and (min-width: $breakpoint-md) {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
 
   .projTitle {
     margin-bottom: 40px;
@@ -122,54 +112,8 @@
 }
 
 .aboutCol {
-  padding: 70px 0;
-  // border-bottom: 1px solid $light-grey;
-
-  @media only screen and (min-width: $breakpoint-sm) {
-    padding: 90px 0;
-  }
-  @media only screen and (min-width: $breakpoint-md) {
-    padding: 120px 0;
-  }
-
-  p {
-    margin-bottom: 35px;
-    @media only screen and (min-width: $breakpoint-sm) {
-      margin-bottom: 45px;
-    }
-    @media only screen and (min-width: $breakpoint-md) {
-      margin-bottom: 60px;
-    }
-  }
   a {
     display: block;
     width: fit-content;
-  }
-}
-
-.moreWorksSection {
-  margin-top: 70px;
-  margin-bottom: 70px;
-  position: relative;
-
-  @media only screen and (min-width: $breakpoint-sm) {
-    margin-top: 90px;
-    margin-bottom: 90px;
-  }
-  @media only screen and (min-width: $breakpoint-md) {
-    margin-top: 120px;
-    margin-bottom: 120px;
-  }
-  .description {
-    margin-bottom: 35px;
-    margin-top: 35px;
-    @media only screen and (min-width: $breakpoint-sm) {
-      margin-bottom: 45px;
-      margin-top: 45px;
-    }
-    @media only screen and (min-width: $breakpoint-md) {
-      margin-bottom: 60px;
-      margin-top: 60px;
-    }
   }
 }

@@ -13,6 +13,7 @@ body {
   color: $black;
   font-size: 20px;
   line-height: 1.4;
+  overflow-x: hidden;
 }
 
 h1,
@@ -91,11 +92,6 @@ h4 {
   @media only screen and (min-width: $breakpoint-md) {
     font-size: 32px;
   }
-  strong {
-    // font-style: normal;
-    // font-weight: normal;
-    // font-family: $font-medium;
-  }
 }
 h5 {
   font-size: 20px;
@@ -128,10 +124,6 @@ p.xsmall {
 }
 
 a {
-  // font-family: $font-light;
-  // text-decoration: underline;
-  // font-size: 20px;
-  // line-height: inherit;
   color: $black;
 }
 a:hover,
@@ -183,4 +175,31 @@ li {
 .nav-el {
   opacity: 0;
   transform: translate(0%, -100%);
+}
+
+.sectionSpacing {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  @media only screen and (min-width: $breakpoint-sm) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.description {
+  margin-bottom: 35px;
+  margin-top: 35px;
+  @media only screen and (min-width: $breakpoint-sm) {
+    margin-bottom: 45px;
+    margin-top: 45px;
+  }
+  @media only screen and (min-width: $breakpoint-md) {
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
 }

@@ -2,7 +2,6 @@ import * as React from "react";
 import styles from "./index.module.scss";
 import cn from "classnames";
 import Layout from "../components/Layout/Layout";
-import { StoreProvider } from "../components/StoreProvider/StoreProvider";
 
 import { gsap } from "gsap";
 import { useEffect } from "react";
@@ -12,10 +11,12 @@ import CaseStudy from "../components/CaseStudy/CaseStudy";
 import Work from "../components/Work/Work";
 import Link from "next/link";
 import { GetStaticProps } from "next";
-import { gePageData } from "../components/pages";
 import Cursor from "../components/Cursor/Cursor";
 import ReactMarkdown from "react-markdown";
-import BasicMeta from "../components/Meta/BasicMeta";
+import { gePageData } from "../utils/pages";
+import { StoreProvider } from "../utils/StoreProvider";
+import BasicMeta from "../utils/BasicMeta";
+import { homePageData } from "../utils/customTypes";
 
 const floatingLinksData = [
   {
@@ -39,8 +40,9 @@ const floatingLinksData = [
 ];
 
 type Props = {
-  data: any;
+  data: homePageData;
 };
+
 const IndexPage: React.FC<Props> = ({ data }) => {
   const {
     aboutShort,
@@ -49,6 +51,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
     moreWorks,
     ndaDisclaimer,
   } = data;
+
   useEffect(() => {
     gsap.set(".hero-text-line", { opacity: 1 });
     gsap.from(".hero-text-line", {
@@ -92,17 +95,17 @@ const IndexPage: React.FC<Props> = ({ data }) => {
             </div>
           </section>
         </div>
-        <section className={cn("grid", styles.aboutSection)}>
+        <section className={cn("grid sectionSpacing", styles.aboutSection)}>
           <div
             className={cn("col-12 col-sm-7 col-md-6 col-lg-5", styles.aboutCol)}
           >
-            <p className={"fade-in-up"}>{aboutShort}</p>
+            <p className={"fade-in-up description"}>{aboutShort}</p>
             <Link href="/about">
               <a className={"fade-in-up"}>About me</a>
             </Link>
           </div>
         </section>
-        <section className={cn("", styles.selectedWorkContainer)}>
+        <section className={cn("sectionSpacing", styles.selectedWorkContainer)}>
           <div className="grid">
             <div className={"col-12 "}>
               <StaggeredTitle
@@ -112,7 +115,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
               />
             </div>
 
-            {selectedProjects.map((proj: any, idx: number) => (
+            {selectedProjects.map((proj, idx: number) => (
               <div
                 key={"proj" + idx}
                 className={cn("col-12 col-sm-6", styles.caseStudyCol, {
@@ -129,8 +132,7 @@ const IndexPage: React.FC<Props> = ({ data }) => {
             </div>
           </div>
         </section>
-
-        <section className={cn("grid", styles.moreWorksSection)}>
+        <section className={cn("grid sectionSpacing", styles.moreWorksSection)}>
           <div className={"col-12 col-sm-6 col-md-5"}>
             <StaggeredTitle
               label1="More"
@@ -139,16 +141,14 @@ const IndexPage: React.FC<Props> = ({ data }) => {
             />
           </div>
           <div className={"col-12 col-sm-6 col-md-7"}>
-            <p className={cn(styles.description, "fade-in-up")}>
-              {moreWorksDesc}
-            </p>
-            {moreWorks.map((work: any, idx: number) => (
+            <p className={cn("description", "fade-in-up")}>{moreWorksDesc}</p>
+            {moreWorks.map((work, idx: number) => (
               <Work {...work} key={"work" + idx} />
             ))}
           </div>
         </section>
       </Layout>
-      <Cursor imgArray={moreWorks.map((work: any) => work.image)} />
+      <Cursor imgArray={moreWorks.map((work) => work.image)} />
     </StoreProvider>
   );
 };

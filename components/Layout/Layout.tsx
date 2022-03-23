@@ -1,14 +1,10 @@
 import * as React from "react";
-import styles from "./Layout.module.scss";
-import { Context } from "../StoreProvider/StoreProvider";
-import { useContext, useEffect, useState } from "react";
 import Navigation from "../Navigation/Navigation";
 import Footer from "../Footer/Footer";
 import { gsap } from "gsap/dist/gsap";
-import Cursor from "../Cursor/Cursor";
-type Props = {};
+import { useEffect } from "react";
 
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   useEffect(() => {
     initAnimations();
   }, []);

@@ -6,7 +6,7 @@ export function gePageData(pageName: string): any {
   try {
     doc = yaml.load(fs.readFileSync(`pages/files/${pageName}.yml`, "utf8"));
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
   return doc;
 }
