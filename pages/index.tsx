@@ -11,7 +11,6 @@ import StaggeredTitle from "../components/StaggeredTitle/StaggeredTitle";
 import CaseStudy from "../components/CaseStudy/CaseStudy";
 import Work from "../components/Work/Work";
 import Link from "next/link";
-import { ScrollTriggerProxy } from "../components/ScrollTriggerProxy/ScrollTriggerProxy";
 import { GetStaticProps } from "next";
 import { gePageData } from "../components/pages";
 import Cursor from "../components/Cursor/Cursor";
@@ -63,7 +62,6 @@ const IndexPage: React.FC<Props> = ({ data }) => {
 
   return (
     <StoreProvider>
-      <ScrollTriggerProxy />
       <Layout>
         <BasicMeta url={"/"} />
         <div className={cn(styles.heroContainer)}>
