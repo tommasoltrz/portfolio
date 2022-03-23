@@ -14,16 +14,13 @@ projects:
         body:
           The newly desigend DLS needed to be translated into code and implemented
           across three different touchpoints. A mobile app and two websites (one
-          for businesses and one for customers). To do so we created a react
-          component based library and used it to create the three backend driven
-          touchpoints.
+          for businesses and one for customers). To do so we created an extra react
+          component library.
       - category: My role
         body:
           In a team made mostly of contractors, I was the only in house front-end
           developer working on the websites. As such I was in charge of
-          enforcing best practices, writing code reviews, and working with the
-          designers to avoid inconsistencies and make the life of my team
-          easier.
+          enforcing best practices, writing code and code reviews, and be the link between developers and designers.
       - category: Architecture
         body: >-
           The app and the websites were built in a monorepo using respectively
@@ -31,13 +28,13 @@ projects:
           hooks, state management, types, epics etc..
 
 
-          In order to also share the components across the websites we built a component library in react and documented it with Storybook.
+          In order to also share the components across the websites we built a component library using React and Storybook.
 
 
           Each one of the two website is divided into two main sections: a brochure section and a dashboard section.
 
 
-          The first one is almost entirely stateless, backend driven, and server side rendered. The dashboard is the section of the website where the user can interact with STC services.
+          The first one is almost entirely stateless, backend driven, and server side rendered. The dashboard is the section of the website where the user can interact with STC services and is client side rendered.
     stack:
       - React
       - Redux
