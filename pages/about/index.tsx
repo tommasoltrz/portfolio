@@ -22,7 +22,7 @@ type Props = {
   projData: selectedProject[];
 };
 const About: React.FC<Props> = ({ data, projData }) => {
-  const { intro, description, skill } = data;
+  const { intro, description, skill, avatar } = data;
   const refTitle = React.createRef<HTMLSpanElement>();
 
   useEffect(() => {
@@ -57,7 +57,9 @@ const About: React.FC<Props> = ({ data, projData }) => {
             <div className={"col-12"}>
               <h1 className={styles.title}>
                 <span>
-                  <span ref={refTitle}> Tommaso Laterza</span>
+                  <span ref={refTitle} className="work-proj">
+                    Tommaso Laterza
+                  </span>
                 </span>
               </h1>
             </div>
@@ -123,7 +125,7 @@ const About: React.FC<Props> = ({ data, projData }) => {
           </div>
         </section>
       </Layout>
-      <Cursor imgArray={projData.map((work) => work.image)} />
+      <Cursor imgArray={[avatar, ...projData.map((work) => work.image)]} />
     </StoreProvider>
   );
 };

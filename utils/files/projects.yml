@@ -13,9 +13,8 @@ projects:
       - category: Objectives
         body:
           The newly desigend DLS needed to be translated into code and implemented
-          across three different touchpoints. A mobile app and two websites (one
-          for businesses and one for customers). To do so we created an extra react
-          component library.
+          across three different touchpoints. A mobile app and two websites (one B2B and one B2C).
+          To do so we created an extra react component library.
       - category: My role
         body:
           In a team made mostly of contractors, I was the only in house front-end
@@ -23,7 +22,7 @@ projects:
           enforcing best practices, writing code and code reviews, and be the link between developers and designers.
       - category: Architecture
         body: >-
-          The app and the websites were built in a monorepo using respectively
+          The mobile app and the websites were built in a monorepo using respectively
           react native and react.js so that they could share most of the logic,
           hooks, state management, types, epics etc..
 
@@ -49,13 +48,17 @@ projects:
     company: Knots
     date: Feb, 2022
     link: https://fishingpredictionmaps.com
+    github: https://fishingpredictionmaps.com
     textBlock:
       - category: In a nutshell
         body: >-
           The interactive map displays the predicted fishing probability (FP) by zone and species for the next week, on a scale from zero to one. This variable represents how easy it will be to fish a species in a precise spot. Zero is assigned to areas where it will be more difficult to find and fish a species, while one to an area where it will be easier on a given day.
       - body: I worked closely with the data scientists to design and develop the interface of the webapp and its architecture. The goal was to deliver a simple and intuitive way to display their data without crowding the interface with too much information but still being useful to the end user.
         category: My role
-      - body: The data produced by the model (running on the company server) get pushed every week on a AWS S3 bucket in the form of .pbf files. These files are then exposed at three different domains to improve performance. The front-end then uses mapbox-gl-js to consume and render the .pbf files.
+      - body: "The data produced by the model (running on the company server) get pushed every week on a AWS S3 bucket in the form of .pbf files. These files are then exposed at three different domains to improve performance. The front end then uses mapbox-gl-js to consume and render the .pbf files.
+      
+
+      The webapp is developed in the form of a PWA (progressive web app) so that it can be easily installed and accessed."
         category: Architecture
     stack:
       - Typescript

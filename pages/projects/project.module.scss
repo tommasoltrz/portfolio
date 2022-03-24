@@ -107,6 +107,10 @@
     @media only screen and (min-width: $breakpoint-sm) {
       margin-bottom: 0;
     }
+    img {
+      height: 24px;
+      width: 24px;
+    }
   }
 }
 .projDetailsSection {

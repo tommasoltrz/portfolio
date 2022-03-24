@@ -141,7 +141,12 @@ const IndexPage: React.FC<Props> = ({ data }) => {
             />
           </div>
           <div className={"col-12 col-sm-6 col-md-7"}>
-            <p className={cn("description", "fade-in-up")}>{moreWorksDesc}</p>
+            <ReactMarkdown
+              linkTarget="_blank"
+              className="description fade-in-up"
+            >
+              {moreWorksDesc}
+            </ReactMarkdown>
             {moreWorks.map((work, idx: number) => (
               <Work {...work} key={"work" + idx} />
             ))}

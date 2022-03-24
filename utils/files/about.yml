@@ -10,7 +10,7 @@ description: >-
   I started my career as a graphic designer to then realise I was much better at writing code than I was at choosing fonts. I later worked for [Arduino](https://www.arduino.cc/),
   where beside doing web dev I would also write [libraries](https://github.com/CasaJasmina/TelegramBot-Library) and tutorials of [questionable taste](https://create.arduino.cc/projecthub/arduino/pavlov-s-cat-7e6577?ref=user&ref_id=65561&offset=3) for thousands of users. The eperience left me
   with a soft spot for open source projects and well written documentation.
-
+avatar: assets/images/tommaso_pic.png
 
 skill:
   - JS-ES6

@@ -21,6 +21,7 @@ export type moreWork = {
 };
 
 export type aboutPageData = {
+  avatar: string;
   intro: string;
   description: string;
   skill: string[];
@@ -32,6 +33,7 @@ export type project = {
   slug: string;
   description: string;
   company: string;
+  github: string;
   link: string;
   date: string;
   stack: string[];

@@ -8,27 +8,29 @@ selectedProjects:
       - React
       - Mapbox
       - Data-Visualization
+      - PWA
     image: assets/images/fishing-prediction-map.webp
   - title: STC - Telcom
     image: assets/images/stc.webp
     slug: /projects/stc
     tags:
-      - Webapp
+      - React
       - Design-Language-System
+      - Storybook
 ndaDisclaimer: Unfortunately a lot of the projects that I am most proud of are
   under NDA. Some of them are about to be published and hopefully I will be able
   to make this list grow.
 moreWorksDesc: This is a collection of smaller or older projects and code
-  snippets I worked on.
+  snippets I worked on. Most of them can also be found on my [Github](https://github.com/tommasoltrz).
 moreWorks:
   - title: Frogdesign
-    description: I plementing the new design with Next.js, Wordpress and a lot of GSAP
+    description: Implementing the new design with Next.js, Wordpress and a lot of animations.
     url: https://www.frogdesign.com
     image: assets/images/frog.png
   - title: Knots Analytics
     image: assets/images/knots.png
     url: https://knotsanalytics.com/
-    description: Design & development - using Next.js and Figma
+    description: Design & development - using Next.js and Figma.
   - title: Face Blurring Tool
     description:
       Uses face recognition to detect faces in pictures and blurs them.
