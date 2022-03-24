@@ -48,7 +48,7 @@ projects:
     company: Knots
     date: Feb, 2022
     link: https://fishingpredictionmaps.com
-    github: https://fishingpredictionmaps.com
+    github: https://github.com/knotsanalytics/fishing_prediction_maps_website
     textBlock:
       - category: In a nutshell
         body: >-
