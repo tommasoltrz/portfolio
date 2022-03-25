@@ -44,7 +44,7 @@
       }
     }
     &.heroLink3 {
-      left: calc(100% - 50px);
+      left: calc(100% - 150px);
       top: calc(100% - 70px);
       animation-delay: -1333ms;
 
@@ -103,11 +103,9 @@
 
 @keyframes move-up-down {
   0% {
-    -webkit-transform: translateX(-50%) translateY(calc(-50% + 10px));
-    transform: translateX(-50%) translateY(calc(-50% + 10px));
+    transform: translateY(10px);
   }
   100% {
-    -webkit-transform: translateX(-50%) translateY(calc(-50% - 10px));
-    transform: translateX(-50%) translateY(calc(-50% - 10px));
+    transform: translateY(-10px);
   }
 }
