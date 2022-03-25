@@ -50,7 +50,7 @@ const CaseStudy: React.FC<selectedProject> = ({ image, slug, title, tags }) => {
               <div className={styles.arrowBg}></div>
             </div>
           </div>
-          <div className={styles.tagContainer}>
+          <div className={"tagContainer"}>
             {tags.map((tag, ix) => (
               <p className={"small fade-in-up"} key={"tag" + ix}>
                 {tag}

@@ -31,7 +31,7 @@ const Work: React.FC<Props> = ({ description, title, url, slug, tags }) => {
           <p className={cn("small", styles.desc)}>{description}</p>
         )}
         {tags && (
-          <div className={styles.tagContainer}>
+          <div className={"tagContainer"}>
             {tags.map((tag, ix) => (
               <p className={"small "} key={"tag" + ix}>
                 {tag}

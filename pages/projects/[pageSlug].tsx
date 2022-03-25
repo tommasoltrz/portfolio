@@ -79,15 +79,15 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
           <div
             className={cn("grid no-pad fade-in-up", styles.bottomTitleSection)}
           >
-            <div className={"col-12 col-sm-4 col-lg-3"}>
+            <div className={"col-6 col-sm-4 col-lg-3"}>
               <p className={cn("small ", styles.label)}>Client</p>
               <p className={styles.keyFact}>{data.company}</p>
             </div>
-            <div className={"col-12 col-sm-4 col-lg-3"}>
+            <div className={"col-6 col-sm-4 col-lg-3"}>
               <p className={cn("small", styles.label)}>Project date</p>
               <p className={styles.keyFact}>{data.date}</p>
             </div>
-            <div className={"col-12 col-sm-4 col-lg-3"}>
+            <div className={"col-6 col-sm-4 col-lg-3"}>
               <p className={cn("small", styles.label)}>Project Link</p>
               <p className={styles.keyFact}>
                 <a href={data.link} rel="noreferrer" target="_blank">
@@ -96,7 +96,7 @@ const ProjectPage: React.FC<Props> = ({ data, moreProjs, slug }) => {
               </p>
             </div>
             {data.github && (
-              <div className={"col-12 col-sm-4 col-lg-3"}>
+              <div className={"col-6 col-sm-4 col-lg-3"}>
                 <p className={cn("small", styles.label)}>Code</p>
                 <p className={styles.keyFact}>
                   <a href={data.github} rel="noreferrer" target="_blank">
