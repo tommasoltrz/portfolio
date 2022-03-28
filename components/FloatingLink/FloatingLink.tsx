@@ -22,6 +22,7 @@ const FloatingLink: React.FC<Props> = ({ name, imgUrl, bgColor, url, idx }) => {
       duration: 0.1,
       height: 120,
       width: 120,
+
       ease: "bounce",
       delay: 0.5 + 0.2 * idx,
     });
@@ -29,12 +30,14 @@ const FloatingLink: React.FC<Props> = ({ name, imgUrl, bgColor, url, idx }) => {
       height: 80,
       width: 80,
       duration: 0.1,
+
       ease: "bounce",
       delay: 0.6 + 0.2 * idx,
     });
     gsap.to(ref2.current, {
       opacity: 1,
       duration: 0.2,
+
       delay: 0.6 + 0.2 * idx,
     });
   }, []);

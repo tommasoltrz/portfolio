@@ -19,9 +19,12 @@
     left: 40px;
     top: 100%;
     transform: translateX(-50%) translateY(-50%);
+
     position: absolute;
-    animation: 2000ms ease-in-out 0s infinite alternate none running
+    animation: 2000ms ease-in-out 3s infinite alternate none running
       move-up-down;
+    animation-delay: 200ms;
+
     &::before {
       transform: translate3d(0, 0, -1);
       height: 600px;
@@ -44,7 +47,7 @@
       }
     }
     &.heroLink3 {
-      left: calc(100% - 150px);
+      left: calc(100% - 80px);
       top: calc(100% - 70px);
       animation-delay: -1333ms;
 
@@ -103,9 +106,11 @@
 
 @keyframes move-up-down {
   0% {
-    transform: translateY(10px);
+    -webkit-transform: translateX(-50%) translateY(calc(-50% + 10px));
+    transform: translateX(-50%) translateY(calc(-50% + 10px));
   }
   100% {
-    transform: translateY(-10px);
+    -webkit-transform: translateX(-50%) translateY(calc(-50% - 10px));
+    transform: translateX(-50%) translateY(calc(-50% - 10px));
   }
 }
