@@ -99,7 +99,9 @@ const IndexPage: React.FC<Props> = ({ data }) => {
           <div
             className={cn("col-12 col-sm-7 col-md-6 col-lg-5", styles.aboutCol)}
           >
-            <p className={"fade-in-up description"}>{aboutShort}</p>
+            <ReactMarkdown className={cn("fade-in-up description")}>
+              {aboutShort}
+            </ReactMarkdown>
             <Link href="/about">
               <a className={"fade-in-up"}>About me</a>
             </Link>

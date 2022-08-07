@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  # git-gateway
+local_backend: true
 media_folder: public/assets/images
 public_folder: assets/images
 collections:
@@ -62,8 +62,8 @@ collections:
         file: "utils/files/about.yml"
         fields:
           - { label: "Intro", name: "intro", widget: "markdown" }
-          - { label: "Description", name: "description", widget: "markdown" },
-          - { label: "Avatar", name: "avatar", widget: "image" },
+          - { label: "Description", name: "description", widget: "markdown" }
+          - { label: "Avatar", name: "avatar", widget: "image" }
           - {
               label: "Skills",
               name: "skill",
@@ -95,7 +95,12 @@ collections:
                   { label: "Company", name: "company", widget: "string" },
                   { label: "Date", name: "date", widget: "string" },
                   { label: "Link", name: "link", widget: "string" },
-                  { label: "Github", name: "github", widget: "string", required: false },
+                  {
+                    label: "Github",
+                    name: "github",
+                    widget: "string",
+                    required: false,
+                  },
                   {
                     label: "Stack",
                     name: "stack",
