@@ -1,7 +1,6 @@
 aboutShort: Hi 👋, I am an Italian web developer moving pixels in the www. I
   have 5 years of experience in building, and sometimes designing, digital
-  experiences. Currently working at <a href='https://boom.co/'
-  target='_blank'>BOOM<a/>.
+  experiences. Currently working at [BOOM](https://boom.co/)
 selectedProjects:
   - title: Fishing Prediction Maps
     slug: /projects/fishingpredictionmaps
