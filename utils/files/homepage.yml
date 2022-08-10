@@ -1,6 +1,7 @@
 aboutShort: Hi 👋, I am an Italian web developer moving pixels in the www. I
   have 5 years of experience in building, and sometimes designing, digital
-  experiences. Currently working at [BOOM](https://boom.co/).
+  experiences. Currently working at <a href='https://boom.co/'
+  target='_blank'>BOOM<a/>.
 selectedProjects:
   - title: Fishing Prediction Maps
     slug: /projects/fishingpredictionmaps
@@ -25,8 +26,7 @@ moreWorksDesc: This is a collection of smaller or older projects and code
   [Github](https://github.com/tommasoltrz).
 moreWorks:
   - title: Frogdesign
-    description:
-      Implementing the new design with Next.js, Wordpress and a lot of
+    description: Implementing the new design with Next.js, Wordpress and a lot of
       animations.
     url: https://www.frogdesign.com
     image: assets/images/frog.png
@@ -35,8 +35,7 @@ moreWorks:
     url: https://knotsanalytics.com/
     description: Design & development - using Next.js and Figma.
   - title: Face Blurring Tool
-    description:
-      Uses face recognition to detect faces in pictures and blurs them.
+    description: Uses face recognition to detect faces in pictures and blurs them.
       Built as a tool for design research.
     url: https://blur.frogdesign.com/
     image: assets/images/blur.png
