@@ -18,7 +18,7 @@
 
   .title {
     margin-bottom: 80px;
-    font-family: $font-regular;
+    font-weight: $font-regular;
     @media only screen and (min-width: $breakpoint-md) {
       margin-bottom: 120px;
     }
@@ -76,7 +76,8 @@
       height: 70px;
     }
     p {
-      font-family: $font-extra-light;
+      font-family: "LeagueSpartan", sans-serif;
+      font-weight: $font-extra-light;
     }
   }
 }

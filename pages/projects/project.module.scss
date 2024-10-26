@@ -98,11 +98,12 @@
   }
   p.label {
     margin-bottom: 8px;
-    font-family: $font-extra-light;
+    font-weight: $font-extra-light;
+    font-family: "LeagueSpartan", sans-serif;
   }
   p.keyFact {
     margin-bottom: 16px;
-    font-family: $font-regular;
+    font-weight: $font-regular;
     margin-bottom: 32px;
     @media only screen and (min-width: $breakpoint-sm) {
       margin-bottom: 0;
@@ -154,7 +155,8 @@
       height: 70px;
     }
     p {
-      font-family: $font-extra-light;
+      font-weight: $font-extra-light;
+      font-family: "LeagueSpartan", sans-serif;
     }
   }
 }

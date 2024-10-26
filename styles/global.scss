@@ -9,7 +9,8 @@
 html,
 body {
   margin: 0;
-  font-family: $font-light;
+  font-family: "LeagueSpartan", sans-serif;
+  font-weight: $font-light;
   color: $black;
   font-size: 20px;
   line-height: 1.4;
@@ -33,7 +34,7 @@ li {
   }
   strong {
     font-weight: normal;
-    font-family: $font-regular;
+    font-weight: $font-regular;
   }
 }
 
@@ -54,7 +55,7 @@ h1 {
 h2 {
   font-size: 40px;
   line-height: 1.2;
-  font-family: $font-light;
+  font-weight: $font-light;
   @media only screen and (min-width: $breakpoint-sm) {
     font-size: 80px;
   }
@@ -69,7 +70,7 @@ h2 {
 h3 {
   font-size: 36px;
   line-height: 1.2;
-  font-family: $font-light;
+  font-weight: $font-light;
   @media only screen and (min-width: $breakpoint-sm) {
     font-size: 56px;
   }
@@ -83,7 +84,7 @@ h3 {
 h4 {
   font-size: 24px;
   line-height: 1.4;
-  font-family: $font-light;
+  font-weight: $font-light;
   @media only screen and (min-width: $breakpoint-md) {
     font-size: 32px;
   }
@@ -91,14 +92,14 @@ h4 {
 h5 {
   font-size: 20px;
   line-height: 1;
-  font-family: $font-regular;
+  font-weight: $font-regular;
   @media only screen and (min-width: $breakpoint-md) {
     font-size: 24px;
   }
 }
 
 p {
-  font-family: $font-light;
+  font-weight: $font-light;
   font-size: 16px;
   line-height: 1.4;
   @media only screen and (min-width: $breakpoint-md) {
@@ -107,13 +108,13 @@ p {
   }
 }
 p.small {
-  font-family: $font-light;
+  font-weight: $font-light;
   font-size: 16px;
   line-height: 1.4;
 }
 
 p.xsmall {
-  font-family: $font-light;
+  font-weight: $font-light;
   font-size: 14px;
   line-height: 1.4;
 }
