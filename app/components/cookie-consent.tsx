@@ -34,7 +34,7 @@ export const CookieConsent = ({ onAccept }: { onAccept: () => void }) => {
         <p className="text-sm text-muted-foreground mb-3">
           This website uses cookies to analyze site traffic.{" "}
           <Link href="/privacy" className="hover:text-primary/80 text-sm ">
-            Learn more
+            View privacy policy
           </Link>
         </p>
         <div className="flex gap-2 justify-end">
