@@ -80,7 +80,9 @@ export async function GET() {
     }
 
     const title = track.name;
-    const artist = track.artists.map((_artist: any) => _artist.name).join(", ");
+    const artist = track.artists
+      .map((artist: { name: string }) => artist.name)
+      .join(", ");
     const albumImageUrl = track.album.images[0]?.url;
     const songUrl = track.external_urls.spotify;
 

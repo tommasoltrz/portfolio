@@ -5,7 +5,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Github, Mail, Linkedin, ChevronDown } from "lucide-react";
+import { Github, Mail, Linkedin } from "lucide-react";
 
 export function ContactMenu() {
   return (

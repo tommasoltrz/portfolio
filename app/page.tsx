@@ -17,17 +17,17 @@ export default function Home() {
         <div className="flex flex-col gap-8">
           <p>
             Hi 👋 <br />
-            I'm an Italian software engineer moving pixels in the world wide
-            web. <br />
-            With 8+ years in the field, I've worn many hats - from crafting
+            I&apos;m an Italian software engineer moving pixels in the world
+            wide web. <br />
+            With 8+ years in the field, I&apos;ve worn many hats - from crafting
             high-traffic platforms to building open source solutions used by
             thousands of users worldwide. <br />
             Always seeking opportunities to create meaningful impact through
             technology.
           </p>
           <p>
-            Over the years, I've worked across both open source and enterprise
-            environments - from community-driven development at{" "}
+            Over the years, I&apos;ve worked across both open source and
+            enterprise environments - from community-driven development at{" "}
             <a href="https://www.arduino.cc" target="_blank">
               Arduino
             </a>{" "}
@@ -62,13 +62,13 @@ export default function Home() {
             description={
               <div className="text-muted-foreground text-sm">
                 <p>
-                  Here I'm mostly responsible for{" "}
+                  Here I&apos;m mostly responsible for{" "}
                   <a href="https://www.weg.de" target="_blank">
                     weg.de
                   </a>{" "}
                   - a major German travel platform that helps thousands of users
-                  book their trips daily. I'm leading the modernization of our
-                  web platform while maintaining the current website,
+                  book their trips daily. I&apos;m leading the modernization of
+                  our web platform while maintaining the current website,
                   implementing company-wide design system standards, and
                   building tools for monitoring performance. Key focus areas
                   include:{" "}
@@ -121,7 +121,7 @@ export default function Home() {
             description={
               <p className="text-sm text-muted-foreground">
                 At frog I was part of a small team of engineers building digital
-                products for some of the world's leading companies - from
+                products for some of the world&apos;s leading companies - from
                 healthcare providers to car manufacturers.
                 <br /> Being in a design consultancy meant constantly switching
                 between different challenges: one day rapidly prototyping new

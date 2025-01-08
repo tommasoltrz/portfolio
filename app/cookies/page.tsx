@@ -47,7 +47,7 @@ export default function CookiesPage() {
             <p className="text-muted-foreground">
               We use Google Analytics to understand how visitors interact with
               our website. These cookies help us analyze and improve our
-              website's performance and content.
+              website&apos;s performance and content.
             </p>
           </div>
 

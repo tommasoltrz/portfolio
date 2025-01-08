@@ -80,7 +80,7 @@ export default function PrivacyPage() {
         </h2>
         <p className="text-muted-foreground">
           The analytics data is processed by Google Analytics in accordance with
-          their privacy policy. No personal data is stored on my website's
+          their privacy policy. No personal data is stored on my website&apos;s
           servers.
         </p>
       </section>
