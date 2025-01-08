@@ -7,7 +7,44 @@ import { Footer } from "./components/footer";
 
 export const metadata: Metadata = {
   title: "Tommaso Laterza",
-  description: "Tommaso Laterza's personal website",
+  description:
+    "Tommaso Laterza's personal website - Software Engineer and Web Developer specializing in modern web technologies, and scalable applications",
+  keywords: [
+    "Tommaso Laterza",
+    "Software Engineer",
+    "Engineering Manager",
+    "Lead Web Developer",
+    "Full Stack Developer",
+    "React Developer",
+    "TypeScript",
+    "Team Management",
+    "Product Management",
+    "Software Development",
+    "Interaction Designer",
+    "Product Designer",
+    "UI/UX Designer",
+    "Frontend Developer",
+  ],
+  authors: [{ name: "Tommaso Laterza" }],
+  creator: "Tommaso Laterza",
+  publisher: "Tommaso Laterza",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://tommasolaterza.com",
+    title: "Tommaso Laterza - Software Engineer",
+    description:
+      "Tommaso Laterza's personal website - Software Engineer and Web Developer specializing in modern web technologies, cloud solutions, and scalable applications",
+    siteName: "Tommaso Laterza",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tommaso Laterza - Software Engineer",
+    description:
+      "Tommaso Laterza's personal website - Software Engineer and Web Developer specializing in modern web technologies",
+    creator: "@tommasolaterza",
+  },
   icons: {
     icon: [
       {
