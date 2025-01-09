@@ -7,13 +7,17 @@ export default function Home() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8 row-start-2 items-start">
-        <Image
-          src="/profile.jpg"
-          alt="Tommaso Laterza"
-          width={180}
-          height={180}
-          className="rounded-md w-full max-w-[180px] mx-auto"
-        />
+        <div className="relative w-full max-w-[180px] mx-auto">
+          <div className="absolute inset-0 rounded-md bg-muted animate-pulse" />
+          <Image
+            src="/profile.jpg"
+            alt="Tommaso Laterza"
+            width={180}
+            height={180}
+            loading="lazy"
+            className="rounded-md w-full relative"
+          />
+        </div>
         <div className="flex flex-col gap-8">
           <p>
             Hi 👋 <br />
