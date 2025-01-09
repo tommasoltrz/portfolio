@@ -58,9 +58,9 @@ export default function Home() {
             role="Senior Frontend Engineer"
             company="Lastminute.com"
             companyUrl="https://www.lastminute.com"
-            timeFrame="2023 - Present"
+            timeFrame="2022 - Present"
             description={
-              <div className="text-muted-foreground text-sm">
+              <div className="text-muted-foreground">
                 <p>
                   Here I&apos;m mostly responsible for{" "}
                   <a href="https://www.weg.de" target="_blank">
@@ -81,7 +81,7 @@ export default function Home() {
                   </li>
                   <li>
                     Development of internal tools for tracking performance and
-                    business KPIs
+                    KPIs
                   </li>
                   <li>
                     Coordinating with product and design teams to deliver new
@@ -101,7 +101,7 @@ export default function Home() {
             companyUrl="https://www.linkedin.com/company/boom-imagestudio/"
             timeFrame="2022"
             description={
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground">
                 BOOM was an italian startup that aimed at transforming the world
                 of visual content management. <br />
                 Here I experienced first hand the fast-paced environment of a
@@ -119,7 +119,7 @@ export default function Home() {
             location="Munich - Milan"
             timeFrame="2018 - 2022"
             description={
-              <p className="text-sm text-muted-foreground">
+              <p className=" text-muted-foreground">
                 At frog I was part of a small team of engineers building digital
                 products for some of the world&apos;s leading companies - from
                 healthcare providers to car manufacturers.
@@ -141,7 +141,7 @@ export default function Home() {
             timeFrame="2015 - 2018"
             location="Turin - Malmö"
             description={
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground">
                 At Arduino I mostly worked on{" "}
                 <a
                   href="https://blog.arduino.cc/category/casajasmina/"
