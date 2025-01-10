@@ -22,7 +22,7 @@ export function JobExperience({
       <div className="flex justify-between">
         <div className="">
           <h3 className="text-md font-semibold">{role}</h3>
-          <a href={companyUrl} className="text-sm">
+          <a href={companyUrl} target="_blank" className="text-sm">
             {company}
           </a>
           <p className="text-sm">{location}</p>
