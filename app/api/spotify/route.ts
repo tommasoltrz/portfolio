@@ -1,5 +1,10 @@
 import { NextResponse } from "next/server";
 
+// Add runtime config to prevent edge caching
+export const runtime = "edge";
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 const client_id = process.env.SPOTIFY_CLIENT_ID;
 const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
 const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
@@ -48,13 +53,19 @@ const getAccessToken = async () => {
 
 const getRecentlyPlayed = async () => {
   const { access_token } = await getAccessToken();
+  console.log("Fetching recently played tracks...");
   const response = await fetch(NOW_PLAYING_ENDPOINT, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
+    cache: "no-store",
   });
 
   if (!response.ok) {
+    console.error("Failed to fetch tracks:", {
+      status: response.status,
+      statusText: response.statusText,
+    });
     throw new Error("Failed to fetch recently played tracks");
   }
 
@@ -66,17 +77,40 @@ export async function GET() {
     const { items } = await getRecentlyPlayed();
 
     if (!items?.length) {
-      return NextResponse.json({
-        error: "No recently played tracks found",
-      });
+      console.log("No recently played tracks found");
+      return new NextResponse(
+        JSON.stringify({ error: "No recently played tracks found" }),
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json",
+            "Cache-Control":
+              "no-store, no-cache, must-revalidate, proxy-revalidate",
+            Pragma: "no-cache",
+            Expires: "0",
+            "Surrogate-Control": "no-store",
+          },
+        }
+      );
     }
 
     const track = items[0].track;
 
     if (!track) {
-      return NextResponse.json({
-        error: "Track data is missing",
-      });
+      return new NextResponse(
+        JSON.stringify({ error: "Track data is missing" }),
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json",
+            "Cache-Control":
+              "no-store, no-cache, must-revalidate, proxy-revalidate",
+            Pragma: "no-cache",
+            Expires: "0",
+            "Surrogate-Control": "no-store",
+          },
+        }
+      );
     }
 
     const title = track.name;
@@ -87,22 +121,59 @@ export async function GET() {
     const songUrl = track.external_urls.spotify;
 
     if (!title || !artist || !albumImageUrl || !songUrl) {
-      return NextResponse.json({
-        error: "Missing required track data",
-      });
+      return new NextResponse(
+        JSON.stringify({ error: "Missing required track data" }),
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json",
+            "Cache-Control":
+              "no-store, no-cache, must-revalidate, proxy-revalidate",
+            Pragma: "no-cache",
+            Expires: "0",
+            "Surrogate-Control": "no-store",
+          },
+        }
+      );
     }
 
-    return NextResponse.json({
-      title,
-      artist,
-      albumImageUrl,
-      songUrl,
-    });
+    console.log("Returning track data:", { title, artist });
+    return new NextResponse(
+      JSON.stringify({
+        title,
+        artist,
+        albumImageUrl,
+        songUrl,
+      }),
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          "Cache-Control":
+            "no-store, no-cache, must-revalidate, proxy-revalidate",
+          Pragma: "no-cache",
+          Expires: "0",
+          "Surrogate-Control": "no-store",
+        },
+      }
+    );
   } catch (e) {
     console.error("Error fetching Spotify data:", e);
-    return NextResponse.json(
-      { error: e instanceof Error ? e.message : "Internal Server Error" },
-      { status: 500 }
+    return new NextResponse(
+      JSON.stringify({
+        error: e instanceof Error ? e.message : "Internal Server Error",
+      }),
+      {
+        status: 500,
+        headers: {
+          "Content-Type": "application/json",
+          "Cache-Control":
+            "no-store, no-cache, must-revalidate, proxy-revalidate",
+          Pragma: "no-cache",
+          Expires: "0",
+          "Surrogate-Control": "no-store",
+        },
+      }
     );
   }
 }
