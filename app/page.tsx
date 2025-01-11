@@ -99,15 +99,28 @@ export default function Home() {
             }
           />
           <JobExperience
-            role="Senior Frontend Engineer"
+            role="Senior Fullstack Engineer"
             company="BOOM"
             companyUrl="https://www.linkedin.com/company/boom-imagestudio/"
             timeFrame="2022"
             description={
-              <p className="text-muted-foreground">
-                BOOM was an italian startup that aimed at transforming the world
-                of visual content management.
-              </p>
+              <div className="text-muted-foreground">
+                <p>
+                  BOOM was an early-stage startup that aimed at transforming the
+                  world of visual content management.
+                  <br /> Key focus areas include:{" "}
+                </p>
+                <ol className="list-disc list-inside space-y-2 mt-3 ">
+                  <li>Architecting a new platform from the ground up</li>
+                  <li>
+                    Leading frontend development and architecture decisions
+                  </li>
+                  <li>Building and integrating core product features</li>
+                  <li>
+                    Coordinating with product team to define technical roadmap
+                  </li>
+                </ol>
+              </div>
             }
           />
 
@@ -160,15 +173,8 @@ export default function Home() {
                 I built web interfaces for IoT devices and created tutorials
                 that helped thousands of makers get started with connected
                 objects. <br /> <br />I got to wear many hats: from writing
-                documentation, libraries and tutorials of{" "}
-                <a
-                  href="https://projecthub.arduino.cc/Arduino_Genuino/pavlovs-cat-296cc2"
-                  target="_blank"
-                >
-                  questionable taste
-                </a>
-                , to running workshops at universities and companies across
-                Europe. <br />
+                documentation, libraries and tutorials to running workshops at
+                universities and companies across Europe. <br />
               </p>
             }
           />
