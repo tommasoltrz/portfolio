@@ -99,7 +99,7 @@ export default function Home() {
             }
           />
           <JobExperience
-            role="Senior Fullstack Engineer"
+            role="Senior Frontend Engineer"
             company="BOOM"
             companyUrl="https://www.linkedin.com/company/boom-imagestudio/"
             timeFrame="2022"
@@ -111,7 +111,6 @@ export default function Home() {
                   <br /> Key focus areas include:{" "}
                 </p>
                 <ol className="list-disc list-inside space-y-2 mt-3 ">
-                  <li>Architecting a new platform from the ground up</li>
                   <li>
                     Leading frontend development and architecture decisions
                   </li>
@@ -119,13 +118,17 @@ export default function Home() {
                   <li>
                     Coordinating with product team to define technical roadmap
                   </li>
+                  <li>
+                    Mentoring junior developers and coordinating knowledge
+                    sharing across teams
+                  </li>
                 </ol>
               </div>
             }
           />
 
           <JobExperience
-            role="Fullstack Engineer"
+            role="Design Technologist"
             company="Frog Design"
             companyUrl="https://www.frogdesign.com"
             location="Munich - Milan"
