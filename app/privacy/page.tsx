@@ -92,7 +92,7 @@ export default function PrivacyPage() {
           will always be available on this page.
         </p>
         <p className="text-sm text-muted-foreground/80">
-          Last updated: January 2025
+          Last updated: January 2026
         </p>
       </section>
     </div>
