@@ -13,7 +13,7 @@ export function Footer() {
           <a href="/cookies">Cookies</a>
         </div>
       </div>
-      <span>© Portfolio 2025</span>
+      <span>© Portfolio {new Date().getFullYear()}</span>
     </footer>
   );
 }
