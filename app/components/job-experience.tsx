@@ -18,20 +18,25 @@ export function JobExperience({
   location = "Remote",
 }: JobExperienceProps) {
   return (
-    <div className="flex flex-col gap-2">
-      <div className="flex justify-between">
-        <div className="">
-          <h3 className="text-md font-semibold">{role}</h3>
-          <a href={companyUrl} target="_blank" className="text-sm">
-            {company}
-          </a>
-          <p className="text-sm">{location}</p>
+    <div className="flex flex-col gap-2 md:grid md:grid-cols-[180px_1fr] md:gap-8 md:items-start">
+      <p className="hidden md:block text-sm text-muted-foreground/80 font-semibold md:pt-1">
+        {timeFrame}
+      </p>
+      <div className="flex flex-col gap-2">
+        <div className="flex justify-between">
+          <div className="">
+            <h3 className="text-md font-semibold">{role}</h3>
+            <a href={companyUrl} target="_blank" className="text-sm">
+              {company}
+            </a>
+            <p className="text-sm">{location}</p>
+          </div>
+          <p className="text-sm text-muted-foreground/80 font-semibold md:hidden">
+            {timeFrame}
+          </p>
         </div>
-        <p className="text-sm text-muted-foreground/80 font-semibold">
-          {timeFrame}
-        </p>
+        <div>{description}</div>
       </div>
-      <div>{description}</div>
     </div>
   );
 }

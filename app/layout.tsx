@@ -73,7 +73,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+      <body
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -86,7 +88,7 @@ export default function RootLayout({
                 GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
               />
             )}
-            <div className="grid grid-rows-[20px_1fr_20px] items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 max-w-[900px] mx-auto">
+            <div className="grid grid-rows-[20px_1fr_20px] items-center min-h-screen p-4 pb-20 gap-16 sm:p-20 max-w-[930px] mx-auto">
               <Header />
               <main className="mb-8">{children}</main>
               <Footer />
