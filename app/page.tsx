@@ -23,13 +23,13 @@ export default function Home() {
         <div className="flex flex-col gap-8">
           <p>
             Hi 👋 <br />
-            I&apos;m an Italian software engineer building and leading digital
-            products for the web.
+            I'm an Italian software engineer moving pixels in the world wide
+            web.
             <br />
             <br />
-            I specialize in large scale Frontend Architecture and Design
-            Systems. I&apos;m at my best at the intersection between design vision
-            and technical reality.
+            I design and lead frontend platforms for the web. I specialize in
+            large scale Frontend Architecture and Design Systems. I work best at
+            the intersection of design vision and technical reality.
             <br />
             <br />
             Over the past decade, I&apos;ve moved from the{" "}
@@ -40,8 +40,8 @@ export default function Home() {
             <a href="https://www.frogdesign.com" target="_blank">
               frog design
             </a>
-            , and I&apos;m currently working on modern web platforms used daily by
-            thousands of travelers at{" "}
+            , and I&apos;m currently working on modern web platforms used daily
+            by thousands of travelers at{" "}
             <a href="https://www.lastminute.com" target="_blank">
               lastminute.com
             </a>
@@ -62,15 +62,15 @@ export default function Home() {
         <div className="flex flex-col gap-8 w-full">
           <ExpertiseArea
             title="Frontend Architecture"
-            description="I design frontend platforms that scale across teams, not just applications (lately) using React and Next.js with a focus on server-driven patterns and React Server Components."
+            description="I enjoy the challenge of building platforms that stay maintainable as they grow. Lately, that means working deeply with Next.js and React Server Components to create solid foundations for performance, A/B testing, and long-term stability."
           />
           <ExpertiseArea
             title="Bridging Design & Engineering"
-            description="I work at the intersection of design and engineering, helping teams turn design systems into real, scalable products through tokens, component libraries, and shared tooling."
+            description="I work where design meets engineering to make the handoff actually work. I have a lot of experience with Multi-brand Token Systems and shared libraries, the kind of tooling that keeps Figma and production code in sync without the usual friction."
           />
           <ExpertiseArea
             title="Engineering Leadership & Developer Experience"
-            description="I focus on making teams more effective through clear engineering standards, mentorship, and by improving the systems and processes developers rely on every day."
+            description="I focus on making teams more effective by improving the daily development cycle. From Mentorship and Code Reviews to automating CI/CD and experimenting with LLM workflows,"
           />
         </div>
       </div>
@@ -245,8 +245,8 @@ export default function Home() {
                   >
                     Casa Jasmina
                   </a>{" "}
-                  - a collaborative &ldquo;Living Lab&rdquo; for open-source smart home
-                  technology created with Bruce Sterling.
+                  - a collaborative &ldquo;Living Lab&rdquo; for open-source
+                  smart home technology created with Bruce Sterling.
                   <br /> <br />
                   Key Initiatives:{" "}
                 </p>
@@ -295,23 +295,12 @@ export default function Home() {
 
       <div className="flex flex-col gap-12 row-start-2 items-start w-full">
         <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8 w-full">
-          <h2 className="text-l font-bold">Technical Stack</h2>
+          <h2 className="text-l font-bold">How I build today</h2>
         </div>
         <div className="flex flex-col gap-8 w-full">
           <SkillCategory
             category="Core Architecture"
             stack={["Next.js", "React", "RSC", "TypeScript", "Node.js"]}
-          />
-          <SkillCategory
-            category="Leadership & Process"
-            stack={[
-              "Technical Architecture",
-              "Code Review",
-              "Mentorship",
-              "CI/CD",
-              "Performance Auditing",
-              "LLM Workflows",
-            ]}
           />
           <SkillCategory
             category="Design & UI"
@@ -325,7 +314,7 @@ export default function Home() {
           />
           <SkillCategory
             category="State & Data"
-            stack={["REST", "GraphQL", "TanStack Query", "Zustand", "Redux"]}
+            stack={["REST", "GraphQL", "TanStack Query", "Zustand"]}
           />
           <SkillCategory
             category="DevOps & Testing"
