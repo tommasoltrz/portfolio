@@ -23,7 +23,7 @@ export default function Home() {
         <div className="flex flex-col gap-8">
           <p>
             Hi 👋 <br />
-            I'm an Italian software engineer moving pixels in the world wide
+            I&apos;m an Italian software engineer moving pixels in the world wide
             web.
             <br />
             <br />
