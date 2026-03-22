@@ -28,11 +28,11 @@ export default function Home() {
             <br />
             <br />
             I specialize in large scale Frontend Architecture and Design
-            Systems. I'm at my best at the intersection between design vision
+            Systems. I&apos;m at my best at the intersection between design vision
             and technical reality.
             <br />
             <br />
-            Over the past decade, I've moved from the{" "}
+            Over the past decade, I&apos;ve moved from the{" "}
             <a href="https://www.arduino.cc" target="_blank">
               Arduino ecosystem
             </a>{" "}
@@ -40,7 +40,7 @@ export default function Home() {
             <a href="https://www.frogdesign.com" target="_blank">
               frog design
             </a>
-            , and I'm currently working on modern web platforms used daily by
+            , and I&apos;m currently working on modern web platforms used daily by
             thousands of travelers at{" "}
             <a href="https://www.lastminute.com" target="_blank">
               lastminute.com
@@ -245,7 +245,7 @@ export default function Home() {
                   >
                     Casa Jasmina
                   </a>{" "}
-                  - a collaborative "Living Lab" for open-source smart home
+                  - a collaborative &ldquo;Living Lab&rdquo; for open-source smart home
                   technology created with Bruce Sterling.
                   <br /> <br />
                   Key Initiatives:{" "}
