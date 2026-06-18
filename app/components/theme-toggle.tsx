@@ -4,21 +4,22 @@ import { Button } from "@/components/ui/button";
 import { Sun } from "lucide-react";
 import { Moon } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
+  // Only read/written, never rendered, so a ref avoids a needless re-render.
+  const mounted = useRef(false);
   const { resolvedTheme, setTheme } = useTheme();
 
-  // useEffect only runs on the client, so now we can safely show the UI
+  // useEffect only runs on the client, so this flips true once we've hydrated.
   useEffect(() => {
-    setMounted(true);
+    mounted.current = true;
   }, []);
 
   return (
     <Button
       onClick={() => {
-        if (mounted) {
+        if (mounted.current) {
           setTheme(resolvedTheme === "dark" ? "light" : "dark");
         }
       }}

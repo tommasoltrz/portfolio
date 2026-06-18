@@ -1,31 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { setConsent, useNeedsConsent } from "./consent";
 
-export const CookieConsent = ({ onAccept }: { onAccept: () => void }) => {
-  const [showBanner, setShowBanner] = useState(false);
+export const CookieConsent = () => {
+  const needsConsent = useNeedsConsent();
 
-  useEffect(() => {
-    const consent = localStorage.getItem("cookieConsent");
-    if (!consent) {
-      setShowBanner(true);
-    }
-  }, []);
-
-  const handleAccept = () => {
-    localStorage.setItem("cookieConsent", "accepted");
-    setShowBanner(false);
-    onAccept();
-  };
-
-  const handleDecline = () => {
-    localStorage.setItem("cookieConsent", "declined");
-    setShowBanner(false);
-  };
-
-  if (!showBanner) return null;
+  if (!needsConsent) return null;
 
   return (
     <div className="fixed bottom-4 right-4 bg-background border rounded-lg p-4 shadow-lg z-50 max-w-[300px]">
@@ -38,10 +20,14 @@ export const CookieConsent = ({ onAccept }: { onAccept: () => void }) => {
           </Link>
         </p>
         <div className="flex gap-2 justify-end">
-          <Button variant="outline" size="sm" onClick={handleDecline}>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setConsent("declined")}
+          >
             Decline
           </Button>
-          <Button size="sm" onClick={handleAccept}>
+          <Button size="sm" onClick={() => setConsent("accepted")}>
             Accept
           </Button>
         </div>

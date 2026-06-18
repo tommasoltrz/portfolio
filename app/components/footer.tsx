@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="text-xs text-muted-foreground/80 flex justify-between font-medium">
@@ -9,8 +11,8 @@ export function Footer() {
           </span>
         </span>
         <div className="flex gap-2">
-          <a href="/privacy">Privacy</a>
-          <a href="/cookies">Cookies</a>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/cookies">Cookies</Link>
         </div>
       </div>
       <span>© Portfolio {new Date().getFullYear()}</span>
