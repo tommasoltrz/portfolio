@@ -28,28 +28,16 @@ export default function Home() {
             <br />
             <br />
             I design and lead frontend platforms for the web. I specialize in
-            large scale Frontend Architecture and Design Systems. I work best at
-            the intersection of design vision and technical reality.
+            large scale Frontend Architecture and Design Systems.
             <br />
             <br />
-            Over the past decade, I&apos;ve moved from the{" "}
-            <a href="https://www.arduino.cc" target="_blank">
-              Arduino ecosystem
-            </a>{" "}
-            to building and shipping products at{" "}
-            <a href="https://www.frogdesign.com" target="_blank">
-              frog design
-            </a>
-            , and I&apos;m currently working on modern web platforms used daily
-            by thousands of travelers at{" "}
-            <a href="https://www.lastminute.com" target="_blank">
+            A decade across the <a href="https://www.arduino.cc" target="_blank">
+              Arduino
+            </a> ecosystem, <a href="https://www.frogdesign.com" target="_blank">
+              frog
+            </a>, and now <a href="https://www.lastminute.com" target="_blank">
               lastminute.com
-            </a>
-            .
-            <br />
-            <br />
-            Always seeking opportunities to create meaningful impact through
-            technology.
+            </a>.
           </p>
         </div>
       </div>
@@ -62,15 +50,15 @@ export default function Home() {
         <div className="flex flex-col gap-8 w-full">
           <ExpertiseArea
             title="Frontend Architecture"
-            description="I enjoy the challenge of building platforms that stay maintainable as they grow. Lately, that means working deeply with Next.js and React Server Components to create solid foundations for performance, A/B testing, and long-term stability."
+            description="I enjoy building platforms that stay maintainable as they grow. Lately, that means working deeply with Next.js and React Server Components to create solid foundations for performance, A/B testing, and long-term stability."
           />
           <ExpertiseArea
             title="Bridging Design & Engineering"
-            description="I work where design meets engineering to make the handoff actually work. I have a lot of experience with Multi-brand Token Systems and shared libraries, the kind of tooling that keeps Figma and production code in sync without the usual friction."
+            description="I work where design meets engineering to make the handoff actually work. I have a lot of experience with Multi-brand Token Systems and shared libraries, the kind of tooling that keeps Figma and production code in sync."
           />
           <ExpertiseArea
             title="Engineering Leadership & Developer Experience"
-            description="I focus on making teams more effective by improving the daily development cycle. From Mentorship and Code Reviews to automating CI/CD and experimenting with LLM workflows,"
+            description="Mentorship, code reviews, CI/CD automation, and experiments with LLM workflows to sharpen the daily cycle."
           />
         </div>
       </div>
