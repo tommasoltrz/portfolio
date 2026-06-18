@@ -19,7 +19,7 @@ export function JobExperience({
 }: JobExperienceProps) {
   return (
     <div className="flex flex-col gap-2 md:grid md:grid-cols-[180px_1fr] md:gap-8 md:items-start">
-      <p className="hidden md:block text-sm text-muted-foreground/80 font-semibold md:pt-1">
+      <p className="hidden md:block text-sm text-muted-foreground/80 font-normal font-roboto-mono md:pt-1">
         {timeFrame}
       </p>
       <div className="flex flex-col gap-2">
@@ -31,7 +31,7 @@ export function JobExperience({
             </a>
             <p className="text-sm">{location}</p>
           </div>
-          <p className="text-sm text-muted-foreground/80 font-semibold md:hidden">
+          <p className="text-sm text-muted-foreground/80 font-normal font-roboto-mono md:hidden">
             {timeFrame}
           </p>
         </div>

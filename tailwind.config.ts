@@ -12,7 +12,7 @@ export default {
   		fontFamily: {
   			sans: ['var(--font-inter)', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
   			display: ['var(--font-inter)', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-  			mono: ['var(--font-mono)', 'JetBrains Mono', 'ui-monospace', 'monospace'],
+  			'roboto-mono': ['var(--font-roboto-mono)', 'Roboto Mono', 'ui-monospace', 'monospace'],
   		},
   		colors: {
   			background: 'hsl(var(--background))',
