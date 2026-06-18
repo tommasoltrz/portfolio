@@ -29,6 +29,7 @@ export default function Home() {
             <br />
             I design and lead frontend platforms for the web. I specialize in
             large scale Frontend Architecture and Design Systems.
+            I work best at the intersection of design vision and technical reality.
             <br />
             <br />
             A decade across the <a href="https://www.arduino.cc" target="_blank">
