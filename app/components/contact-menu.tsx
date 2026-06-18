@@ -1,20 +1,20 @@
-import { FaLinkedin, FaRegEnvelope, FaGithub } from "react-icons/fa6";
+import { Github, Mail, Linkedin } from "lucide-react";
 import { Tooltip } from "@/components/ui/tooltip";
 
 const links = [
   {
     href: "https://www.linkedin.com/in/tommaso-laterza/",
-    icon: FaLinkedin,
+    icon: Linkedin,
     label: "LinkedIn",
   },
   {
     href: "mailto:tommasoltrz@gmail.com",
-    icon: FaRegEnvelope,
+    icon: Mail,
     label: "Email",
   },
   {
     href: "https://github.com/tommasoltrz",
-    icon: FaGithub,
+    icon: Github,
     label: "GitHub",
   },
 ];

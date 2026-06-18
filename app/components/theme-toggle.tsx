@@ -1,7 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { FaRegSun, FaRegMoon } from "react-icons/fa6";
+import { Sun } from "lucide-react";
+import { Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useRef } from "react";
 
@@ -27,8 +28,8 @@ export function ThemeToggle() {
       size="icon"
       className="rounded-full"
     >
-      <FaRegMoon className="h-[18px] w-[18px] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <FaRegSun className="absolute h-[18px] w-[18px] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
     </Button>
   );
 }
