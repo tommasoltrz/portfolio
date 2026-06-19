@@ -1,23 +1,27 @@
+import { slugify } from "@/lib/utils";
+
 export interface ExpertiseAreaProps {
   title: string;
   description: string;
 }
 
 export function ExpertiseArea({ title, description }: ExpertiseAreaProps) {
-  const id = title.toLowerCase().replace(/\s+/g, "-");
+  const id = slugify(title);
 
   return (
     <section
-      className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-2 md:gap-8 items-start"
       aria-labelledby={id}
+      className="flex flex-col gap-2 border-b border-border py-[22px] md:flex-row md:items-start md:gap-8"
     >
       <h3
         id={id}
-        className="font-bold md:font-medium text-foreground text-sm md:pt-1"
+        className="text-[16px] font-medium text-foreground md:w-[280px] md:flex-none"
       >
         {title}
       </h3>
-      <p className="text-muted-foreground">{description}</p>
+      <p className="text-[15px] leading-[1.5] text-muted-foreground md:flex-1">
+        {description}
+      </p>
     </section>
   );
 }

@@ -1,28 +1,27 @@
+import { slugify } from "@/lib/utils";
+
 export interface SkillCategoryProps {
   category: string;
   stack: string[];
 }
 
 export function SkillCategory({ category, stack }: SkillCategoryProps) {
-  const id = category.toLowerCase().replace(/\s+/g, "-");
+  const id = slugify(category);
 
   return (
     <section
-      className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-2 md:gap-8 items-start"
       aria-labelledby={id}
+      className="flex flex-col gap-1 border-b border-border py-[18px] md:flex-row md:items-baseline md:justify-between md:gap-8"
     >
-      <h3 id={id} className="font-medium text-foreground text-sm md:pt-1">
+      <h3
+        id={id}
+        className="text-base font-medium text-foreground md:flex-none"
+      >
         {category}
       </h3>
-      <ul className="flex flex-wrap gap-2" role="list">
-        {stack.map((item) => (
-          <li key={item}>
-            <span className="px-2.5 py-1 bg-muted/80 text-foreground rounded text-sm inline-block">
-              {item}
-            </span>
-          </li>
-        ))}
-      </ul>
+      <p className="font-roboto-mono text-[13.5px] font-normal leading-[1.6] text-muted-foreground/70 md:text-right">
+        {stack.join(" · ")}
+      </p>
     </section>
   );
 }

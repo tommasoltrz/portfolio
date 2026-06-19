@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Separator } from "@/components/ui/separator";
 import { JobExperience } from "./components/job-experience";
 import { SpotifyNowPlaying } from "./components/spotify-now-playing";
 import { SkillCategory } from "./components/skill-category";
 import { ExpertiseArea } from "./components/expertise-area";
+import { Section } from "./components/section";
 
 export default function Home() {
   return (
@@ -27,9 +27,9 @@ export default function Home() {
             web.
             <br />
             <br />
-            I design and lead frontend platforms for the web. I specialize in
-            large scale Frontend Architecture and Design Systems.
-            I work best at the intersection of design vision and technical reality.
+            I build and lead web platforms at scale.
+            I specialize in frontend architecture and design systems, 
+            and work best at the intersection of design vision and technical reality.
             <br />
             <br />
             A decade across the <a href="https://www.arduino.cc" target="_blank">
@@ -42,251 +42,154 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <Separator className="mx-auto my-12" />
 
-      <div className="flex flex-col gap-12 row-start-2 items-start w-full">
-        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8 w-full">
-          <h2 className="text-l font-bold">Areas of Expertise</h2>
-        </div>
-        <div className="flex flex-col gap-8 w-full">
-          <ExpertiseArea
-            title="Frontend Architecture"
-            description="I enjoy building platforms that stay maintainable as they grow. Lately, that means working deeply with Next.js and React Server Components to create solid foundations for performance, A/B testing, and long-term stability."
-          />
-          <ExpertiseArea
-            title="Bridging Design & Engineering"
-            description="I work where design meets engineering to make the handoff actually work. I have a lot of experience with Multi-brand Token Systems and shared libraries, the kind of tooling that keeps Figma and production code in sync."
-          />
-          <ExpertiseArea
-            title="Engineering Leadership & Developer Experience"
-            description="Mentorship, code reviews, CI/CD automation, and experiments with LLM workflows to sharpen the daily cycle."
-          />
-        </div>
-      </div>
-
-      <Separator className="mx-auto my-12" />
-
-      <div className="flex flex-col gap-12 row-start-2 items-start w-full">
-        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8 w-full">
-          <h2 className="text-l font-bold">Experience</h2>
-        </div>
-        <div className="flex flex-col gap-16 w-full">
+      <Section title="Experience" hint="Tap to expand">
           <JobExperience
-            role="Senior Frontend Engineer"
+            role="Lead Product Engineer"
             company="Lastminute.com"
             companyUrl="https://www.lastminute.com"
-            timeFrame="2023 - Present"
-            description={
-              <div className="text-muted-foreground">
-                <p>
-                  lastminute.com is a European leader in the travel domain,
-                  operating a diverse ecosystem of sub-brands and web
-                  applications across multiple markets.
-                  <br />
-                  <br /> Key Initiatives:{" "}
-                </p>
-                <ol className="list-disc list-inside space-y-2 mt-3 ">
-                  <li>
-                    <span className="font-bold">
-                      Leading the architectural re-platforming
-                    </span>{" "}
+            timeFrame="2023"
+            current
+            summary="Leading the Next.js / RSC re-platforming of weg.de and the company-wide Design System — A/B-validated work that lifted CTR 15% and conversion ~4% (peaking at 10%)."
+            intro="lastminute.com is a European leader in the travel domain, operating a diverse ecosystem of sub-brands and web applications across multiple markets."
+            bullets={[
+              {
+                lead: "Leading the architectural re-platforming",
+                body: (
+                  <>
+                    {" "}
                     of{" "}
-                    <a href="https://www.weg.de" target="_blank">
+                    <a
+                      href="https://www.weg.de"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       weg.de
                     </a>{" "}
                     to a modern Next.js stack, replacing a legacy React monolith
-                    with a high-performance RSC-driven architecture.
-                  </li>
-                  <li>
-                    <span className="font-bold">
-                      Revitalized a dormant Enterprise Design System
-                    </span>{" "}
-                    by hiring dedicated design talent and architecting a
-                    Multi-brand Token System, unifying dozens of white-label
-                    applications and significantly reducing frontend overhead
-                    across the group.
-                  </li>
-                  <li>
-                    <span className="font-bold">
-                      Directing a data-validated migration strategy
-                    </span>{" "}
-                    through A/B testing and performance monitoring, ensuring
-                    platform stability and business-metric parity before
-                    executing full-scale production rollouts.
-                  </li>
-                </ol>
-              </div>
-            }
+                    with a RSC-driven architecture.
+                  </>
+                ),
+              },
+              {
+                lead: "Primary lead for the new company-wide Design System:",
+                body: " architected a Multi-brand Token System unifying dozens of white-label applications, and led hiring for dedicated design talent to bridge Figma and production code.",
+              },
+              {
+                lead: "Measuring business impact:",
+                body: " Partnered with data teams to monitor KPIs, conversion, and A/B tests — building internal dashboards (Grafana, GA, Sentry) to validate migrations and tie technical work to revenue.",
+              },
+            ]}
           />
 
           <JobExperience
             role="Senior Frontend Engineer"
             company="BOOM"
             companyUrl="https://www.linkedin.com/company/boom-imagestudio/"
-            timeFrame="2022 - 2022"
-            description={
-              <div className="text-muted-foreground">
-                <p>
-                  BOOM was a high-growth Italian startup (recognized in Forbes
-                  30 Under 30) focused on automated visual content management.
-                  <br /> <br />
-                  Key Initiatives:{" "}
-                </p>
-                <ol className="list-disc list-inside space-y-2 mt-3 ">
-                  <li>
-                    <span className="font-bold">
-                      Product Feature Expansion:
-                    </span>{" "}
-                    Led the development and integration of core product features
-                    for the content management platform, focusing on
-                    high-performance interfaces for large-scale visual assets.
-                  </li>
-                  <li>
-                    <span className="font-bold">Roadmap Collaboration:</span>{" "}
-                    Partnered with the product team to translate business
-                    requirements into technical milestones, ensuring engineering
-                    efforts aligned with the rapid growth of the startup.
-                  </li>
-                  <li>
-                    <span className="font-bold">
-                      Engineering Standards & Mentorship:
-                    </span>{" "}
-                    Established best practices for code quality and knowledge
-                    sharing, mentoring junior developers to maintain velocity
-                    during a period of intense feature delivery.
-                  </li>
-                </ol>
-              </div>
-            }
+            timeFrame="2022"
+            summary="Built in-browser image-editing features for an automated visual-content platform at an early-stage startup."
+            intro="BOOM was an Italian startup (Forbes 30 Under 30) building automated visual content management. The product was browser-based image editing; the company didn't survive, but the engineering problems were fun."
+            bullets={[
+              {
+                lead: "In-browser image editing: ",
+                body: "Built editing tools for manipulating large visual assets directly in the browser — the technical core of the product.",
+              },
+              {
+                lead: "Standards & mentorship: ",
+                body: "Set code-quality practices and mentored junior developers through a fast, high-pressure delivery cycle.",
+              },
+            ]}
           />
 
           <JobExperience
             role="Design Technologist"
-            company="Frog Design"
+            company="frog"
             companyUrl="https://www.frogdesign.com"
-            location="Munich - Milan"
-            timeFrame="2018 - 2022"
-            description={
-              <div className="text-muted-foreground">
-                <p>
-                  frog is a global creative consultancy. I was a core member of
-                  a lean, cross-European engineering team (Munich/Milan/London)
-                  delivering digital products for Fortune 500 clients.
-                </p>
-                <br />
-                Key Initiatives:{" "}
-                <ol className="list-disc list-inside space-y-2 mt-3 ">
-                  <li>
-                    <span className="font-bold">
-                      End-to-End Product Delivery:
-                    </span>{" "}
-                    Developed frontend architecture and high-fidelity functional
-                    prototypes for market leaders in the Automotive, Retail, and
-                    Insurance sectors, transitioning from conceptual design to
-                    production-ready code.
-                  </li>
-                  <li>
-                    <span className="font-bold">
-                      Technical Modernization & Recovery:
-                    </span>{" "}
-                    Contributed to the technical rescue and revamp of a legacy
-                    codebase for a Major Telecommunications Provider, working
-                    alongside external consultants to re-architect the platform
-                    into a modern React application.
-                  </li>
-                  <li>
-                    <span className="font-bold">Design Systems Advocacy:</span>{" "}
-                    Partnered with design teams to establish scalable component
-                    libraries, educating stakeholders on technical feasibility
-                    and token-driven structures to ensure seamless handoffs and
-                    developer-ready specifications.
-                  </li>
-                  <li>
-                    <span className="font-bold">
-                      Cross-Disciplinary Innovation:
-                    </span>{" "}
-                    Collaborated directly with designers to bridge the gap
-                    between physical and digital, utilizing React, Angular, and
-                    Arduino to validate complex hardware-software integrations
-                    for emerging ventures.
-                  </li>
-                </ol>
-              </div>
-            }
+            timeFrame="2018 – 2022"
+            summary="Delivered end-to-end frontend architecture and hi-fi prototypes for Fortune 500 clients; built scalable component libraries and token-driven design → dev handoffs."
+            intro="frog is a global creative consultancy. I was a core member of a lean, cross-European engineering team (Munich/Milan/London) delivering digital products for Fortune 500 clients."
+            bullets={[
+              {
+                lead: "End-to-End Product Delivery:",
+                body: " Developed frontend architecture and high-fidelity functional prototypes for market leaders in the Automotive, Retail, and Insurance sectors, transitioning from conceptual design to production-ready code.",
+              },
+              {
+                lead: "Technical Modernization & Recovery:",
+                body: " Contributed to the technical rescue and revamp of a legacy codebase for a Major Telecommunications Provider, working alongside external consultants to re-architect the platform into a modern React application.",
+              },
+              {
+                lead: "Design Systems Advocacy:",
+                body: " Partnered with design teams to establish scalable component libraries, educating stakeholders on technical feasibility and token-driven structures to ensure seamless handoffs and developer-ready specifications.",
+              },
+              {
+                lead: "Cross-Disciplinary Innovation:",
+                body: " Collaborated directly with designers to bridge the gap between physical and digital, utilizing React, Angular, and Arduino to validate complex hardware-software integrations for emerging ventures.",
+              },
+            ]}
           />
 
           <JobExperience
             role="Design Technologist"
             company="Arduino"
             companyUrl="https://www.arduino.cc"
-            timeFrame="2015 - 2018"
-            location="Turin - Malmö"
-            description={
-              <div className="text-muted-foreground">
-                <p>
-                  Arduino is a global leader in open-source hardware and
-                  software.
-                  <br />
-                  Here I was the core developer of{" "}
-                  <a
-                    href="https://blog.arduino.cc/category/casajasmina/"
-                    target="_blank"
-                  >
-                    Casa Jasmina
-                  </a>{" "}
-                  - a collaborative &ldquo;Living Lab&rdquo; for open-source
-                  smart home technology created with Bruce Sterling.
-                  <br /> <br />
-                  Key Initiatives:{" "}
-                </p>
-
-                <ol className="list-disc list-inside space-y-2 mt-3 ">
-                  <li>
-                    <span className="font-bold">
-                      IoT Interface Development:
-                    </span>{" "}
-                    Engineered web-based interfaces and communication layers for
-                    connected home devices, exploring the intersection of
-                    open-source hardware and human-centric digital control.
-                  </li>
-                  <li>
-                    <span className="font-bold">
-                      Educational Leadership & Open Source:
-                    </span>{" "}
-                    Authored comprehensive technical documentation, libraries,
-                    and tutorials that enabled thousands of makers globally to
-                    build and scale their own connected objects.
-                  </li>
-                  <li>
-                    <span className="font-bold">
-                      Knowledge Design & Workshops:
-                    </span>{" "}
-                    Led technical workshops at universities and corporate
-                    environments across Europe, educating diverse audiences on
-                    the practical implementation of IoT and smart-home
-                    ecosystems.
-                  </li>
-                  <li>
-                    <span className="font-bold">Technical Communication:</span>{" "}
-                    Balanced engineering with technical writing to bridge the
-                    gap between complex hardware protocols and accessible
-                    developer experiences (DX), fostering a global community of
-                    innovators.
-                  </li>
-                </ol>
-              </div>
+            timeFrame="2015 – 2018"
+            summary="Core developer of Casa Jasmina, an open-source smart-home “Living Lab” created with Bruce Sterling, and author of docs & libraries used by thousands of makers."
+            intro={
+              <>
+                Arduino is a global leader in open-source hardware and software.
+                Here I was the core developer of{" "}
+                <a
+                  href="https://blog.arduino.cc/category/casajasmina/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Casa Jasmina
+                </a>{" "}
+                — a collaborative “Living Lab” for open-source smart home
+                technology created with Bruce Sterling.
+              </>
             }
+            bullets={[
+              {
+                lead: "IoT Interface Development:",
+                body: " Engineered web-based interfaces and communication layers for connected home devices, exploring the intersection of open-source hardware and human-centric digital control.",
+              },
+              {
+                lead: "Educational Leadership & Open Source:",
+                body: " Authored comprehensive technical documentation, libraries, and tutorials that enabled thousands of makers globally to build and scale their own connected objects.",
+              },
+              {
+                lead: "Knowledge Design & Workshops:",
+                body: " Led technical workshops at universities and corporate environments across Europe, educating diverse audiences on the practical implementation of IoT and smart-home ecosystems.",
+              },
+              {
+                lead: "Technical Communication:",
+                body: " Balanced engineering with technical writing to bridge the gap between complex hardware protocols and accessible developer experiences (DX), fostering a global community of innovators.",
+              },
+            ]}
           />
-        </div>
-      </div>
+      </Section>
 
-      <Separator className="mx-auto my-12" />
+      <Section title="Areas of Expertise">
+          <ExpertiseArea
+            title="Technical Leadership"
+            description="Setting architectural direction, mentoring engineers, and raising code-quality and delivery standards across teams."
+          />
+          <ExpertiseArea
+            title="Fullstack & Architecture"
+            description="Next.js & Node.js as foundations for performance, A/B testing, and long-term stability."
+          />
+          <ExpertiseArea
+            title="Data-Informed Delivery"
+            description="Working with data teams on KPIs, conversion, and A/B testing to ensure technical work moves business metrics."
+          />
+          <ExpertiseArea
+            title="Design Systems & Tooling"
+            description="Building and implementing design systems, and working closely with designers to speak a shared language between design and code."
+          />
+      </Section>
 
-      <div className="flex flex-col gap-12 row-start-2 items-start w-full">
-        <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8 w-full">
-          <h2 className="text-l font-bold">How I build today</h2>
-        </div>
-        <div className="flex flex-col gap-8 w-full">
+      <Section title="How I build today">
           <SkillCategory
             category="Core Architecture"
             stack={["Next.js", "React", "RSC", "TypeScript", "Node.js"]}
@@ -297,7 +200,7 @@ export default function Home() {
               "Design Systems",
               "Storybook",
               "Figma",
-              "Accessibility (a11y)",
+              "a11y",
               "Radix UI",
             ]}
           />
@@ -311,7 +214,7 @@ export default function Home() {
               "Docker",
               "GitHub Actions",
               "Cypress",
-              "Turborepo",
+              "Grafana",
               "Sentry",
             ]}
           />
@@ -319,14 +222,11 @@ export default function Home() {
             category="Backend and CMS"
             stack={["PostgreSQL", "Supabase", "Payload CMS"]}
           />
-        </div>
-      </div>
+      </Section>
 
-      <Separator className="mx-auto my-12" />
-      <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8 row-start-2 items-start">
-        <h2 className="text-l font-bold">Recently played</h2>
-        <SpotifyNowPlaying />
-      </div>
+      <Section title="Recently played" bodyClassName="pt-6">
+          <SpotifyNowPlaying />
+      </Section>
     </>
   );
 }

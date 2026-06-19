@@ -43,10 +43,10 @@ export function SpotifyNowPlaying() {
   if (error) return null;
   if (isLoading || !data) {
     return (
-      <div className="flex gap-4">
-        <div className="w-[96px] h-[96px] bg-accent animate-pulse rounded-md" />
+      <div className="flex items-center gap-[18px]">
+        <div className="w-[74px] h-[74px] bg-accent animate-pulse rounded-md" />
         <div className="flex flex-col gap-2">
-          <div className="w-32 h-4 bg-accent animate-pulse rounded" />
+          <div className="w-40 h-4 bg-accent animate-pulse rounded" />
           <div className="w-24 h-3 bg-accent animate-pulse rounded" />
         </div>
       </div>
@@ -54,30 +54,30 @@ export function SpotifyNowPlaying() {
   }
 
   return (
-    <div>
-      <a
-        href={data.songUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex gap-4 no-underline group"
-      >
-        {data.albumImageUrl && (
-          <Image
-            src={data.albumImageUrl}
-            alt={`${data.title} album art`}
-            width={96}
-            height={96}
-            className="rounded-md"
-            unoptimized
-          />
-        )}
-        <div className="flex flex-col">
-          <span className="font-medium group-hover:text-primary text-foreground transition-colors">
-            {data.title}
-          </span>
-          <span className="text-xs text-muted-foreground">{data.artist}</span>
-        </div>
-      </a>
-    </div>
+    <a
+      href={data.songUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex w-fit items-center gap-[18px] no-underline group"
+    >
+      {data.albumImageUrl && (
+        <Image
+          src={data.albumImageUrl}
+          alt={`${data.title} album art`}
+          width={74}
+          height={74}
+          className="flex-none rounded-md shadow-sm"
+          unoptimized
+        />
+      )}
+      <div className="flex min-w-0 flex-col">
+        <span className="text-lg font-medium text-foreground transition-colors group-hover:text-primary">
+          {data.title}
+        </span>
+        <span className="mt-1 text-sm text-muted-foreground/70">
+          {data.artist}
+        </span>
+      </div>
+    </a>
   );
 }
