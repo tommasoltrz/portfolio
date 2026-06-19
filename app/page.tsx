@@ -219,8 +219,8 @@ export default function Home() {
             ]}
           />
           <SkillCategory
-            category="Backend and CMS"
-            stack={["PostgreSQL", "Supabase", "Payload CMS"]}
+            category="AI-Assisted Engineering"
+            stack={["LMs for coding, debugging, observability, and delivery automation"]}
           />
       </Section>
 
