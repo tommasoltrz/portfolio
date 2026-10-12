@@ -6,8 +6,11 @@ const pill =
 
 export function FloatingControls() {
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-4 z-50 sm:top-10">
-      <div className="mx-auto flex max-w-[930px] items-center justify-end gap-2 px-4 sm:gap-3 sm:px-20">
+    // Mobile: fixed above the header, since there isn't room beside the name.
+    // sm+: spans from the header down to the bottom of the page, so the sticky
+    // row starts aligned with the header and pins near the top once scrolled past.
+    <div className="pointer-events-none fixed inset-x-4 top-4 z-50 sm:absolute sm:inset-x-20 sm:top-32 sm:bottom-0">
+      <div className="flex items-center justify-end gap-2 sm:sticky sm:top-6 sm:gap-3">
         <div className={`${pill} flex h-10 items-center px-1 sm:h-12 sm:px-1.5`}>
           <ContactMenu />
         </div>
