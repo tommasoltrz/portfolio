@@ -36,8 +36,10 @@ export default function Home() {
               Arduino
             </a> ecosystem, <a href="https://www.frogdesign.com" target="_blank">
               frog
-            </a>, and now <a href="https://www.lastminute.com" target="_blank">
+            </a>, <a href="https://www.lastminute.com" target="_blank">
               lastminute.com
+            </a>, and now <a href="https://www.stedi.com" target="_blank">
+              Stedi
             </a>.
           </p>
         </div>
@@ -45,16 +47,35 @@ export default function Home() {
 
       <Section title="Experience" hint="Tap to expand">
           <JobExperience
+            role="Staff Frontend Engineer"
+            company="Stedi"
+            companyUrl="https://www.stedi.com"
+            timeFrame="2026"
+            current
+            summary="Building the web product for the world's only API-first healthcare clearinghouse with React, Next.js, and TypeScript."
+            intro="Stedi is a programmable healthcare clearinghouse: modern APIs for eligibility checks, claims, and ERAs that let healthcare technology companies exchange X12 HIPAA transactions with payers without dealing with EDI or carrier-specific connectivity."
+            bullets={[
+              {
+                lead: "Web product:",
+                body: " Building foundational features in Stedi's Next.js and TypeScript application, working from Figma designs alongside design, product, and backend engineering.",
+              },
+              {
+                lead: "Design language system:",
+                body: " Contributing reusable, responsive, accessible React components to the shared design language.",
+              },
+            ]}
+          />
+
+          <JobExperience
             role="Lead Product Engineer"
             company="Lastminute.com"
             companyUrl="https://www.lastminute.com"
-            timeFrame="2023"
-            current
-            summary="Leading the Next.js / RSC re-platforming of weg.de and the company-wide Design System — A/B-validated work that lifted CTR 15% and conversion ~4% (peaking at 10%)."
+            timeFrame="2023 – 2026"
+            summary="Led the Next.js / RSC re-platforming of weg.de and the company-wide Design System — A/B-validated work that lifted CTR 15% and conversion ~4% (peaking at 10%)."
             intro="lastminute.com is a European leader in the travel domain, operating a diverse ecosystem of sub-brands and web applications across multiple markets."
             bullets={[
               {
-                lead: "Leading the architectural re-platforming",
+                lead: "Led the architectural re-platforming",
                 body: (
                   <>
                     {" "}
