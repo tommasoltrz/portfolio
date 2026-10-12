@@ -6,12 +6,12 @@ const pill =
 
 export function FloatingControls() {
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-4 z-50 sm:top-6">
-      <div className="mx-auto flex max-w-[930px] items-center justify-end gap-3 px-4 sm:px-20">
-        <div className={`${pill} flex items-center px-5 py-2.5`}>
+    <div className="pointer-events-none fixed inset-x-0 top-4 z-50 sm:top-10">
+      <div className="mx-auto flex max-w-[930px] items-center justify-end gap-2 px-4 sm:gap-3 sm:px-20">
+        <div className={`${pill} flex h-10 items-center px-1 sm:h-12 sm:px-1.5`}>
           <ContactMenu />
         </div>
-        <div className={`${pill} flex items-center justify-center`}>
+        <div className={`${pill} flex h-10 w-10 items-center justify-center sm:h-12 sm:w-12`}>
           <ThemeToggle />
         </div>
       </div>

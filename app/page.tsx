@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { JobExperience } from "./components/job-experience";
 import { SpotifyNowPlaying } from "./components/spotify-now-playing";
 import { SkillCategory } from "./components/skill-category";
@@ -8,41 +7,36 @@ import { Section } from "./components/section";
 export default function Home() {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8 row-start-2 items-start">
-        <div className="relative w-full max-w-[180px] mx-auto">
-          <div className="absolute inset-0 rounded-md bg-muted animate-pulse" />
-          <Image
-            src="/profile.jpg"
-            alt="Tommaso Laterza"
-            width={180}
-            height={180}
-            loading="lazy"
-            className="rounded-md w-full relative"
-          />
-        </div>
-        <div className="flex flex-col gap-8">
-          <p>
-            Hi 👋 <br />
-            I&apos;m an Italian software engineer moving pixels in the world wide
-            web.
-            <br />
-            <br />
-            I build and lead web platforms at scale.
-            I specialize in frontend architecture and design systems, 
-            and work best at the intersection of design vision and technical reality.
-            <br />
-            <br />
-            A decade across the <a href="https://www.arduino.cc" target="_blank">
-              Arduino
-            </a> ecosystem, <a href="https://www.frogdesign.com" target="_blank">
-              frog
-            </a>, <a href="https://www.lastminute.com" target="_blank">
-              lastminute.com
-            </a>, and now <a href="https://www.stedi.com" target="_blank">
-              Stedi
-            </a>.
-          </p>
-        </div>
+      <div className="flex max-w-[42rem] flex-col gap-4">
+        <p>
+          Hi 👋 <br />
+          I&apos;m an Italian software engineer moving pixels in the world wide
+          web.
+        </p>
+        <p>
+          I build and lead web platforms at scale. I specialize in frontend
+          architecture and design systems, and work best at the intersection of
+          design vision and technical reality.
+        </p>
+        <p>
+          A decade across the{" "}
+          <a href="https://www.arduino.cc" target="_blank">
+            Arduino
+          </a>{" "}
+          ecosystem,{" "}
+          <a href="https://www.frogdesign.com" target="_blank">
+            frog
+          </a>
+          ,{" "}
+          <a href="https://www.lastminute.com" target="_blank">
+            lastminute.com
+          </a>
+          , and now{" "}
+          <a href="https://www.stedi.com" target="_blank">
+            Stedi
+          </a>
+          .
+        </p>
       </div>
 
       <Section title="Experience" hint="Tap to expand">
