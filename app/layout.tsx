@@ -89,8 +89,8 @@ export default function RootLayout({
                 GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
               />
             )}
-            <FloatingControls />
-            <div className="grid grid-rows-[auto_1fr_auto] items-center min-h-screen p-4 pb-10 gap-16 sm:p-20 sm:pt-10 sm:pb-10 max-w-[930px] mx-auto">
+            <div className="relative grid grid-rows-[auto_1fr_auto] items-center min-h-screen p-4 pt-20 pb-10 gap-16 sm:p-20 sm:pt-32 sm:pb-10 max-w-[930px] mx-auto">
+              <FloatingControls />
               <Header />
               <main className="mb-8">{children}</main>
               <Footer />
