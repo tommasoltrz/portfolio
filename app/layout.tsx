@@ -90,7 +90,7 @@ export default function RootLayout({
               />
             )}
             <FloatingControls />
-            <div className="grid grid-rows-[20px_1fr_20px] items-center min-h-screen p-4 pb-10 pt-6 gap-16 sm:p-20 sm:pb-10 max-w-[930px] mx-auto">
+            <div className="grid grid-rows-[auto_1fr_auto] items-center min-h-screen p-4 pb-10 gap-16 sm:p-20 sm:pt-10 sm:pb-10 max-w-[930px] mx-auto">
               <Header />
               <main className="mb-8">{children}</main>
               <Footer />
