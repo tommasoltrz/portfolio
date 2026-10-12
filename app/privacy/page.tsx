@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "How this portfolio handles page visit analytics and browser storage",
+  description: "How this portfolio handles visit and contact link analytics and browser storage",
 };
 
 export default function PrivacyPage() {
@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       </p>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Page Visit Analytics</h2>
+        <h2 className="text-2xl font-semibold mb-4">Website Analytics</h2>
         <p className="text-muted-foreground mb-4">
           I use a self-hosted installation of Umami to understand which pages
           people visit and improve this portfolio. It records page visits and
@@ -25,11 +25,16 @@ export default function PrivacyPage() {
           system, device type, language and approximate location.
         </p>
         <p className="text-muted-foreground mb-4">
+          I also record clicks on my Email, LinkedIn and GitHub contact links to
+          understand interest in contacting me or viewing my profiles. These
+          events identify the link clicked and do not include message content.
+        </p>
+        <p className="text-muted-foreground mb-4">
           Umami does not use analytics cookies. It processes IP addresses and
           browser information to derive location and generate hashed visit
           identifiers. Raw IP addresses are not stored in the analytics database.
           URL query strings and fragments are excluded from tracking. I do not
-          use custom event tracking, session recordings or advertising profiles.
+          use session recordings or advertising profiles.
         </p>
         <p className="text-muted-foreground mb-4">
           The analytics service runs on Vercel, and its data is stored in my Neon

@@ -15,10 +15,10 @@ export default function CookiesPage() {
       </p>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Page Visit Analytics</h2>
+        <h2 className="text-2xl font-semibold mb-4">Website Analytics</h2>
         <p className="text-muted-foreground">
-          Umami counts page visits without saving analytics cookies or visitor
-          identifiers in your browser. Read the{" "}
+          Umami counts page visits and clicks on my contact links without saving
+          analytics cookies or visitor identifiers in your browser. Read the{" "}
           <Link href="/privacy" className="text-foreground underline">
             privacy policy
           </Link>{" "}
