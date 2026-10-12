@@ -1,8 +1,9 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy and data protection information",
+  description: "How this portfolio handles page visit analytics and browser storage",
 };
 
 export default function PrivacyPage() {
@@ -11,77 +12,71 @@ export default function PrivacyPage() {
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
 
       <p className="text-muted-foreground mb-8">
-        This Privacy Policy, in accordance with the Regulation (EU) 2016/679
-        (GDPR), outlines how I collect and process data on my portfolio website.
+        This page explains how I, Tommaso Laterza, handle information when you
+        visit this portfolio.
       </p>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Data Collection</h2>
+        <h2 className="text-2xl font-semibold mb-4">Page Visit Analytics</h2>
         <p className="text-muted-foreground mb-4">
-          I use Google Analytics to collect anonymous usage data about how
-          visitors interact with my website. This helps me understand which
-          content is most useful and how I can improve the site. The data
-          collected includes:
+          I use a self-hosted installation of Umami to understand which pages
+          people visit and improve this portfolio. It records page visits and
+          basic visit information, including referral source, browser, operating
+          system, device type, language and approximate location.
         </p>
-        <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4 mb-4">
-          <li>Pages visited</li>
-          <li>Time spent on the site</li>
-          <li>Country of origin</li>
-          <li>Browser type and device</li>
-          <li>Referral source</li>
-        </ul>
         <p className="text-muted-foreground mb-4">
-          Additionally, the website stores your theme preference (light/dark
-          mode) locally on your device to provide a consistent viewing
-          experience.
+          Umami does not use analytics cookies. It processes IP addresses and
+          browser information to derive location and generate hashed visit
+          identifiers. Raw IP addresses are not stored in the analytics database.
+          URL query strings and fragments are excluded from tracking. I do not
+          use custom event tracking, session recordings or advertising profiles.
         </p>
-        <p className="text-muted-foreground">
-          No personal information is collected unless you choose to contact me
-          directly.
-        </p>
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Cookie Usage</h2>
-        <p className="text-muted-foreground">
-          This website uses cookies only for analytics purposes. You can choose
-          whether to accept these cookies through the consent banner that
-          appears when you first visit the site. You can change your preferences
-          at any time by clearing your browser cookies.
-        </p>
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Your Rights</h2>
         <p className="text-muted-foreground mb-4">
-          Under GDPR, you have several rights regarding your data:
+          The analytics service runs on Vercel, and its data is stored in my Neon
+          PostgreSQL database in Frankfurt. The dashboard requires authentication.
+          In this self-hosted setup, analytics records remain until I delete them.
         </p>
-        <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-          <li>Right to access any data collected about you</li>
-          <li>Right to request deletion of your data</li>
-          <li>Right to withdraw consent for data collection</li>
-          <li>Right to lodge a complaint with a supervisory authority</li>
-        </ul>
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
         <p className="text-muted-foreground">
-          If you have any questions about this privacy policy or would like to
-          exercise any of your rights regarding your data, you can contact me
-          at:{" "}
-          <span className="text-foreground">tommasoltrz [at] gmail.com</span>
+          The tracker respects Do Not Track in browsers that support it. You can
+          also prevent tracking by blocking the analytics script in your browser.
         </p>
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">
-          Data Storage and Security
-        </h2>
+        <h2 className="text-2xl font-semibold mb-4">Browser Storage</h2>
         <p className="text-muted-foreground">
-          The analytics data is processed by Google Analytics in accordance with
-          their privacy policy. No personal data is stored on my website&apos;s
-          servers.
+          Your light or dark theme preference is saved locally in your browser.
+          This website does not set analytics or advertising cookies. See the{" "}
+          <Link href="/cookies" className="text-foreground underline">
+            cookies and browser storage page
+          </Link>{" "}
+          for details.
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">Hosting and External Content</h2>
+        <p className="text-muted-foreground">
+          Vercel may process technical request information, including IP
+          addresses, to deliver and secure the website and analytics service.
+          Spotify album artwork loads from Spotify&apos;s image servers, which
+          receive normal request information. If you follow an external link,
+          the destination website&apos;s privacy policy applies.
+        </p>
+      </section>
+
+      <section className="mb-8">
+        <h2 className="text-2xl font-semibold mb-4">Contact and Your Rights</h2>
+        <p className="text-muted-foreground mb-4">
+          If you contact me directly, I use the information you provide to respond
+          to your message. For questions about this policy or requests concerning
+          your personal data, contact{" "}
+          <span className="text-foreground">tommasoltrz [at] gmail.com</span>.
+        </p>
+        <p className="text-muted-foreground">
+          Where applicable, you may request access, correction or deletion of
+          your personal data, ask to restrict processing, or object to processing.
+          You may also lodge a complaint with your data protection authority.
         </p>
       </section>
 
@@ -92,7 +87,7 @@ export default function PrivacyPage() {
           will always be available on this page.
         </p>
         <p className="text-sm text-muted-foreground/80">
-          Last updated: January 2026
+          Last updated: October 12, 2026
         </p>
       </section>
     </div>

@@ -1,3 +1,3 @@
 ## 🚀 Portfolio
 
-Live at 👉 [tommasolaterza.io](https://tommasolaterza.io)
+Live at 👉 [tommasolaterza.com](https://tommasolaterza.com)

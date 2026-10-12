@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -13,7 +14,6 @@ const robotoMono = Roboto_Mono({
 });
 import { ThemeProvider } from "./components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { GoogleAnalytics } from "./components/google-analytics";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import { FloatingControls } from "./components/floating-controls";
@@ -77,6 +77,18 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${robotoMono.variable} font-sans antialiased`}
       >
+        {process.env.NODE_ENV === "production" && (
+          <Script
+            id="umami-analytics"
+            src="https://umami-xi-blond.vercel.app/script.js"
+            strategy="afterInteractive"
+            data-website-id="47f59a81-c771-4dab-8a06-8b29d8132563"
+            data-domains="tommasolaterza.com,www.tommasolaterza.com"
+            data-exclude-search="true"
+            data-exclude-hash="true"
+            data-do-not-track="true"
+          />
+        )}
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -84,11 +96,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-              <GoogleAnalytics
-                GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
-              />
-            )}
             <div className="relative grid grid-rows-[auto_1fr_auto] items-center min-h-screen p-4 pt-20 pb-10 gap-16 sm:p-20 sm:pt-32 sm:pb-10 max-w-[930px] mx-auto">
               <FloatingControls />
               <Header />
