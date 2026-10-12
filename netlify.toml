@@ -7,3 +7,16 @@
 
 [build.environment]
   NEXT_TELEMETRY_DISABLED = "1"
+
+# Preserve old portfolio links after moving the site to .com.
+[[redirects]]
+  from = "https://tommasolaterza.io/*"
+  to = "https://tommasolaterza.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.tommasolaterza.io/*"
+  to = "https://tommasolaterza.com/:splat"
+  status = 301
+  force = true
