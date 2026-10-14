@@ -1,8 +1,12 @@
 import { ThemeToggle } from "./theme-toggle";
 import { ContactMenu } from "./contact-menu";
 
-const pill =
-  "pointer-events-auto rounded-full border border-border/60 bg-background/80 backdrop-blur-sm";
+const pill = [
+  "pointer-events-auto rounded-full border border-border/60 bg-background/70 backdrop-blur-md backdrop-saturate-150",
+  // Solid fallbacks when the user asks for less transparency or more contrast.
+  "[@media(prefers-reduced-transparency:reduce)]:bg-background [@media(prefers-reduced-transparency:reduce)]:backdrop-blur-none",
+  "contrast-more:border-foreground/50 contrast-more:bg-background contrast-more:backdrop-blur-none",
+].join(" ");
 
 export function FloatingControls() {
   return (

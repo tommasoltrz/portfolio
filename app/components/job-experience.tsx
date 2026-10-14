@@ -49,7 +49,7 @@ export function JobExperience({
           aria-expanded={open}
           aria-controls={panelId}
           onClick={() => setOpen((v) => !v)}
-          className="group flex w-full flex-col py-6 text-left transition-opacity hover:opacity-[0.78]"
+          className="group flex w-full flex-col py-6 text-left transition-opacity hover:opacity-[0.78] active:opacity-60 active:duration-0"
         >
           <span className="flex items-baseline justify-between gap-6">
             <span className="flex flex-wrap items-center gap-x-[11px] gap-y-1.5 text-[16px] font-medium text-foreground">
@@ -80,7 +80,7 @@ export function JobExperience({
               </span>
               <ChevronDown
                 aria-hidden
-                className={`size-[18px] flex-none text-muted-foreground/45 transition-transform duration-200 ${
+                className={`size-[18px] flex-none text-muted-foreground/45 transition-transform duration-300 ease-out motion-reduce:transition-none ${
                   open ? "rotate-180" : ""
                 }`}
               />
@@ -95,7 +95,7 @@ export function JobExperience({
         id={panelId}
         role="region"
         aria-labelledby={triggerId}
-        className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+        className={`grid transition-[grid-template-rows] duration-300 ease-out motion-reduce:transition-none ${
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
         }`}
       >

@@ -44,10 +44,10 @@ export function SpotifyNowPlaying() {
   if (isLoading || !data) {
     return (
       <div className="flex items-center gap-[18px]">
-        <div className="w-[74px] h-[74px] bg-accent animate-pulse rounded-md" />
+        <div className="w-[74px] h-[74px] bg-accent animate-pulse motion-reduce:animate-none rounded-md" />
         <div className="flex flex-col gap-2">
-          <div className="w-40 h-4 bg-accent animate-pulse rounded" />
-          <div className="w-24 h-3 bg-accent animate-pulse rounded" />
+          <div className="w-40 h-4 bg-accent animate-pulse motion-reduce:animate-none rounded" />
+          <div className="w-24 h-3 bg-accent animate-pulse motion-reduce:animate-none rounded" />
         </div>
       </div>
     );

@@ -31,9 +31,10 @@ export function Tooltip({
           side={side}
           sideOffset={6}
           className={cn(
-            "z-50 rounded-md bg-foreground px-2 py-1 text-xs text-background",
+            "z-50 origin-[--radix-tooltip-content-transform-origin] rounded-md bg-foreground px-2 py-1 text-xs text-background",
             "animate-in fade-in-0 zoom-in-95",
-            "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95"
+            "data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95",
+            "motion-reduce:animate-none data-[state=closed]:motion-reduce:animate-none"
           )}
         >
           {content}

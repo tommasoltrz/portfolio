@@ -30,7 +30,7 @@ export function ContactMenu() {
             rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
             aria-label={label}
             data-umami-event={`${label} click`}
-            className="flex h-8 w-8 items-center justify-center rounded-full text-muted-foreground no-underline transition-colors hover:bg-accent hover:text-accent-foreground sm:h-9 sm:w-9"
+            className="flex h-8 w-8 items-center justify-center rounded-full text-muted-foreground no-underline transition-[color,background-color,transform] duration-100 ease-out hover:bg-accent active:scale-90 hover:text-accent-foreground sm:h-9 sm:w-9"
           >
             <Icon className="h-4 w-4" aria-hidden="true" />
           </a>
