@@ -19,7 +19,7 @@ export function SkillCategory({ category, stack }: SkillCategoryProps) {
       >
         {category}
       </h3>
-      <p className="font-roboto-mono text-[13.5px] font-normal leading-[1.6] text-muted-foreground/70 md:text-right">
+      <p className="font-roboto-mono text-meta font-normal text-muted-foreground/70 md:text-right">
         {stack.join(" · ")}
       </p>
     </section>

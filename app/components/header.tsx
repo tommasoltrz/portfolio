@@ -16,7 +16,7 @@ export function Header() {
           priority
           className="h-10 w-10 rounded-full bg-muted object-cover sm:h-12 sm:w-12"
         />
-        <h1 className="text-base font-bold sm:text-2xl">Tommaso Laterza</h1>
+        <h1 className="text-base font-bold sm:text-2xl sm:tracking-tight">Tommaso Laterza</h1>
       </Link>
     </header>
   );

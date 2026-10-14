@@ -39,7 +39,7 @@ export default function Home() {
         </p>
       </div>
 
-      <Section title="Experience" hint="Tap to expand">
+      <Section title="Experience" hint="Expand for details">
           <JobExperience
             role="Staff Frontend Engineer"
             company="Stedi"

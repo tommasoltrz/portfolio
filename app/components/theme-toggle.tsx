@@ -5,6 +5,7 @@ import { Sun } from "lucide-react";
 import { Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useRef } from "react";
+import { flushSync } from "react-dom";
 
 export function ThemeToggle() {
   // Only read/written, never rendered, so a ref avoids a needless re-render.
@@ -16,12 +17,22 @@ export function ThemeToggle() {
     mounted.current = true;
   }, []);
 
+  const toggle = () => {
+    const next = resolvedTheme === "dark" ? "light" : "dark";
+    // Cross-fade the whole page instead of an abrupt brightness jump. flushSync
+    // makes next-themes apply the class inside the transition callback, so the
+    // browser snapshots the new theme. Falls back to an instant swap.
+    if (!document.startViewTransition) {
+      setTheme(next);
+      return;
+    }
+    document.startViewTransition(() => flushSync(() => setTheme(next)));
+  };
+
   return (
     <Button
       onClick={() => {
-        if (mounted.current) {
-          setTheme(resolvedTheme === "dark" ? "light" : "dark");
-        }
+        if (mounted.current) toggle();
       }}
       aria-label="Toggle theme"
       variant="ghost"

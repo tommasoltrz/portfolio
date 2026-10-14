@@ -14,6 +14,12 @@ export default {
   			display: ['var(--font-inter)', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
   			'roboto-mono': ['var(--font-roboto-mono)', 'Roboto Mono', 'ui-monospace', 'monospace'],
   		},
+  		// Small type scale in rem so it follows the user's font-size setting.
+  		fontSize: {
+  			body: ['0.9375rem', { lineHeight: '1.6' }],
+  			meta: ['0.8125rem', { lineHeight: '1.6' }],
+  			label: ['0.6875rem', { lineHeight: '1rem' }]
+  		},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
