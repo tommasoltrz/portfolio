@@ -1,0 +1,38 @@
+# Tommaso Laterza
+
+> Personal portfolio of Tommaso Laterza, an Italian Staff Frontend Engineer who builds and leads web platforms at scale. He specializes in frontend architecture and design systems, and works at the intersection of design vision and technical reality.
+
+The site is a single page covering experience, areas of expertise and current stack. Contact: tommasoltrz [at] gmail.com.
+
+## Experience
+
+- Staff Frontend Engineer at [Stedi](https://www.stedi.com) (2026 – present): building the web product for an API-first healthcare clearinghouse with React, Next.js and TypeScript, and contributing to its design language system.
+- Lead Product Engineer at [lastminute.com](https://www.lastminute.com) (2023 – 2026): led the Next.js / RSC re-platforming of weg.de and the company-wide multi-brand Design System; A/B-validated work lifted CTR 15% and conversion ~4%.
+- Senior Frontend Engineer at BOOM (2022): built in-browser image-editing tools for an automated visual-content platform.
+- Design Technologist at [frog](https://www.frogdesign.com) (2018 – 2022): frontend architecture, hi-fi prototypes and component libraries for Fortune 500 clients.
+- Design Technologist at [Arduino](https://www.arduino.cc) (2015 – 2018): core developer of the Casa Jasmina open-source smart-home lab; author of docs, libraries and tutorials for makers.
+
+## Expertise
+
+- Technical leadership: architectural direction, mentoring, code-quality and delivery standards.
+- Fullstack & architecture: Next.js and Node.js for performance, A/B testing and long-term stability.
+- Data-informed delivery: KPIs, conversion and A/B testing with data teams.
+- Design systems & tooling: building design systems and bridging design and code.
+
+## Stack
+
+- Core: Next.js, React, RSC, TypeScript, Node.js
+- Design & UI: Design Systems, Storybook, Figma, accessibility, Radix UI
+- State & data: REST, GraphQL, TanStack Query, Zustand
+- DevOps & testing: Docker, GitHub Actions, Cypress, Grafana, Sentry
+
+## Links
+
+- [Portfolio](https://tommasolaterza.com): the full site
+- [LinkedIn](https://www.linkedin.com/in/tommaso-laterza/): professional profile
+- [GitHub](https://github.com/tommasoltrz): code
+
+## Optional
+
+- [Privacy Policy](https://tommasolaterza.com/privacy): analytics and data handling
+- [Cookies](https://tommasolaterza.com/cookies): browser storage used by the site
