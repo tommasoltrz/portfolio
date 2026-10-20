@@ -10,13 +10,13 @@ export default function Home() {
       <div className="flex max-w-[42rem] flex-col gap-4">
         <p>
           Hi 👋 <br />
-          I&apos;m an Italian software engineer moving pixels in the world wide
+          I&apos;m a software engineer moving pixels in the world wide
           web.
         </p>
         <p>
           I build and lead web platforms at scale. I specialize in frontend
           architecture and design systems, and work best at the intersection of
-          design vision and technical reality.
+          design and engineering.
         </p>
         <p>
           A decade across the{" "}
@@ -235,7 +235,7 @@ export default function Home() {
           />
           <SkillCategory
             category="AI-Assisted Engineering"
-            stack={["LMs for coding, debugging, observability, and delivery automation"]}
+            stack={["LLMs for coding, debugging, observability, and delivery automation"]}
           />
       </Section>
 
