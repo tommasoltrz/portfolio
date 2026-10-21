@@ -19,6 +19,11 @@ The site is a single page covering experience, areas of expertise and current st
 - Data-informed delivery: KPIs, conversion and A/B testing with data teams.
 - Design systems & tooling: building design systems and bridging design and code.
 
+## Side projects
+
+- [Paguro](https://anguria.studio/paguro/): a native Mac workspace bringing messages, mail and everyday web tools together.
+- [Stingray](https://www.stingraynav.com/): decodes AIS and VDR recordings into an interactive incident reconstruction, in the browser.
+
 ## Stack
 
 - Core: Next.js, React, RSC, TypeScript, Node.js

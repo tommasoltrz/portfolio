@@ -3,6 +3,7 @@ import { SpotifyNowPlaying } from "./components/spotify-now-playing";
 import { SkillCategory } from "./components/skill-category";
 import { ExpertiseArea } from "./components/expertise-area";
 import { Section } from "./components/section";
+import { SideProject } from "./components/side-project";
 
 export default function Home() {
   return (
@@ -201,6 +202,24 @@ export default function Home() {
           <ExpertiseArea
             title="Design Systems & Tooling"
             description="Building and implementing design systems, and working closely with designers to speak a shared language between design and code."
+          />
+      </Section>
+
+      <Section title="Side projects">
+          <SideProject
+            name="Paguro"
+            description="A native Mac workspace for your web apps"
+            badges={["macOS", "Open source"]}
+            url="https://anguria.studio/paguro/"
+            icon="/projects/paguro-light.png"
+            iconDark="/projects/paguro-dark.png"
+          />
+          <SideProject
+            name="Stingray"
+            description="VDR & AIS decoder for incident reconstruction"
+            badges={["Web app"]}
+            url="https://www.stingraynav.com/"
+            icon="/projects/stingray.png"
           />
       </Section>
 
