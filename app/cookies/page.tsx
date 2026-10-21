@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/cookies",
+  },
   title: "Cookies and Browser Storage",
   description: "Cookie-free analytics and how this portfolio remembers your theme",
 };

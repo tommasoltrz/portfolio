@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import { JobExperience } from "./components/job-experience";
 import { SpotifyNowPlaying } from "./components/spotify-now-playing";
 import { SkillCategory } from "./components/skill-category";
 import { ExpertiseArea } from "./components/expertise-area";
 import { Section } from "./components/section";
 import { SideProject } from "./components/side-project";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (

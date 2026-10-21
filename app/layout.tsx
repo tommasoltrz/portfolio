@@ -20,6 +20,7 @@ import { Footer } from "./components/footer";
 import { FloatingControls } from "./components/floating-controls";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tommasolaterza.com"),
   title: "Tommaso Laterza",
   description:
     "Tommaso Laterza's personal website - Software Engineer and Web Developer specializing in modern web technologies, and scalable applications",
