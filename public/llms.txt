@@ -21,8 +21,9 @@ The site is a single page covering experience, areas of expertise and current st
 
 ## Side projects
 
-- [Paguro](https://anguria.studio/paguro/): a native Mac workspace bringing messages, mail and everyday web tools together.
 - [Stingray](https://www.stingraynav.com/): decodes AIS and VDR recordings into an interactive incident reconstruction, in the browser.
+- [Moppo](https://anguria.studio/moppo/): an open-source Mac cleaner that shows what is taking space and which parts are safe to remove.
+- [Paguro](https://anguria.studio/paguro/): an open-source native Mac workspace bringing messages, mail and everyday web tools together.
 
 ## Stack
 

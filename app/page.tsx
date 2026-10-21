@@ -207,19 +207,26 @@ export default function Home() {
 
       <Section title="Side projects">
           <SideProject
+            name="Stingray"
+            description="VDR & AIS decoder for incident reconstruction"
+            badges={["Web app"]}
+            url="https://www.stingraynav.com/"
+            icon="/projects/stingray.png"
+          />
+          <SideProject
+            name="Moppo"
+            description="A Mac cleaner that shows what’s safe to remove"
+            badges={["macOS", "Open source"]}
+            url="https://anguria.studio/moppo/"
+            icon="/projects/moppo.png"
+          />
+          <SideProject
             name="Paguro"
             description="A native Mac workspace for your web apps"
             badges={["macOS", "Open source"]}
             url="https://anguria.studio/paguro/"
             icon="/projects/paguro-light.png"
             iconDark="/projects/paguro-dark.png"
-          />
-          <SideProject
-            name="Stingray"
-            description="VDR & AIS decoder for incident reconstruction"
-            badges={["Web app"]}
-            url="https://www.stingraynav.com/"
-            icon="/projects/stingray.png"
           />
       </Section>
 
