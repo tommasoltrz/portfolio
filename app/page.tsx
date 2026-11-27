@@ -235,6 +235,14 @@ export default function Home() {
             icon="/projects/paguro-light.png"
             iconDark="/projects/paguro-dark.png"
           />
+          <SideProject
+            name="Obolo"
+            description="A native subscription tracker for spending and renewals"
+            badges={["macOS", "Free", "Open source"]}
+            url="https://anguria.studio/obolo/"
+            icon="/projects/obolo-icon.svg"
+            iconDark="/projects/obolo-mark.svg"
+          />
       </Section>
 
       <Section title="How I build today">
