@@ -238,7 +238,7 @@ export default function Home() {
           <SideProject
             name="Obolo"
             description="A native subscription tracker for spending and renewals"
-            badges={["macOS", "Free", "Open source"]}
+            badges={["macOS", "Open source"]}
             url="https://anguria.studio/obolo/"
             icon="/projects/obolo-light.webp"
             iconDark="/projects/obolo-dark.webp"
