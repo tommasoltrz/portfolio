@@ -240,8 +240,8 @@ export default function Home() {
             description="A native subscription tracker for spending and renewals"
             badges={["macOS", "Free", "Open source"]}
             url="https://anguria.studio/obolo/"
-            icon="/projects/obolo-icon.svg"
-            iconDark="/projects/obolo-mark.svg"
+            icon="/projects/obolo-light.webp"
+            iconDark="/projects/obolo-dark.webp"
           />
       </Section>
 
